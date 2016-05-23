@@ -32,7 +32,6 @@
     presenter.view = view;
     presenter.interactor = interactor;
     presenter.router = router;
-    [presenter configureModule];
     
     return presenter;
 }

@@ -9,8 +9,6 @@
 
 @protocol MEFeedModuleModuleInput <NSObject>
 
-- (void)configureModule;
-
 - (void)presentInWindow:(UIWindow *)window;
 
 @end

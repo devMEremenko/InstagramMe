@@ -3,10 +3,11 @@ platform :ios, '7.0'
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
-inhibit_all_warnings!
-
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/anodamobi/ANODA-CocoaPods.git'
+
+inhibit_all_warnings!
+
 
 target 'InstagramMe' do
 
@@ -20,7 +21,6 @@ pod 'ANLogger'
 #UI
 pod 'Masonry'
 pod 'YYWebImage'
-#pod 'SDWebImage'
 
 end
 

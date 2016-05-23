@@ -18,13 +18,6 @@
 
 @implementation MEAuthorizationPresenter
 
-#pragma mark - MEAuthorizationModuleInput
-
-- (void)configureModule
-{
-    
-}
-
 #pragma mark - MENavigationModuleDelegate
 
 - (UIViewController *)controller

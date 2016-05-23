@@ -35,9 +35,7 @@
     presenter.interactor = interactor;
     presenter.router = router;
     presenter.authorizationModule = [MEAuthorizationAssembly createModule];
-    
-    [presenter configureModule];
-    
+        
     return presenter;
 }
 

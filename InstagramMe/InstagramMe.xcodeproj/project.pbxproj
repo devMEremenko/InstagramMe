@@ -8,21 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F822ED030B5A54ADF1C870B7 /* libPods-InstagramMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */; };
-		FA14D3DB1CF311710024F6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA14D3D91CF311710024F6CC /* Assets.xcassets */; };
-		FA14D3DC1CF311710024F6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA14D3DA1CF311710024F6CC /* LaunchScreen.storyboard */; };
 		FA14D3E01CF311790024F6CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14D3DE1CF311790024F6CC /* main.m */; };
-		FAAA40C31CF3594800EC0376 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA407E1CF3594700EC0376 /* AppDelegate.m */; };
-		FAAA40C41CF3594800EC0376 /* MEPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40811CF3594700EC0376 /* MEPreloader.m */; };
-		FAAA40CA1CF3594800EC0376 /* MEAuthorizationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40921CF3594800EC0376 /* MEAuthorizationAssembly.m */; };
-		FAAA40CB1CF3594800EC0376 /* MEAuthorizationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40951CF3594800EC0376 /* MEAuthorizationInteractor.m */; };
-		FAAA40CC1CF3594800EC0376 /* MEAuthorizationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA409B1CF3594800EC0376 /* MEAuthorizationPresenter.m */; };
-		FAAA40CD1CF3594800EC0376 /* MEAuthorizationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40A01CF3594800EC0376 /* MEAuthorizationRouter.m */; };
-		FAAA40CE1CF3594800EC0376 /* MEAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40A41CF3594800EC0376 /* MEAuthorizationViewController.m */; };
-		FAAA40CF1CF3594800EC0376 /* MEFeedModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40AA1CF3594800EC0376 /* MEFeedModuleAssembly.m */; };
-		FAAA40D01CF3594800EC0376 /* MEFeedModuleInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40AD1CF3594800EC0376 /* MEFeedModuleInteractor.m */; };
-		FAAA40D11CF3594800EC0376 /* MEFeedModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40B31CF3594800EC0376 /* MEFeedModulePresenter.m */; };
-		FAAA40D21CF3594800EC0376 /* MEFeedModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40B61CF3594800EC0376 /* MEFeedModuleRouter.m */; };
-		FAAA40D31CF3594800EC0376 /* MEFeedModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40BA1CF3594800EC0376 /* MEFeedModuleViewController.m */; };
+		FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEEB1CF3C2BE008F6E75 /* AppDelegate.m */; };
+		FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEEE1CF3C2BE008F6E75 /* MEPreloader.m */; };
+		FADEDF271CF3C2BE008F6E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADEDEF41CF3C2BE008F6E75 /* Assets.xcassets */; };
+		FADEDF281CF3C2BE008F6E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADEDEF51CF3C2BE008F6E75 /* LaunchScreen.storyboard */; };
+		FADEDF291CF3C2BE008F6E75 /* MEAuthorizationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEFA1CF3C2BE008F6E75 /* MEAuthorizationAssembly.m */; };
+		FADEDF2A1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEFD1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m */; };
+		FADEDF2B1CF3C2BE008F6E75 /* MEAuthorizationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF031CF3C2BE008F6E75 /* MEAuthorizationPresenter.m */; };
+		FADEDF2C1CF3C2BE008F6E75 /* MEAuthorizationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF081CF3C2BE008F6E75 /* MEAuthorizationRouter.m */; };
+		FADEDF2D1CF3C2BE008F6E75 /* MEAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF0C1CF3C2BE008F6E75 /* MEAuthorizationViewController.m */; };
+		FADEDF2E1CF3C2BE008F6E75 /* MEFeedModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF121CF3C2BE008F6E75 /* MEFeedModuleAssembly.m */; };
+		FADEDF2F1CF3C2BE008F6E75 /* MEFeedModuleInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF151CF3C2BE008F6E75 /* MEFeedModuleInteractor.m */; };
+		FADEDF301CF3C2BE008F6E75 /* MEFeedModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF1B1CF3C2BE008F6E75 /* MEFeedModulePresenter.m */; };
+		FADEDF311CF3C2BE008F6E75 /* MEFeedModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF1E1CF3C2BE008F6E75 /* MEFeedModuleRouter.m */; };
+		FADEDF321CF3C2BE008F6E75 /* MEFeedModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF221CF3C2BE008F6E75 /* MEFeedModuleViewController.m */; };
+		FAF32C951CF3C9A200C31DB1 /* AKBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32C941CF3C9A200C31DB1 /* AKBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,50 +31,52 @@
 		33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3E303D04A1D4F0BF639120 /* Pods-InstagramMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe.release.xcconfig"; sourceTree = "<group>"; };
 		FA14D3BC1CF310570024F6CC /* InstagramMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA14D3D91CF311710024F6CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA14D3DA1CF311710024F6CC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA14D3DD1CF311790024F6CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA14D3DE1CF311790024F6CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FAAA407D1CF3594700EC0376 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FAAA407E1CF3594700EC0376 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAAA40801CF3594700EC0376 /* MEPreloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPreloader.h; sourceTree = "<group>"; };
-		FAAA40811CF3594700EC0376 /* MEPreloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEPreloader.m; sourceTree = "<group>"; };
-		FAAA40911CF3594800EC0376 /* MEAuthorizationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationAssembly.h; sourceTree = "<group>"; };
-		FAAA40921CF3594800EC0376 /* MEAuthorizationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationAssembly.m; sourceTree = "<group>"; };
-		FAAA40941CF3594800EC0376 /* MEAuthorizationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractor.h; sourceTree = "<group>"; };
-		FAAA40951CF3594800EC0376 /* MEAuthorizationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationInteractor.m; sourceTree = "<group>"; };
-		FAAA40961CF3594800EC0376 /* MEAuthorizationInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractorInput.h; sourceTree = "<group>"; };
-		FAAA40971CF3594800EC0376 /* MEAuthorizationInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractorOutput.h; sourceTree = "<group>"; };
-		FAAA40991CF3594800EC0376 /* MEAuthorizationModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationModuleInput.h; sourceTree = "<group>"; };
-		FAAA409A1CF3594800EC0376 /* MEAuthorizationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationPresenter.h; sourceTree = "<group>"; };
-		FAAA409B1CF3594800EC0376 /* MEAuthorizationPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationPresenter.m; sourceTree = "<group>"; };
-		FAAA409C1CF3594800EC0376 /* MENavigationModuleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENavigationModuleDelegate.h; sourceTree = "<group>"; };
-		FAAA409D1CF3594800EC0376 /* MENavigationModuleDelegateOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENavigationModuleDelegateOutput.h; sourceTree = "<group>"; };
-		FAAA409F1CF3594800EC0376 /* MEAuthorizationRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationRouter.h; sourceTree = "<group>"; };
-		FAAA40A01CF3594800EC0376 /* MEAuthorizationRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationRouter.m; sourceTree = "<group>"; };
-		FAAA40A11CF3594800EC0376 /* MEAuthorizationRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationRouterInput.h; sourceTree = "<group>"; };
-		FAAA40A31CF3594800EC0376 /* MEAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewController.h; sourceTree = "<group>"; };
-		FAAA40A41CF3594800EC0376 /* MEAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationViewController.m; sourceTree = "<group>"; };
-		FAAA40A51CF3594800EC0376 /* MEAuthorizationViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewInput.h; sourceTree = "<group>"; };
-		FAAA40A61CF3594800EC0376 /* MEAuthorizationViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewOutput.h; sourceTree = "<group>"; };
-		FAAA40A91CF3594800EC0376 /* MEFeedModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleAssembly.h; sourceTree = "<group>"; };
-		FAAA40AA1CF3594800EC0376 /* MEFeedModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleAssembly.m; sourceTree = "<group>"; };
-		FAAA40AC1CF3594800EC0376 /* MEFeedModuleInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractor.h; sourceTree = "<group>"; };
-		FAAA40AD1CF3594800EC0376 /* MEFeedModuleInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleInteractor.m; sourceTree = "<group>"; };
-		FAAA40AE1CF3594800EC0376 /* MEFeedModuleInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractorInput.h; sourceTree = "<group>"; };
-		FAAA40AF1CF3594800EC0376 /* MEFeedModuleInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractorOutput.h; sourceTree = "<group>"; };
-		FAAA40B11CF3594800EC0376 /* MEFeedModuleModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleModuleInput.h; sourceTree = "<group>"; };
-		FAAA40B21CF3594800EC0376 /* MEFeedModulePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModulePresenter.h; sourceTree = "<group>"; };
-		FAAA40B31CF3594800EC0376 /* MEFeedModulePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModulePresenter.m; sourceTree = "<group>"; };
-		FAAA40B51CF3594800EC0376 /* MEFeedModuleRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleRouter.h; sourceTree = "<group>"; };
-		FAAA40B61CF3594800EC0376 /* MEFeedModuleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleRouter.m; sourceTree = "<group>"; };
-		FAAA40B71CF3594800EC0376 /* MEFeedModuleRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleRouterInput.h; sourceTree = "<group>"; };
-		FAAA40B91CF3594800EC0376 /* MEFeedModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewController.h; sourceTree = "<group>"; };
-		FAAA40BA1CF3594800EC0376 /* MEFeedModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleViewController.m; sourceTree = "<group>"; };
-		FAAA40BB1CF3594800EC0376 /* MEFeedModuleViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewInput.h; sourceTree = "<group>"; };
-		FAAA40BC1CF3594800EC0376 /* MEFeedModuleViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewOutput.h; sourceTree = "<group>"; };
-		FADEDEA61CF3B41C008F6E75 /* MEGlobalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEGlobalHeader.h; sourceTree = "<group>"; };
-		FADEDEA71CF3B41C008F6E75 /* MEPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPrefixHeader.pch; sourceTree = "<group>"; };
+		FADEDEEA1CF3C2BE008F6E75 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FADEDEEB1CF3C2BE008F6E75 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FADEDEED1CF3C2BE008F6E75 /* MEPreloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPreloader.h; sourceTree = "<group>"; };
+		FADEDEEE1CF3C2BE008F6E75 /* MEPreloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEPreloader.m; sourceTree = "<group>"; };
+		FADEDEF41CF3C2BE008F6E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FADEDEF51CF3C2BE008F6E75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FADEDEF91CF3C2BE008F6E75 /* MEAuthorizationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationAssembly.h; sourceTree = "<group>"; };
+		FADEDEFA1CF3C2BE008F6E75 /* MEAuthorizationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationAssembly.m; sourceTree = "<group>"; };
+		FADEDEFC1CF3C2BE008F6E75 /* MEAuthorizationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractor.h; sourceTree = "<group>"; };
+		FADEDEFD1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationInteractor.m; sourceTree = "<group>"; };
+		FADEDEFE1CF3C2BE008F6E75 /* MEAuthorizationInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractorInput.h; sourceTree = "<group>"; };
+		FADEDEFF1CF3C2BE008F6E75 /* MEAuthorizationInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractorOutput.h; sourceTree = "<group>"; };
+		FADEDF011CF3C2BE008F6E75 /* MEAuthorizationModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationModuleInput.h; sourceTree = "<group>"; };
+		FADEDF021CF3C2BE008F6E75 /* MEAuthorizationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationPresenter.h; sourceTree = "<group>"; };
+		FADEDF031CF3C2BE008F6E75 /* MEAuthorizationPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationPresenter.m; sourceTree = "<group>"; };
+		FADEDF041CF3C2BE008F6E75 /* MENavigationModuleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENavigationModuleDelegate.h; sourceTree = "<group>"; };
+		FADEDF051CF3C2BE008F6E75 /* MENavigationModuleDelegateOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENavigationModuleDelegateOutput.h; sourceTree = "<group>"; };
+		FADEDF071CF3C2BE008F6E75 /* MEAuthorizationRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationRouter.h; sourceTree = "<group>"; };
+		FADEDF081CF3C2BE008F6E75 /* MEAuthorizationRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationRouter.m; sourceTree = "<group>"; };
+		FADEDF091CF3C2BE008F6E75 /* MEAuthorizationRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationRouterInput.h; sourceTree = "<group>"; };
+		FADEDF0B1CF3C2BE008F6E75 /* MEAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewController.h; sourceTree = "<group>"; };
+		FADEDF0C1CF3C2BE008F6E75 /* MEAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationViewController.m; sourceTree = "<group>"; };
+		FADEDF0D1CF3C2BE008F6E75 /* MEAuthorizationViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewInput.h; sourceTree = "<group>"; };
+		FADEDF0E1CF3C2BE008F6E75 /* MEAuthorizationViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewOutput.h; sourceTree = "<group>"; };
+		FADEDF111CF3C2BE008F6E75 /* MEFeedModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleAssembly.h; sourceTree = "<group>"; };
+		FADEDF121CF3C2BE008F6E75 /* MEFeedModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleAssembly.m; sourceTree = "<group>"; };
+		FADEDF141CF3C2BE008F6E75 /* MEFeedModuleInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractor.h; sourceTree = "<group>"; };
+		FADEDF151CF3C2BE008F6E75 /* MEFeedModuleInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleInteractor.m; sourceTree = "<group>"; };
+		FADEDF161CF3C2BE008F6E75 /* MEFeedModuleInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractorInput.h; sourceTree = "<group>"; };
+		FADEDF171CF3C2BE008F6E75 /* MEFeedModuleInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractorOutput.h; sourceTree = "<group>"; };
+		FADEDF191CF3C2BE008F6E75 /* MEFeedModuleModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleModuleInput.h; sourceTree = "<group>"; };
+		FADEDF1A1CF3C2BE008F6E75 /* MEFeedModulePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModulePresenter.h; sourceTree = "<group>"; };
+		FADEDF1B1CF3C2BE008F6E75 /* MEFeedModulePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModulePresenter.m; sourceTree = "<group>"; };
+		FADEDF1D1CF3C2BE008F6E75 /* MEFeedModuleRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleRouter.h; sourceTree = "<group>"; };
+		FADEDF1E1CF3C2BE008F6E75 /* MEFeedModuleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleRouter.m; sourceTree = "<group>"; };
+		FADEDF1F1CF3C2BE008F6E75 /* MEFeedModuleRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleRouterInput.h; sourceTree = "<group>"; };
+		FADEDF211CF3C2BE008F6E75 /* MEFeedModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewController.h; sourceTree = "<group>"; };
+		FADEDF221CF3C2BE008F6E75 /* MEFeedModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleViewController.m; sourceTree = "<group>"; };
+		FADEDF231CF3C2BE008F6E75 /* MEFeedModuleViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewInput.h; sourceTree = "<group>"; };
+		FADEDF241CF3C2BE008F6E75 /* MEFeedModuleViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewOutput.h; sourceTree = "<group>"; };
+		FAF32C8B1CF3C57B00C31DB1 /* MEGlobalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEGlobalHeader.h; sourceTree = "<group>"; };
+		FAF32C8C1CF3C57B00C31DB1 /* MEPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPrefixHeader.pch; sourceTree = "<group>"; };
+		FAF32C931CF3C9A200C31DB1 /* AKBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKBarView.h; sourceTree = "<group>"; };
+		FAF32C941CF3C9A200C31DB1 /* AKBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +111,7 @@
 		FA14D3B31CF310570024F6CC = {
 			isa = PBXGroup;
 			children = (
-				FAAA407C1CF3594700EC0376 /* Application */,
-				FAAA408E1CF3594700EC0376 /* UserStories */,
-				FAAA40821CF3594700EC0376 /* Layers */,
-				FA14D3D71CF310F10024F6CC /* Resource */,
+				FADEDEE81CF3C2BE008F6E75 /* InstargamMe */,
 				FA14D3D81CF3111C0024F6CC /* Supporting Files */,
 				FA14D3BD1CF310570024F6CC /* Products */,
 				BDEECCD4175B7B9182361FD7 /* Pods */,
@@ -127,15 +127,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA14D3D71CF310F10024F6CC /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				FA14D3D91CF311710024F6CC /* Assets.xcassets */,
-				FA14D3DA1CF311710024F6CC /* LaunchScreen.storyboard */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		FA14D3D81CF3111C0024F6CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,177 +136,223 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FAAA407C1CF3594700EC0376 /* Application */ = {
+		FADEDEE81CF3C2BE008F6E75 /* InstargamMe */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA407D1CF3594700EC0376 /* AppDelegate.h */,
-				FAAA407E1CF3594700EC0376 /* AppDelegate.m */,
-				FAAA407F1CF3594700EC0376 /* Preloader */,
+				FADEDEE91CF3C2BE008F6E75 /* Application */,
+				FADEDEF61CF3C2BE008F6E75 /* UserStory */,
+				FAF32C851CF3C4DC00C31DB1 /* Library */,
+				FADEDEF31CF3C2BE008F6E75 /* Resource */,
+				FAF32C8D1CF3C92400C31DB1 /* Vendor */,
+			);
+			path = InstargamMe;
+			sourceTree = "<group>";
+		};
+		FADEDEE91CF3C2BE008F6E75 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FADEDEEA1CF3C2BE008F6E75 /* AppDelegate.h */,
+				FADEDEEB1CF3C2BE008F6E75 /* AppDelegate.m */,
+				FADEDEEC1CF3C2BE008F6E75 /* Preloader */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		FAAA407F1CF3594700EC0376 /* Preloader */ = {
+		FADEDEEC1CF3C2BE008F6E75 /* Preloader */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40801CF3594700EC0376 /* MEPreloader.h */,
-				FAAA40811CF3594700EC0376 /* MEPreloader.m */,
+				FADEDEED1CF3C2BE008F6E75 /* MEPreloader.h */,
+				FADEDEEE1CF3C2BE008F6E75 /* MEPreloader.m */,
 			);
 			path = Preloader;
 			sourceTree = "<group>";
 		};
-		FAAA40821CF3594700EC0376 /* Layers */ = {
+		FADEDEF31CF3C2BE008F6E75 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				FADEDEA51CF3B41C008F6E75 /* Headers */,
+				FADEDEF41CF3C2BE008F6E75 /* Assets.xcassets */,
+				FADEDEF51CF3C2BE008F6E75 /* LaunchScreen.storyboard */,
 			);
-			path = Layers;
+			path = Resource;
 			sourceTree = "<group>";
 		};
-		FAAA408E1CF3594700EC0376 /* UserStories */ = {
+		FADEDEF61CF3C2BE008F6E75 /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA408F1CF3594800EC0376 /* MEAuthorization */,
-				FAAA40A71CF3594800EC0376 /* MEFeedModule */,
+				FADEDEF71CF3C2BE008F6E75 /* MEAuthorization */,
+				FADEDF0F1CF3C2BE008F6E75 /* MEFeedModule */,
 			);
-			path = UserStories;
+			path = UserStory;
 			sourceTree = "<group>";
 		};
-		FAAA408F1CF3594800EC0376 /* MEAuthorization */ = {
+		FADEDEF71CF3C2BE008F6E75 /* MEAuthorization */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40901CF3594800EC0376 /* Assembly */,
-				FAAA40931CF3594800EC0376 /* Interactor */,
-				FAAA40981CF3594800EC0376 /* Presenter */,
-				FAAA409E1CF3594800EC0376 /* Router */,
-				FAAA40A21CF3594800EC0376 /* View */,
+				FADEDEF81CF3C2BE008F6E75 /* Assembly */,
+				FADEDEFB1CF3C2BE008F6E75 /* Interactor */,
+				FADEDF001CF3C2BE008F6E75 /* Presenter */,
+				FADEDF061CF3C2BE008F6E75 /* Router */,
+				FADEDF0A1CF3C2BE008F6E75 /* View */,
 			);
 			path = MEAuthorization;
 			sourceTree = "<group>";
 		};
-		FAAA40901CF3594800EC0376 /* Assembly */ = {
+		FADEDEF81CF3C2BE008F6E75 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40911CF3594800EC0376 /* MEAuthorizationAssembly.h */,
-				FAAA40921CF3594800EC0376 /* MEAuthorizationAssembly.m */,
+				FADEDEF91CF3C2BE008F6E75 /* MEAuthorizationAssembly.h */,
+				FADEDEFA1CF3C2BE008F6E75 /* MEAuthorizationAssembly.m */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		FAAA40931CF3594800EC0376 /* Interactor */ = {
+		FADEDEFB1CF3C2BE008F6E75 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40941CF3594800EC0376 /* MEAuthorizationInteractor.h */,
-				FAAA40951CF3594800EC0376 /* MEAuthorizationInteractor.m */,
-				FAAA40961CF3594800EC0376 /* MEAuthorizationInteractorInput.h */,
-				FAAA40971CF3594800EC0376 /* MEAuthorizationInteractorOutput.h */,
+				FADEDEFC1CF3C2BE008F6E75 /* MEAuthorizationInteractor.h */,
+				FADEDEFD1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m */,
+				FADEDEFE1CF3C2BE008F6E75 /* MEAuthorizationInteractorInput.h */,
+				FADEDEFF1CF3C2BE008F6E75 /* MEAuthorizationInteractorOutput.h */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		FAAA40981CF3594800EC0376 /* Presenter */ = {
+		FADEDF001CF3C2BE008F6E75 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40991CF3594800EC0376 /* MEAuthorizationModuleInput.h */,
-				FAAA409A1CF3594800EC0376 /* MEAuthorizationPresenter.h */,
-				FAAA409B1CF3594800EC0376 /* MEAuthorizationPresenter.m */,
-				FAAA409C1CF3594800EC0376 /* MENavigationModuleDelegate.h */,
-				FAAA409D1CF3594800EC0376 /* MENavigationModuleDelegateOutput.h */,
+				FADEDF011CF3C2BE008F6E75 /* MEAuthorizationModuleInput.h */,
+				FADEDF021CF3C2BE008F6E75 /* MEAuthorizationPresenter.h */,
+				FADEDF031CF3C2BE008F6E75 /* MEAuthorizationPresenter.m */,
+				FADEDF041CF3C2BE008F6E75 /* MENavigationModuleDelegate.h */,
+				FADEDF051CF3C2BE008F6E75 /* MENavigationModuleDelegateOutput.h */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		FAAA409E1CF3594800EC0376 /* Router */ = {
+		FADEDF061CF3C2BE008F6E75 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA409F1CF3594800EC0376 /* MEAuthorizationRouter.h */,
-				FAAA40A01CF3594800EC0376 /* MEAuthorizationRouter.m */,
-				FAAA40A11CF3594800EC0376 /* MEAuthorizationRouterInput.h */,
+				FADEDF071CF3C2BE008F6E75 /* MEAuthorizationRouter.h */,
+				FADEDF081CF3C2BE008F6E75 /* MEAuthorizationRouter.m */,
+				FADEDF091CF3C2BE008F6E75 /* MEAuthorizationRouterInput.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
-		FAAA40A21CF3594800EC0376 /* View */ = {
+		FADEDF0A1CF3C2BE008F6E75 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40A31CF3594800EC0376 /* MEAuthorizationViewController.h */,
-				FAAA40A41CF3594800EC0376 /* MEAuthorizationViewController.m */,
-				FAAA40A51CF3594800EC0376 /* MEAuthorizationViewInput.h */,
-				FAAA40A61CF3594800EC0376 /* MEAuthorizationViewOutput.h */,
+				FADEDF0B1CF3C2BE008F6E75 /* MEAuthorizationViewController.h */,
+				FADEDF0C1CF3C2BE008F6E75 /* MEAuthorizationViewController.m */,
+				FADEDF0D1CF3C2BE008F6E75 /* MEAuthorizationViewInput.h */,
+				FADEDF0E1CF3C2BE008F6E75 /* MEAuthorizationViewOutput.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		FAAA40A71CF3594800EC0376 /* MEFeedModule */ = {
+		FADEDF0F1CF3C2BE008F6E75 /* MEFeedModule */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40A81CF3594800EC0376 /* Assembly */,
-				FAAA40AB1CF3594800EC0376 /* Interactor */,
-				FAAA40B01CF3594800EC0376 /* Presenter */,
-				FAAA40B41CF3594800EC0376 /* Router */,
-				FAAA40B81CF3594800EC0376 /* View */,
+				FADEDF101CF3C2BE008F6E75 /* Assembly */,
+				FADEDF131CF3C2BE008F6E75 /* Interactor */,
+				FADEDF181CF3C2BE008F6E75 /* Presenter */,
+				FADEDF1C1CF3C2BE008F6E75 /* Router */,
+				FADEDF201CF3C2BE008F6E75 /* View */,
 			);
 			path = MEFeedModule;
 			sourceTree = "<group>";
 		};
-		FAAA40A81CF3594800EC0376 /* Assembly */ = {
+		FADEDF101CF3C2BE008F6E75 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40A91CF3594800EC0376 /* MEFeedModuleAssembly.h */,
-				FAAA40AA1CF3594800EC0376 /* MEFeedModuleAssembly.m */,
+				FADEDF111CF3C2BE008F6E75 /* MEFeedModuleAssembly.h */,
+				FADEDF121CF3C2BE008F6E75 /* MEFeedModuleAssembly.m */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		FAAA40AB1CF3594800EC0376 /* Interactor */ = {
+		FADEDF131CF3C2BE008F6E75 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40AC1CF3594800EC0376 /* MEFeedModuleInteractor.h */,
-				FAAA40AD1CF3594800EC0376 /* MEFeedModuleInteractor.m */,
-				FAAA40AE1CF3594800EC0376 /* MEFeedModuleInteractorInput.h */,
-				FAAA40AF1CF3594800EC0376 /* MEFeedModuleInteractorOutput.h */,
+				FADEDF141CF3C2BE008F6E75 /* MEFeedModuleInteractor.h */,
+				FADEDF151CF3C2BE008F6E75 /* MEFeedModuleInteractor.m */,
+				FADEDF161CF3C2BE008F6E75 /* MEFeedModuleInteractorInput.h */,
+				FADEDF171CF3C2BE008F6E75 /* MEFeedModuleInteractorOutput.h */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		FAAA40B01CF3594800EC0376 /* Presenter */ = {
+		FADEDF181CF3C2BE008F6E75 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40B11CF3594800EC0376 /* MEFeedModuleModuleInput.h */,
-				FAAA40B21CF3594800EC0376 /* MEFeedModulePresenter.h */,
-				FAAA40B31CF3594800EC0376 /* MEFeedModulePresenter.m */,
+				FADEDF191CF3C2BE008F6E75 /* MEFeedModuleModuleInput.h */,
+				FADEDF1A1CF3C2BE008F6E75 /* MEFeedModulePresenter.h */,
+				FADEDF1B1CF3C2BE008F6E75 /* MEFeedModulePresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		FAAA40B41CF3594800EC0376 /* Router */ = {
+		FADEDF1C1CF3C2BE008F6E75 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40B51CF3594800EC0376 /* MEFeedModuleRouter.h */,
-				FAAA40B61CF3594800EC0376 /* MEFeedModuleRouter.m */,
-				FAAA40B71CF3594800EC0376 /* MEFeedModuleRouterInput.h */,
+				FADEDF1D1CF3C2BE008F6E75 /* MEFeedModuleRouter.h */,
+				FADEDF1E1CF3C2BE008F6E75 /* MEFeedModuleRouter.m */,
+				FADEDF1F1CF3C2BE008F6E75 /* MEFeedModuleRouterInput.h */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
-		FAAA40B81CF3594800EC0376 /* View */ = {
+		FADEDF201CF3C2BE008F6E75 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40B91CF3594800EC0376 /* MEFeedModuleViewController.h */,
-				FAAA40BA1CF3594800EC0376 /* MEFeedModuleViewController.m */,
-				FAAA40BB1CF3594800EC0376 /* MEFeedModuleViewInput.h */,
-				FAAA40BC1CF3594800EC0376 /* MEFeedModuleViewOutput.h */,
+				FADEDF211CF3C2BE008F6E75 /* MEFeedModuleViewController.h */,
+				FADEDF221CF3C2BE008F6E75 /* MEFeedModuleViewController.m */,
+				FADEDF231CF3C2BE008F6E75 /* MEFeedModuleViewInput.h */,
+				FADEDF241CF3C2BE008F6E75 /* MEFeedModuleViewOutput.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		FADEDEA51CF3B41C008F6E75 /* Headers */ = {
+		FAF32C851CF3C4DC00C31DB1 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				FADEDEA71CF3B41C008F6E75 /* MEPrefixHeader.pch */,
-				FADEDEA61CF3B41C008F6E75 /* MEGlobalHeader.h */,
+				FAF32C8A1CF3C57B00C31DB1 /* Headers */,
+				FAF32C861CF3C4FB00C31DB1 /* Layers */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		FAF32C861CF3C4FB00C31DB1 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		FAF32C8A1CF3C57B00C31DB1 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32C8B1CF3C57B00C31DB1 /* MEGlobalHeader.h */,
+				FAF32C8C1CF3C57B00C31DB1 /* MEPrefixHeader.pch */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		FAF32C8D1CF3C92400C31DB1 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32C921CF3C9A200C31DB1 /* AKBarView */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FAF32C921CF3C9A200C31DB1 /* AKBarView */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32C931CF3C9A200C31DB1 /* AKBarView.h */,
+				FAF32C941CF3C9A200C31DB1 /* AKBarView.m */,
+			);
+			path = AKBarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,8 +416,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA14D3DB1CF311710024F6CC /* Assets.xcassets in Resources */,
-				FA14D3DC1CF311710024F6CC /* LaunchScreen.storyboard in Resources */,
+				FADEDF271CF3C2BE008F6E75 /* Assets.xcassets in Resources */,
+				FADEDF281CF3C2BE008F6E75 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,19 +476,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAA40CC1CF3594800EC0376 /* MEAuthorizationPresenter.m in Sources */,
-				FAAA40D31CF3594800EC0376 /* MEFeedModuleViewController.m in Sources */,
-				FAAA40CD1CF3594800EC0376 /* MEAuthorizationRouter.m in Sources */,
-				FAAA40CF1CF3594800EC0376 /* MEFeedModuleAssembly.m in Sources */,
-				FAAA40C31CF3594800EC0376 /* AppDelegate.m in Sources */,
-				FAAA40C41CF3594800EC0376 /* MEPreloader.m in Sources */,
-				FAAA40D11CF3594800EC0376 /* MEFeedModulePresenter.m in Sources */,
-				FAAA40CB1CF3594800EC0376 /* MEAuthorizationInteractor.m in Sources */,
+				FADEDF311CF3C2BE008F6E75 /* MEFeedModuleRouter.m in Sources */,
+				FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */,
+				FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */,
+				FADEDF2B1CF3C2BE008F6E75 /* MEAuthorizationPresenter.m in Sources */,
+				FADEDF2A1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m in Sources */,
+				FADEDF321CF3C2BE008F6E75 /* MEFeedModuleViewController.m in Sources */,
+				FADEDF2D1CF3C2BE008F6E75 /* MEAuthorizationViewController.m in Sources */,
+				FADEDF2C1CF3C2BE008F6E75 /* MEAuthorizationRouter.m in Sources */,
+				FADEDF2E1CF3C2BE008F6E75 /* MEFeedModuleAssembly.m in Sources */,
 				FA14D3E01CF311790024F6CC /* main.m in Sources */,
-				FAAA40D21CF3594800EC0376 /* MEFeedModuleRouter.m in Sources */,
-				FAAA40CE1CF3594800EC0376 /* MEAuthorizationViewController.m in Sources */,
-				FAAA40D01CF3594800EC0376 /* MEFeedModuleInteractor.m in Sources */,
-				FAAA40CA1CF3594800EC0376 /* MEAuthorizationAssembly.m in Sources */,
+				FAF32C951CF3C9A200C31DB1 /* AKBarView.m in Sources */,
+				FADEDF2F1CF3C2BE008F6E75 /* MEFeedModuleInteractor.m in Sources */,
+				FADEDF301CF3C2BE008F6E75 /* MEFeedModulePresenter.m in Sources */,
+				FADEDF291CF3C2BE008F6E75 /* MEAuthorizationAssembly.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/InstagramMe/InstagramMe/Layers/Headers/MEPrefixHeader.pch;
+				GCC_PREFIX_HEADER = InstargamMe/Library/Headers/MEPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
@@ -560,7 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/InstagramMe/InstagramMe/Layers/Headers/MEPrefixHeader.pch;
+				GCC_PREFIX_HEADER = InstargamMe/Library/Headers/MEPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";

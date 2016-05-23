@@ -8,6 +8,4 @@
 
 @protocol MEAuthorizationModuleInput <NSObject>
 
-- (void)configureModule;
-
 @end

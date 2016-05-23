@@ -7,7 +7,6 @@
 //
 
 #import "MEFeedModulePresenter.h"
-
 #import "MEFeedModuleViewInput.h"
 #import "MEFeedModuleInteractorInput.h"
 #import "MEFeedModuleRouterInput.h"
@@ -15,11 +14,6 @@
 @implementation MEFeedModulePresenter
 
 #pragma mark - MEFeedModuleModuleInput
-
-- (void)configureModule
-{
-    
-}
 
 - (void)presentInWindow:(UIWindow *)window
 {

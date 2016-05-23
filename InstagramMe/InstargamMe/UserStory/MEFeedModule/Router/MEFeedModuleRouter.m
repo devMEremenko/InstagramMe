@@ -9,7 +9,9 @@
 #import "MEFeedModuleRouter.h"
 
 @interface MEFeedModuleRouter ()
+
 @property (weak, nonatomic) UIWindow* window;
+
 @end
 
 @implementation MEFeedModuleRouter

@@ -7,7 +7,6 @@
 //
 
 #import "MEAuthorizationRouterInput.h"
-
 #import "MEAuthorizationPresenter.h"
 
 @interface MEAuthorizationRouter : NSObject <MEAuthorizationRouterInput>

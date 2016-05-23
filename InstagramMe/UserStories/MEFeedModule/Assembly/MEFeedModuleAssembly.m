@@ -43,7 +43,7 @@
 
 + (MEFeedModuleViewController *)viewController
 {
-    return [[MEFeedModuleViewController alloc]init];
+    return [MEFeedModuleViewController new];
 }
 
 @end

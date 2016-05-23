@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4EB97A6FEB5EB57F7AB67125'
+               BlueprintIdentifier = '0DB934E84C4E4C8CEB70ECB9'
                BlueprintName = 'InstagramKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libInstagramKit.a'>

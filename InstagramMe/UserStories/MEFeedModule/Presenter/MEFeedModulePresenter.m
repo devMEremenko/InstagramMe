@@ -14,7 +14,7 @@
 
 @implementation MEFeedModulePresenter
 
-#pragma mark - Методы MEFeedModuleModuleInput
+#pragma mark - MEFeedModuleModuleInput
 
 - (void)configureModule
 {
@@ -38,13 +38,13 @@
     [self.router dismissModule:module];
 }
 
-#pragma mark - Методы MEFeedModuleViewOutput
+#pragma mark - MEFeedModuleViewOutput
 
 - (void)didTriggerViewReadyEvent
 {
     [self.view setupInitialState];
 }
 
-#pragma mark - Методы MEFeedModuleInteractorOutput
+#pragma mark - MEFeedModuleInteractorOutput
 
 @end

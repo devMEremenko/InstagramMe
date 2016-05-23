@@ -9,16 +9,17 @@
 #import "MEAuthorizationViewController.h"
 #import "MEAuthorizationViewOutput.h"
 #import "InstagramKit.h"
-#import "Masonry.h"
 
 @interface MEAuthorizationViewController () <UIWebViewDelegate>
+
 @property (strong, nonatomic) UIWebView* webView;
 @property (strong, nonatomic) UINavigationBar* topBar;
+
 @end
 
 @implementation MEAuthorizationViewController
 
-#pragma mark - Методы жизненного цикла
+#pragma mark -  
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -26,7 +27,7 @@
 	[self.output didTriggerViewReadyEvent];
 }
 
-#pragma mark - Методы MEAuthorizationViewInput
+#pragma mark -  MEAuthorizationViewInput
 
 - (void)setupInitialState
 {

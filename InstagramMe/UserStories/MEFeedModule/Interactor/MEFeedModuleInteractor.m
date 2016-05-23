@@ -12,6 +12,6 @@
 
 @implementation MEFeedModuleInteractor
 
-#pragma mark - Методы MEFeedModuleInteractorInput
+#pragma mark -  MEFeedModuleInteractorInput
 
 @end

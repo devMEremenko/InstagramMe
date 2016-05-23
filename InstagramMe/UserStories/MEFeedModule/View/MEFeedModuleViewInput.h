@@ -6,15 +6,10 @@
 //  Copyright 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+
 
 @protocol MEFeedModuleViewInput <NSObject>
 
-/**
- @author devMEremenko
-
- Метод настраивает начальный стейт view
- */
 - (void)setupInitialState;
 
 @end

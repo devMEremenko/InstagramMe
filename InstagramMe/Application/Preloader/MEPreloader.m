@@ -11,8 +11,10 @@
 #import "MEFeedModuleModuleInput.h"
 
 @interface MEPreloader ()
+
 @property (weak, nonatomic) UIWindow* window;
 @property (strong, nonatomic) id <MEFeedModuleModuleInput> feedModule;
+
 @end
 
 @implementation MEPreloader

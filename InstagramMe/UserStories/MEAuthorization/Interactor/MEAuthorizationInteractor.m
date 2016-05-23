@@ -7,11 +7,10 @@
 //
 
 #import "MEAuthorizationInteractor.h"
-
 #import "MEAuthorizationInteractorOutput.h"
 
 @implementation MEAuthorizationInteractor
 
-#pragma mark - Методы MEAuthorizationInteractorInput
+#pragma mark - MEAuthorizationInteractorInput
 
 @end

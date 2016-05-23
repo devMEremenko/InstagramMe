@@ -7,7 +7,6 @@
 //
 
 #import "MEFeedModuleRouter.h"
-#import "LMHelperFunction.h"
 
 @interface MEFeedModuleRouter ()
 @property (weak, nonatomic) UIWindow* window;
@@ -21,7 +20,7 @@
 {
     self.window = window;
     
-    LMDispatchToMainQueue(^{
+    ANDispatchBlockToMainQueue(^{
         [window setRootViewController:(UIViewController *)self.presenter.view];
         [window makeKeyAndVisible];
         

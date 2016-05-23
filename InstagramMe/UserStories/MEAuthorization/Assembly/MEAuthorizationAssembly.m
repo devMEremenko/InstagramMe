@@ -15,7 +15,6 @@
 
 @implementation MEAuthorizationAssembly
 
-
 + (id <MEAuthorizationModuleInput, MENavigationModuleDelegate>)createModule
 {
     MEAuthorizationViewController *view = [self viewController];

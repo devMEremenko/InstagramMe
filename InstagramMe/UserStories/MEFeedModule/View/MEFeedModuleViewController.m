@@ -12,7 +12,7 @@
 
 @implementation MEFeedModuleViewController
 
-#pragma mark - Методы жизненного цикла
+#pragma mark -  
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -20,7 +20,7 @@
 	[self.output didTriggerViewReadyEvent];
 }
 
-#pragma mark - Методы MEFeedModuleViewInput
+#pragma mark -  MEFeedModuleViewInput
 
 - (void)setupInitialState {
 	// В этом методе происходит настройка параметров view, зависящих от ее жизненого цикла (создание элементов, анимации и пр.)

@@ -9,6 +9,26 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ANCategories.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ANHelperFunctions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ANLogger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>InstagramKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,10 +44,65 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>03936B41D8B63F2E36D00CD71FBBDBFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04D11FC58B663503DF38E5C5DA6EC6D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28D1441EC77B943D59069B8C63FBFDCC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B34D5AC61318F22B429074EEC3F6A59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F4C56112129384C630E83520975BE7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86FE4F194F9764420244166E3C441201</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>905CDB7B135EFEC9D8E7C5A4835783B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D3C2493BA170EB870EB2248C235649B</key>
+		<key>CF52435D4D56866F55BAFBED07DCA8B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E57EB80C1FDDCB4E9A2BF59CFC77EA42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5556290C327E0D1451882642E396661</key>
 		<dict>
 			<key>primary</key>
 			<true/>

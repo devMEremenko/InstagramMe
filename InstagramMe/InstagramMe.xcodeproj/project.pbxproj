@@ -13,7 +13,6 @@
 		FA14D3E01CF311790024F6CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14D3DE1CF311790024F6CC /* main.m */; };
 		FAAA40C31CF3594800EC0376 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA407E1CF3594700EC0376 /* AppDelegate.m */; };
 		FAAA40C41CF3594800EC0376 /* MEPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40811CF3594700EC0376 /* MEPreloader.m */; };
-		FAAA40C51CF3594800EC0376 /* LMHelperFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40871CF3594700EC0376 /* LMHelperFunction.m */; };
 		FAAA40CA1CF3594800EC0376 /* MEAuthorizationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40921CF3594800EC0376 /* MEAuthorizationAssembly.m */; };
 		FAAA40CB1CF3594800EC0376 /* MEAuthorizationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40951CF3594800EC0376 /* MEAuthorizationInteractor.m */; };
 		FAAA40CC1CF3594800EC0376 /* MEAuthorizationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA409B1CF3594800EC0376 /* MEAuthorizationPresenter.m */; };
@@ -39,9 +38,6 @@
 		FAAA407E1CF3594700EC0376 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FAAA40801CF3594700EC0376 /* MEPreloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPreloader.h; sourceTree = "<group>"; };
 		FAAA40811CF3594700EC0376 /* MEPreloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEPreloader.m; sourceTree = "<group>"; };
-		FAAA40841CF3594700EC0376 /* MEPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPrefixHeader.pch; sourceTree = "<group>"; };
-		FAAA40861CF3594700EC0376 /* LMHelperFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHelperFunction.h; sourceTree = "<group>"; };
-		FAAA40871CF3594700EC0376 /* LMHelperFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHelperFunction.m; sourceTree = "<group>"; };
 		FAAA40911CF3594800EC0376 /* MEAuthorizationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationAssembly.h; sourceTree = "<group>"; };
 		FAAA40921CF3594800EC0376 /* MEAuthorizationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationAssembly.m; sourceTree = "<group>"; };
 		FAAA40941CF3594800EC0376 /* MEAuthorizationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractor.h; sourceTree = "<group>"; };
@@ -76,6 +72,8 @@
 		FAAA40BA1CF3594800EC0376 /* MEFeedModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleViewController.m; sourceTree = "<group>"; };
 		FAAA40BB1CF3594800EC0376 /* MEFeedModuleViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewInput.h; sourceTree = "<group>"; };
 		FAAA40BC1CF3594800EC0376 /* MEFeedModuleViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewOutput.h; sourceTree = "<group>"; };
+		FADEDEA61CF3B41C008F6E75 /* MEGlobalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEGlobalHeader.h; sourceTree = "<group>"; };
+		FADEDEA71CF3B41C008F6E75 /* MEPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,27 +167,9 @@
 		FAAA40821CF3594700EC0376 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA40831CF3594700EC0376 /* Global */,
-				FAAA40851CF3594700EC0376 /* Helpers */,
+				FADEDEA51CF3B41C008F6E75 /* Headers */,
 			);
 			path = Layers;
-			sourceTree = "<group>";
-		};
-		FAAA40831CF3594700EC0376 /* Global */ = {
-			isa = PBXGroup;
-			children = (
-				FAAA40841CF3594700EC0376 /* MEPrefixHeader.pch */,
-			);
-			path = Global;
-			sourceTree = "<group>";
-		};
-		FAAA40851CF3594700EC0376 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				FAAA40861CF3594700EC0376 /* LMHelperFunction.h */,
-				FAAA40871CF3594700EC0376 /* LMHelperFunction.m */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FAAA408E1CF3594700EC0376 /* UserStories */ = {
@@ -329,6 +309,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FADEDEA51CF3B41C008F6E75 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				FADEDEA71CF3B41C008F6E75 /* MEPrefixHeader.pch */,
+				FADEDEA61CF3B41C008F6E75 /* MEGlobalHeader.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -451,7 +440,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAA40CC1CF3594800EC0376 /* MEAuthorizationPresenter.m in Sources */,
-				FAAA40C51CF3594800EC0376 /* LMHelperFunction.m in Sources */,
 				FAAA40D31CF3594800EC0376 /* MEFeedModuleViewController.m in Sources */,
 				FAAA40CD1CF3594800EC0376 /* MEAuthorizationRouter.m in Sources */,
 				FAAA40CF1CF3594800EC0376 /* MEFeedModuleAssembly.m in Sources */,
@@ -558,7 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/InstagramMe/InstagramMe/Layers/Global/MEPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/InstagramMe/InstagramMe/Layers/Headers/MEPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
@@ -572,7 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/InstagramMe/InstagramMe/Layers/Global/MEPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/InstagramMe/InstagramMe/Layers/Headers/MEPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";

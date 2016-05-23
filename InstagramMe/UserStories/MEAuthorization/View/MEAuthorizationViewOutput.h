@@ -6,8 +6,6 @@
 //  Copyright 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @protocol MEAuthorizationViewOutput <NSObject>
 
 - (void)didTriggerViewReadyEvent;

@@ -10,16 +10,19 @@
 #import "MEPreloader.h"
 
 @interface AppDelegate ()
+
 @property (strong, nonatomic) MEPreloader* preloader;
+
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {    
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [UIWindow new];
+    self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor blackColor];
+    
     [self.preloader preloadWithWindow:self.window];
     
     return YES;
@@ -31,7 +34,7 @@
 {
     if (!_preloader)
     {
-        _preloader = [[MEPreloader alloc]init];
+        _preloader = [MEPreloader new];
     }
     return _preloader;
 }

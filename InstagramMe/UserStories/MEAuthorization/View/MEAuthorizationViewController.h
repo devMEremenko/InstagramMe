@@ -6,8 +6,6 @@
 //  Copyright 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "MEAuthorizationViewInput.h"
 
 @protocol MEAuthorizationViewOutput;

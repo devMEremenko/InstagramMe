@@ -7,20 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F822ED030B5A54ADF1C870B7 /* libPods-InstagramMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */; };
 		FA14D3DB1CF311710024F6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA14D3D91CF311710024F6CC /* Assets.xcassets */; };
 		FA14D3DC1CF311710024F6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA14D3DA1CF311710024F6CC /* LaunchScreen.storyboard */; };
 		FA14D3E01CF311790024F6CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14D3DE1CF311790024F6CC /* main.m */; };
-		FA14D3E31CF311820024F6CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14D3E21CF311820024F6CC /* AppDelegate.m */; };
+		FAAA40C31CF3594800EC0376 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA407E1CF3594700EC0376 /* AppDelegate.m */; };
+		FAAA40C41CF3594800EC0376 /* MEPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40811CF3594700EC0376 /* MEPreloader.m */; };
+		FAAA40C51CF3594800EC0376 /* LMHelperFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40871CF3594700EC0376 /* LMHelperFunction.m */; };
+		FAAA40CA1CF3594800EC0376 /* MEAuthorizationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40921CF3594800EC0376 /* MEAuthorizationAssembly.m */; };
+		FAAA40CB1CF3594800EC0376 /* MEAuthorizationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40951CF3594800EC0376 /* MEAuthorizationInteractor.m */; };
+		FAAA40CC1CF3594800EC0376 /* MEAuthorizationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA409B1CF3594800EC0376 /* MEAuthorizationPresenter.m */; };
+		FAAA40CD1CF3594800EC0376 /* MEAuthorizationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40A01CF3594800EC0376 /* MEAuthorizationRouter.m */; };
+		FAAA40CE1CF3594800EC0376 /* MEAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40A41CF3594800EC0376 /* MEAuthorizationViewController.m */; };
+		FAAA40CF1CF3594800EC0376 /* MEFeedModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40AA1CF3594800EC0376 /* MEFeedModuleAssembly.m */; };
+		FAAA40D01CF3594800EC0376 /* MEFeedModuleInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40AD1CF3594800EC0376 /* MEFeedModuleInteractor.m */; };
+		FAAA40D11CF3594800EC0376 /* MEFeedModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40B31CF3594800EC0376 /* MEFeedModulePresenter.m */; };
+		FAAA40D21CF3594800EC0376 /* MEFeedModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40B61CF3594800EC0376 /* MEFeedModuleRouter.m */; };
+		FAAA40D31CF3594800EC0376 /* MEFeedModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA40BA1CF3594800EC0376 /* MEFeedModuleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F3636DED59B569B4ECA9099 /* Pods-InstagramMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe.debug.xcconfig"; sourceTree = "<group>"; };
+		33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3E303D04A1D4F0BF639120 /* Pods-InstagramMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe.release.xcconfig"; sourceTree = "<group>"; };
 		FA14D3BC1CF310570024F6CC /* InstagramMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA14D3D91CF311710024F6CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA14D3DA1CF311710024F6CC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA14D3DD1CF311790024F6CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA14D3DE1CF311790024F6CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA14D3E11CF311820024F6CC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FA14D3E21CF311820024F6CC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAAA407D1CF3594700EC0376 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAAA407E1CF3594700EC0376 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAAA40801CF3594700EC0376 /* MEPreloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPreloader.h; sourceTree = "<group>"; };
+		FAAA40811CF3594700EC0376 /* MEPreloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEPreloader.m; sourceTree = "<group>"; };
+		FAAA40841CF3594700EC0376 /* MEPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPrefixHeader.pch; sourceTree = "<group>"; };
+		FAAA40861CF3594700EC0376 /* LMHelperFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHelperFunction.h; sourceTree = "<group>"; };
+		FAAA40871CF3594700EC0376 /* LMHelperFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHelperFunction.m; sourceTree = "<group>"; };
+		FAAA40911CF3594800EC0376 /* MEAuthorizationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationAssembly.h; sourceTree = "<group>"; };
+		FAAA40921CF3594800EC0376 /* MEAuthorizationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationAssembly.m; sourceTree = "<group>"; };
+		FAAA40941CF3594800EC0376 /* MEAuthorizationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractor.h; sourceTree = "<group>"; };
+		FAAA40951CF3594800EC0376 /* MEAuthorizationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationInteractor.m; sourceTree = "<group>"; };
+		FAAA40961CF3594800EC0376 /* MEAuthorizationInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractorInput.h; sourceTree = "<group>"; };
+		FAAA40971CF3594800EC0376 /* MEAuthorizationInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationInteractorOutput.h; sourceTree = "<group>"; };
+		FAAA40991CF3594800EC0376 /* MEAuthorizationModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationModuleInput.h; sourceTree = "<group>"; };
+		FAAA409A1CF3594800EC0376 /* MEAuthorizationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationPresenter.h; sourceTree = "<group>"; };
+		FAAA409B1CF3594800EC0376 /* MEAuthorizationPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationPresenter.m; sourceTree = "<group>"; };
+		FAAA409C1CF3594800EC0376 /* MENavigationModuleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENavigationModuleDelegate.h; sourceTree = "<group>"; };
+		FAAA409D1CF3594800EC0376 /* MENavigationModuleDelegateOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENavigationModuleDelegateOutput.h; sourceTree = "<group>"; };
+		FAAA409F1CF3594800EC0376 /* MEAuthorizationRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationRouter.h; sourceTree = "<group>"; };
+		FAAA40A01CF3594800EC0376 /* MEAuthorizationRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationRouter.m; sourceTree = "<group>"; };
+		FAAA40A11CF3594800EC0376 /* MEAuthorizationRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationRouterInput.h; sourceTree = "<group>"; };
+		FAAA40A31CF3594800EC0376 /* MEAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewController.h; sourceTree = "<group>"; };
+		FAAA40A41CF3594800EC0376 /* MEAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationViewController.m; sourceTree = "<group>"; };
+		FAAA40A51CF3594800EC0376 /* MEAuthorizationViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewInput.h; sourceTree = "<group>"; };
+		FAAA40A61CF3594800EC0376 /* MEAuthorizationViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationViewOutput.h; sourceTree = "<group>"; };
+		FAAA40A91CF3594800EC0376 /* MEFeedModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleAssembly.h; sourceTree = "<group>"; };
+		FAAA40AA1CF3594800EC0376 /* MEFeedModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleAssembly.m; sourceTree = "<group>"; };
+		FAAA40AC1CF3594800EC0376 /* MEFeedModuleInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractor.h; sourceTree = "<group>"; };
+		FAAA40AD1CF3594800EC0376 /* MEFeedModuleInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleInteractor.m; sourceTree = "<group>"; };
+		FAAA40AE1CF3594800EC0376 /* MEFeedModuleInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractorInput.h; sourceTree = "<group>"; };
+		FAAA40AF1CF3594800EC0376 /* MEFeedModuleInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleInteractorOutput.h; sourceTree = "<group>"; };
+		FAAA40B11CF3594800EC0376 /* MEFeedModuleModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleModuleInput.h; sourceTree = "<group>"; };
+		FAAA40B21CF3594800EC0376 /* MEFeedModulePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModulePresenter.h; sourceTree = "<group>"; };
+		FAAA40B31CF3594800EC0376 /* MEFeedModulePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModulePresenter.m; sourceTree = "<group>"; };
+		FAAA40B51CF3594800EC0376 /* MEFeedModuleRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleRouter.h; sourceTree = "<group>"; };
+		FAAA40B61CF3594800EC0376 /* MEFeedModuleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleRouter.m; sourceTree = "<group>"; };
+		FAAA40B71CF3594800EC0376 /* MEFeedModuleRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleRouterInput.h; sourceTree = "<group>"; };
+		FAAA40B91CF3594800EC0376 /* MEFeedModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewController.h; sourceTree = "<group>"; };
+		FAAA40BA1CF3594800EC0376 /* MEFeedModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedModuleViewController.m; sourceTree = "<group>"; };
+		FAAA40BB1CF3594800EC0376 /* MEFeedModuleViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewInput.h; sourceTree = "<group>"; };
+		FAAA40BC1CF3594800EC0376 /* MEFeedModuleViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewOutput.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,19 +83,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F822ED030B5A54ADF1C870B7 /* libPods-InstagramMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDEECCD4175B7B9182361FD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F3636DED59B569B4ECA9099 /* Pods-InstagramMe.debug.xcconfig */,
+				4F3E303D04A1D4F0BF639120 /* Pods-InstagramMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF8F0DBFF2B9865D5A41FCB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA14D3B31CF310570024F6CC = {
 			isa = PBXGroup;
 			children = (
-				FA14D3D61CF310B20024F6CC /* Application */,
+				FAAA407C1CF3594700EC0376 /* Application */,
+				FAAA408E1CF3594700EC0376 /* UserStories */,
+				FAAA40821CF3594700EC0376 /* Layers */,
 				FA14D3D71CF310F10024F6CC /* Resource */,
 				FA14D3D81CF3111C0024F6CC /* Supporting Files */,
 				FA14D3BD1CF310570024F6CC /* Products */,
+				BDEECCD4175B7B9182361FD7 /* Pods */,
+				EF8F0DBFF2B9865D5A41FCB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,16 +127,6 @@
 				FA14D3BC1CF310570024F6CC /* InstagramMe.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FA14D3D61CF310B20024F6CC /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				FA14D3E41CF312230024F6CC /* Preloader */,
-				FA14D3E11CF311820024F6CC /* AppDelegate.h */,
-				FA14D3E21CF311820024F6CC /* AppDelegate.m */,
-			);
-			path = Application;
 			sourceTree = "<group>";
 		};
 		FA14D3D71CF310F10024F6CC /* Resource */ = {
@@ -80,11 +147,186 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FA14D3E41CF312230024F6CC /* Preloader */ = {
+		FAAA407C1CF3594700EC0376 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				FAAA407D1CF3594700EC0376 /* AppDelegate.h */,
+				FAAA407E1CF3594700EC0376 /* AppDelegate.m */,
+				FAAA407F1CF3594700EC0376 /* Preloader */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FAAA407F1CF3594700EC0376 /* Preloader */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40801CF3594700EC0376 /* MEPreloader.h */,
+				FAAA40811CF3594700EC0376 /* MEPreloader.m */,
 			);
 			path = Preloader;
+			sourceTree = "<group>";
+		};
+		FAAA40821CF3594700EC0376 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40831CF3594700EC0376 /* Global */,
+				FAAA40851CF3594700EC0376 /* Helpers */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		FAAA40831CF3594700EC0376 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40841CF3594700EC0376 /* MEPrefixHeader.pch */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		FAAA40851CF3594700EC0376 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40861CF3594700EC0376 /* LMHelperFunction.h */,
+				FAAA40871CF3594700EC0376 /* LMHelperFunction.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FAAA408E1CF3594700EC0376 /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA408F1CF3594800EC0376 /* MEAuthorization */,
+				FAAA40A71CF3594800EC0376 /* MEFeedModule */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		FAAA408F1CF3594800EC0376 /* MEAuthorization */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40901CF3594800EC0376 /* Assembly */,
+				FAAA40931CF3594800EC0376 /* Interactor */,
+				FAAA40981CF3594800EC0376 /* Presenter */,
+				FAAA409E1CF3594800EC0376 /* Router */,
+				FAAA40A21CF3594800EC0376 /* View */,
+			);
+			path = MEAuthorization;
+			sourceTree = "<group>";
+		};
+		FAAA40901CF3594800EC0376 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40911CF3594800EC0376 /* MEAuthorizationAssembly.h */,
+				FAAA40921CF3594800EC0376 /* MEAuthorizationAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FAAA40931CF3594800EC0376 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40941CF3594800EC0376 /* MEAuthorizationInteractor.h */,
+				FAAA40951CF3594800EC0376 /* MEAuthorizationInteractor.m */,
+				FAAA40961CF3594800EC0376 /* MEAuthorizationInteractorInput.h */,
+				FAAA40971CF3594800EC0376 /* MEAuthorizationInteractorOutput.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAAA40981CF3594800EC0376 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40991CF3594800EC0376 /* MEAuthorizationModuleInput.h */,
+				FAAA409A1CF3594800EC0376 /* MEAuthorizationPresenter.h */,
+				FAAA409B1CF3594800EC0376 /* MEAuthorizationPresenter.m */,
+				FAAA409C1CF3594800EC0376 /* MENavigationModuleDelegate.h */,
+				FAAA409D1CF3594800EC0376 /* MENavigationModuleDelegateOutput.h */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAAA409E1CF3594800EC0376 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA409F1CF3594800EC0376 /* MEAuthorizationRouter.h */,
+				FAAA40A01CF3594800EC0376 /* MEAuthorizationRouter.m */,
+				FAAA40A11CF3594800EC0376 /* MEAuthorizationRouterInput.h */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAAA40A21CF3594800EC0376 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40A31CF3594800EC0376 /* MEAuthorizationViewController.h */,
+				FAAA40A41CF3594800EC0376 /* MEAuthorizationViewController.m */,
+				FAAA40A51CF3594800EC0376 /* MEAuthorizationViewInput.h */,
+				FAAA40A61CF3594800EC0376 /* MEAuthorizationViewOutput.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAAA40A71CF3594800EC0376 /* MEFeedModule */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40A81CF3594800EC0376 /* Assembly */,
+				FAAA40AB1CF3594800EC0376 /* Interactor */,
+				FAAA40B01CF3594800EC0376 /* Presenter */,
+				FAAA40B41CF3594800EC0376 /* Router */,
+				FAAA40B81CF3594800EC0376 /* View */,
+			);
+			path = MEFeedModule;
+			sourceTree = "<group>";
+		};
+		FAAA40A81CF3594800EC0376 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40A91CF3594800EC0376 /* MEFeedModuleAssembly.h */,
+				FAAA40AA1CF3594800EC0376 /* MEFeedModuleAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FAAA40AB1CF3594800EC0376 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40AC1CF3594800EC0376 /* MEFeedModuleInteractor.h */,
+				FAAA40AD1CF3594800EC0376 /* MEFeedModuleInteractor.m */,
+				FAAA40AE1CF3594800EC0376 /* MEFeedModuleInteractorInput.h */,
+				FAAA40AF1CF3594800EC0376 /* MEFeedModuleInteractorOutput.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAAA40B01CF3594800EC0376 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40B11CF3594800EC0376 /* MEFeedModuleModuleInput.h */,
+				FAAA40B21CF3594800EC0376 /* MEFeedModulePresenter.h */,
+				FAAA40B31CF3594800EC0376 /* MEFeedModulePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAAA40B41CF3594800EC0376 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40B51CF3594800EC0376 /* MEFeedModuleRouter.h */,
+				FAAA40B61CF3594800EC0376 /* MEFeedModuleRouter.m */,
+				FAAA40B71CF3594800EC0376 /* MEFeedModuleRouterInput.h */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAAA40B81CF3594800EC0376 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA40B91CF3594800EC0376 /* MEFeedModuleViewController.h */,
+				FAAA40BA1CF3594800EC0376 /* MEFeedModuleViewController.m */,
+				FAAA40BB1CF3594800EC0376 /* MEFeedModuleViewInput.h */,
+				FAAA40BC1CF3594800EC0376 /* MEFeedModuleViewOutput.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,9 +336,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA14D3D31CF310570024F6CC /* Build configuration list for PBXNativeTarget "InstagramMe" */;
 			buildPhases = (
+				D2F07990DBD893C403B224EB /* Check Pods Manifest.lock */,
 				FA14D3B81CF310570024F6CC /* Sources */,
 				FA14D3B91CF310570024F6CC /* Frameworks */,
 				FA14D3BA1CF310570024F6CC /* Resources */,
+				219DBF2FCCB27F9D24B32EAD /* Embed Pods Frameworks */,
+				9D163C38B30D5C19F2F93DC2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,13 +397,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		219DBF2FCCB27F9D24B32EAD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D163C38B30D5C19F2F93DC2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2F07990DBD893C403B224EB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA14D3B81CF310570024F6CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA14D3E31CF311820024F6CC /* AppDelegate.m in Sources */,
+				FAAA40CC1CF3594800EC0376 /* MEAuthorizationPresenter.m in Sources */,
+				FAAA40C51CF3594800EC0376 /* LMHelperFunction.m in Sources */,
+				FAAA40D31CF3594800EC0376 /* MEFeedModuleViewController.m in Sources */,
+				FAAA40CD1CF3594800EC0376 /* MEAuthorizationRouter.m in Sources */,
+				FAAA40CF1CF3594800EC0376 /* MEFeedModuleAssembly.m in Sources */,
+				FAAA40C31CF3594800EC0376 /* AppDelegate.m in Sources */,
+				FAAA40C41CF3594800EC0376 /* MEPreloader.m in Sources */,
+				FAAA40D11CF3594800EC0376 /* MEFeedModulePresenter.m in Sources */,
+				FAAA40CB1CF3594800EC0376 /* MEAuthorizationInteractor.m in Sources */,
 				FA14D3E01CF311790024F6CC /* main.m in Sources */,
+				FAAA40D21CF3594800EC0376 /* MEFeedModuleRouter.m in Sources */,
+				FAAA40CE1CF3594800EC0376 /* MEAuthorizationViewController.m in Sources */,
+				FAAA40D01CF3594800EC0376 /* MEFeedModuleInteractor.m in Sources */,
+				FAAA40CA1CF3594800EC0376 /* MEAuthorizationAssembly.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +554,11 @@
 		};
 		FA14D3D41CF310570024F6CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F3636DED59B569B4ECA9099 /* Pods-InstagramMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/InstagramMe/InstagramMe/Layers/Global/MEPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
@@ -261,9 +568,11 @@
 		};
 		FA14D3D51CF310570024F6CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F3E303D04A1D4F0BF639120 /* Pods-InstagramMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/InstagramMe/InstagramMe/Layers/Global/MEPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
@@ -290,6 +599,7 @@
 				FA14D3D51CF310570024F6CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

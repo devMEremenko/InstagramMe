@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>InstagramAppRedirectURL</key>
+	<string>https://instagram.com/login/callback</string>
+	<key>InstagramAppClientId</key>
+	<string>499d43d413cd40289edea14f55912f43</string>
 </dict>
 </plist>

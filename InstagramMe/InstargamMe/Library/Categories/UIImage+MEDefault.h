@@ -6,8 +6,12 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface UIImage (MEDefault)
+
+// UIButton
++ (UIImage *)me_likeImage;
++ (UIImage *)me_likeHighlightedImage;
++ (UIImage *)me_replyImage;
++ (UIImage *)me_commentsImage;
 
 @end

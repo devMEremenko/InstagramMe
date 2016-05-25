@@ -312,6 +312,7 @@
                       NSMutableArray *objects = [NSMutableArray arrayWithCapacity:responseObjects.count];
                       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                           [responseObjects enumerateObjectsUsingBlock:^(NSDictionary * dataDictionary, NSUInteger idx, BOOL *stop) {
+                              
                               id modelObject = [[modelClass alloc] initWithInfo:dataDictionary];
                               [objects addObject:modelObject];
                           }];

@@ -15,12 +15,14 @@ target 'InstagramMe' do
 pod 'InstagramKit', '~> 3.0'
 
 #ANODA
-pod 'ANHelperFunctions'
 pod 'ANLogger'
+pod 'ANHelperFunctions'
+pod 'ANBaseDomainModel'
 
 #UI
 pod 'Masonry'
 pod 'YYWebImage'
+pod 'TLYShyNavBar'
 
 end
 

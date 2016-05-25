@@ -11,7 +11,6 @@
 		FA14D3E01CF311790024F6CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14D3DE1CF311790024F6CC /* main.m */; };
 		FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEEB1CF3C2BE008F6E75 /* AppDelegate.m */; };
 		FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEEE1CF3C2BE008F6E75 /* MEPreloader.m */; };
-		FADEDF271CF3C2BE008F6E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADEDEF41CF3C2BE008F6E75 /* Assets.xcassets */; };
 		FADEDF281CF3C2BE008F6E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADEDEF51CF3C2BE008F6E75 /* LaunchScreen.storyboard */; };
 		FADEDF291CF3C2BE008F6E75 /* MEAuthorizationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEFA1CF3C2BE008F6E75 /* MEAuthorizationAssembly.m */; };
 		FADEDF2A1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEFD1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m */; };
@@ -23,7 +22,17 @@
 		FADEDF301CF3C2BE008F6E75 /* MEFeedModulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF1B1CF3C2BE008F6E75 /* MEFeedModulePresenter.m */; };
 		FADEDF311CF3C2BE008F6E75 /* MEFeedModuleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF1E1CF3C2BE008F6E75 /* MEFeedModuleRouter.m */; };
 		FADEDF321CF3C2BE008F6E75 /* MEFeedModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDF221CF3C2BE008F6E75 /* MEFeedModuleViewController.m */; };
-		FAF32C951CF3C9A200C31DB1 /* AKBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32C941CF3C9A200C31DB1 /* AKBarView.m */; };
+		FAF32C9E1CF484BB00C31DB1 /* MEShareContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32C9D1CF484BB00C31DB1 /* MEShareContentView.m */; };
+		FAF32CA21CF485BE00C31DB1 /* MEFeedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CA11CF485BE00C31DB1 /* MEFeedCollectionCell.m */; };
+		FAF32CA61CF485EE00C31DB1 /* MELikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CA51CF485EE00C31DB1 /* MELikeButton.m */; };
+		FAF32CA91CF4872800C31DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF32CA81CF4872800C31DB1 /* Assets.xcassets */; };
+		FAF32CAE1CF4885200C31DB1 /* UIImage+MEDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CAD1CF4885200C31DB1 /* UIImage+MEDefault.m */; };
+		FAF32CB11CF48FD700C31DB1 /* MECommentsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB01CF48FD700C31DB1 /* MECommentsButton.m */; };
+		FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB61CF4A8A000C31DB1 /* MEReplyButton.m */; };
+		FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB91CF4AF8900C31DB1 /* MECommentsContentView.m */; };
+		FAF32CC51CF639BC00C31DB1 /* MEFeedDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CC41CF639BC00C31DB1 /* MEFeedDataProvider.m */; };
+		FAF32CC71CF6469600C31DB1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF32CC61CF6469600C31DB1 /* Security.framework */; };
+		FAF32CDD1CF6662F00C31DB1 /* MERecentMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CDC1CF6662F00C31DB1 /* MERecentMedia.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +46,6 @@
 		FADEDEEB1CF3C2BE008F6E75 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FADEDEED1CF3C2BE008F6E75 /* MEPreloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPreloader.h; sourceTree = "<group>"; };
 		FADEDEEE1CF3C2BE008F6E75 /* MEPreloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEPreloader.m; sourceTree = "<group>"; };
-		FADEDEF41CF3C2BE008F6E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FADEDEF51CF3C2BE008F6E75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FADEDEF91CF3C2BE008F6E75 /* MEAuthorizationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAuthorizationAssembly.h; sourceTree = "<group>"; };
 		FADEDEFA1CF3C2BE008F6E75 /* MEAuthorizationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAuthorizationAssembly.m; sourceTree = "<group>"; };
@@ -75,8 +83,26 @@
 		FADEDF241CF3C2BE008F6E75 /* MEFeedModuleViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedModuleViewOutput.h; sourceTree = "<group>"; };
 		FAF32C8B1CF3C57B00C31DB1 /* MEGlobalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEGlobalHeader.h; sourceTree = "<group>"; };
 		FAF32C8C1CF3C57B00C31DB1 /* MEPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPrefixHeader.pch; sourceTree = "<group>"; };
-		FAF32C931CF3C9A200C31DB1 /* AKBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKBarView.h; sourceTree = "<group>"; };
-		FAF32C941CF3C9A200C31DB1 /* AKBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKBarView.m; sourceTree = "<group>"; };
+		FAF32C9C1CF484BB00C31DB1 /* MEShareContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEShareContentView.h; sourceTree = "<group>"; };
+		FAF32C9D1CF484BB00C31DB1 /* MEShareContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEShareContentView.m; sourceTree = "<group>"; };
+		FAF32CA01CF485BE00C31DB1 /* MEFeedCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedCollectionCell.h; sourceTree = "<group>"; };
+		FAF32CA11CF485BE00C31DB1 /* MEFeedCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedCollectionCell.m; sourceTree = "<group>"; };
+		FAF32CA41CF485EE00C31DB1 /* MELikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELikeButton.h; sourceTree = "<group>"; };
+		FAF32CA51CF485EE00C31DB1 /* MELikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELikeButton.m; sourceTree = "<group>"; };
+		FAF32CA81CF4872800C31DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAF32CAC1CF4885200C31DB1 /* UIImage+MEDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MEDefault.h"; sourceTree = "<group>"; };
+		FAF32CAD1CF4885200C31DB1 /* UIImage+MEDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MEDefault.m"; sourceTree = "<group>"; };
+		FAF32CAF1CF48FD700C31DB1 /* MECommentsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECommentsButton.h; sourceTree = "<group>"; };
+		FAF32CB01CF48FD700C31DB1 /* MECommentsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECommentsButton.m; sourceTree = "<group>"; };
+		FAF32CB51CF4A8A000C31DB1 /* MEReplyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEReplyButton.h; sourceTree = "<group>"; };
+		FAF32CB61CF4A8A000C31DB1 /* MEReplyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEReplyButton.m; sourceTree = "<group>"; };
+		FAF32CB81CF4AF8900C31DB1 /* MECommentsContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECommentsContentView.h; sourceTree = "<group>"; };
+		FAF32CB91CF4AF8900C31DB1 /* MECommentsContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECommentsContentView.m; sourceTree = "<group>"; };
+		FAF32CC31CF639BC00C31DB1 /* MEFeedDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedDataProvider.h; sourceTree = "<group>"; };
+		FAF32CC41CF639BC00C31DB1 /* MEFeedDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedDataProvider.m; sourceTree = "<group>"; };
+		FAF32CC61CF6469600C31DB1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FAF32CDB1CF6662F00C31DB1 /* MERecentMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERecentMedia.h; sourceTree = "<group>"; };
+		FAF32CDC1CF6662F00C31DB1 /* MERecentMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERecentMedia.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF32CC71CF6469600C31DB1 /* Security.framework in Frameworks */,
 				F822ED030B5A54ADF1C870B7 /* libPods-InstagramMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +130,7 @@
 		EF8F0DBFF2B9865D5A41FCB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAF32CC61CF6469600C31DB1 /* Security.framework */,
 				33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */,
 			);
 			name = Frameworks;
@@ -170,7 +198,7 @@
 		FADEDEF31CF3C2BE008F6E75 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				FADEDEF41CF3C2BE008F6E75 /* Assets.xcassets */,
+				FAF32CA71CF4871500C31DB1 /* Images */,
 				FADEDEF51CF3C2BE008F6E75 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
@@ -305,6 +333,7 @@
 		FADEDF201CF3C2BE008F6E75 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAF32C961CF4816000C31DB1 /* Views */,
 				FADEDF211CF3C2BE008F6E75 /* MEFeedModuleViewController.h */,
 				FADEDF221CF3C2BE008F6E75 /* MEFeedModuleViewController.m */,
 				FADEDF231CF3C2BE008F6E75 /* MEFeedModuleViewInput.h */,
@@ -316,6 +345,7 @@
 		FAF32C851CF3C4DC00C31DB1 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				FAF32CAA1CF4880600C31DB1 /* Categories */,
 				FAF32C8A1CF3C57B00C31DB1 /* Headers */,
 				FAF32C861CF3C4FB00C31DB1 /* Layers */,
 			);
@@ -325,6 +355,9 @@
 		FAF32C861CF3C4FB00C31DB1 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				FAF32CC21CF6397100C31DB1 /* DataProvider */,
+				FAF32CD71CF6647800C31DB1 /* DomainModel */,
+				FAF32CC11CF6366500C31DB1 /* Service */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -341,18 +374,93 @@
 		FAF32C8D1CF3C92400C31DB1 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				FAF32C921CF3C9A200C31DB1 /* AKBarView */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
 		};
-		FAF32C921CF3C9A200C31DB1 /* AKBarView */ = {
+		FAF32C961CF4816000C31DB1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FAF32C931CF3C9A200C31DB1 /* AKBarView.h */,
-				FAF32C941CF3C9A200C31DB1 /* AKBarView.m */,
+				FAF32C9F1CF485BE00C31DB1 /* Cells */,
+				FAF32C9B1CF4848500C31DB1 /* Content Views */,
+				FAF32CA31CF485D200C31DB1 /* Buttons */,
 			);
-			path = AKBarView;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAF32C9B1CF4848500C31DB1 /* Content Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32C9C1CF484BB00C31DB1 /* MEShareContentView.h */,
+				FAF32C9D1CF484BB00C31DB1 /* MEShareContentView.m */,
+				FAF32CB81CF4AF8900C31DB1 /* MECommentsContentView.h */,
+				FAF32CB91CF4AF8900C31DB1 /* MECommentsContentView.m */,
+			);
+			path = "Content Views";
+			sourceTree = "<group>";
+		};
+		FAF32C9F1CF485BE00C31DB1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CA01CF485BE00C31DB1 /* MEFeedCollectionCell.h */,
+				FAF32CA11CF485BE00C31DB1 /* MEFeedCollectionCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAF32CA31CF485D200C31DB1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CA41CF485EE00C31DB1 /* MELikeButton.h */,
+				FAF32CA51CF485EE00C31DB1 /* MELikeButton.m */,
+				FAF32CAF1CF48FD700C31DB1 /* MECommentsButton.h */,
+				FAF32CB01CF48FD700C31DB1 /* MECommentsButton.m */,
+				FAF32CB51CF4A8A000C31DB1 /* MEReplyButton.h */,
+				FAF32CB61CF4A8A000C31DB1 /* MEReplyButton.m */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		FAF32CA71CF4871500C31DB1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CA81CF4872800C31DB1 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		FAF32CAA1CF4880600C31DB1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CAC1CF4885200C31DB1 /* UIImage+MEDefault.h */,
+				FAF32CAD1CF4885200C31DB1 /* UIImage+MEDefault.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FAF32CC11CF6366500C31DB1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FAF32CC21CF6397100C31DB1 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CC31CF639BC00C31DB1 /* MEFeedDataProvider.h */,
+				FAF32CC41CF639BC00C31DB1 /* MEFeedDataProvider.m */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		FAF32CD71CF6647800C31DB1 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CDB1CF6662F00C31DB1 /* MERecentMedia.h */,
+				FAF32CDC1CF6662F00C31DB1 /* MERecentMedia.m */,
+			);
+			path = DomainModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,7 +524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FADEDF271CF3C2BE008F6E75 /* Assets.xcassets in Resources */,
+				FAF32CA91CF4872800C31DB1 /* Assets.xcassets in Resources */,
 				FADEDF281CF3C2BE008F6E75 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,20 +584,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */,
+				FAF32CDD1CF6662F00C31DB1 /* MERecentMedia.m in Sources */,
 				FADEDF311CF3C2BE008F6E75 /* MEFeedModuleRouter.m in Sources */,
 				FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */,
 				FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */,
+				FAF32CA21CF485BE00C31DB1 /* MEFeedCollectionCell.m in Sources */,
+				FAF32C9E1CF484BB00C31DB1 /* MEShareContentView.m in Sources */,
 				FADEDF2B1CF3C2BE008F6E75 /* MEAuthorizationPresenter.m in Sources */,
 				FADEDF2A1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m in Sources */,
+				FAF32CC51CF639BC00C31DB1 /* MEFeedDataProvider.m in Sources */,
 				FADEDF321CF3C2BE008F6E75 /* MEFeedModuleViewController.m in Sources */,
 				FADEDF2D1CF3C2BE008F6E75 /* MEAuthorizationViewController.m in Sources */,
 				FADEDF2C1CF3C2BE008F6E75 /* MEAuthorizationRouter.m in Sources */,
 				FADEDF2E1CF3C2BE008F6E75 /* MEFeedModuleAssembly.m in Sources */,
+				FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */,
 				FA14D3E01CF311790024F6CC /* main.m in Sources */,
-				FAF32C951CF3C9A200C31DB1 /* AKBarView.m in Sources */,
+				FAF32CA61CF485EE00C31DB1 /* MELikeButton.m in Sources */,
 				FADEDF2F1CF3C2BE008F6E75 /* MEFeedModuleInteractor.m in Sources */,
 				FADEDF301CF3C2BE008F6E75 /* MEFeedModulePresenter.m in Sources */,
 				FADEDF291CF3C2BE008F6E75 /* MEAuthorizationAssembly.m in Sources */,
+				FAF32CAE1CF4885200C31DB1 /* UIImage+MEDefault.m in Sources */,
+				FAF32CB11CF48FD700C31DB1 /* MECommentsButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,11 +700,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = InstargamMe/Library/Headers/MEPrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					INSTAGRAMKIT_UICKEYCHAINSTORE,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstargamMe/Vendor/ASFloatingHeadersFlowLayout/InstagramMe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -598,11 +724,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = InstargamMe/Library/Headers/MEPrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					INSTAGRAMKIT_UICKEYCHAINSTORE,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstargamMe/Vendor/ASFloatingHeadersFlowLayout/InstagramMe-Bridging-Header.h";
 			};
 			name = Release;
 		};

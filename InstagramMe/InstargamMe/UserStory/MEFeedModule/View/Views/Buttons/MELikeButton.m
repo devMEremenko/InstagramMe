@@ -21,7 +21,7 @@
     if (self)
     {
         [self setImage:[UIImage me_likeImage] forState:UIControlStateNormal];
-        [self setImage:nil forState:UIControlStateHighlighted];
+        [self setImage:[UIImage me_likeHighlightedImage] forState:UIControlStateHighlighted];
     }
     return self;
 }

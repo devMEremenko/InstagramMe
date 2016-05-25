@@ -21,6 +21,8 @@
 
 - (void)preloadWithWindow:(UIWindow *)window
 {
+    [ANLogger initializeLogger];
+    
     self.window = window;
     [self.feedModule presentInWindow:window];
 }

@@ -23,7 +23,10 @@
     self.window = window;
     
     ANDispatchBlockToMainQueue(^{
-        [window setRootViewController:(UIViewController *)self.presenter.view];
+        UINavigationController* rootVC = [UINavigationController new];
+        [rootVC setViewControllers:@[self.presenter.view]];
+        
+        [window setRootViewController:rootVC];
         [window makeKeyAndVisible];
         
         [self presentAuthorizationModuleIfNeeded];

@@ -6,8 +6,6 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import "MEBaseShareView.h"
-
-@interface MELikeButton : MEBaseShareView
+@interface MELikeButton : UIButton
 
 @end

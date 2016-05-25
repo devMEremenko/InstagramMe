@@ -30,6 +30,7 @@
 - (void)dismissModule:(id<MENavigationModuleDelegate>)module
 {
     [self.router dismissModule:module];
+    [self.interactor findRecentMediaForCurrentUser];
 }
 
 #pragma mark - MEFeedModuleViewOutput
@@ -40,5 +41,26 @@
 }
 
 #pragma mark - MEFeedModuleInteractorOutput
+
+- (void)didFindRecentMedia:(MERecentMedia *)recentMedia
+{
+    ANDispatchBlockToMainQueue(^{
+        [self.view didFindRecentMedia:recentMedia];
+    });
+}
+
+- (void)didFindNextPageRecentMedia:(MERecentMedia *)recentMedia
+{
+    ANDispatchBlockToMainQueue(^{
+        [self.view didFindNextPageRecentMedia:recentMedia];
+    });
+}
+
+- (void)failedFindRecentMedia
+{
+    ANDispatchBlockToMainQueue(^{
+        [self.view failedFindRecentMedia];
+    });
+}
 
 @end

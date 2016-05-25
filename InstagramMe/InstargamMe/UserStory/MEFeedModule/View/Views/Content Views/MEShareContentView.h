@@ -6,8 +6,16 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MELikeButton.h"
+#import "MEReplyButton.h"
+#import "MECommentsButton.h"
 
 @interface MEShareContentView : UIView
+
+@property (strong, nonatomic) MELikeButton* likeButton;
+@property (strong, nonatomic) MECommentsButton* commentsButton;
+@property (strong, nonatomic) MEReplyButton* replyButton;
+
+@property (strong, nonatomic) UIView* separator;
 
 @end

@@ -10,4 +10,6 @@
 
 @protocol MEFeedModuleInteractorInput <NSObject>
 
+- (void)findRecentMediaForCurrentUser;
+
 @end

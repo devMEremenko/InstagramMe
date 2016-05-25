@@ -10,4 +10,19 @@
 
 @implementation MEReplyButton
 
+- (instancetype)init
+{
+    return [self initWithFrame:CGRectZero];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        [self setImage:[UIImage me_replyImage] forState:UIControlStateNormal];
+    }
+    return self;
+}
+
 @end

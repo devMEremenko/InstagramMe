@@ -20,6 +20,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>InstagramAppClientId</key>
+	<string>499d43d413cd40289edea14f55912f43</string>
+	<key>InstagramAppRedirectURL</key>
+	<string>https://instagram.com/login/callback</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -31,8 +35,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,9 +43,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>InstagramAppRedirectURL</key>
-	<string>https://instagram.com/login/callback</string>
-	<key>InstagramAppClientId</key>
-	<string>499d43d413cd40289edea14f55912f43</string>
 </dict>
 </plist>

@@ -8,10 +8,11 @@
 @class InstagramMedia;
 
 #import "MECommentLabel.h"
+#import "MEViewAllButton.h"
 
 @interface MECommentsContentView : UIView
 
-@property (strong, nonatomic) UIButton* viewAllCommentsButton;
+@property (strong, nonatomic) MEViewAllButton* viewAllCommentsButton;
 
 @property (strong, nonatomic) MECommentLabel* firstCommentLabel;
 @property (strong, nonatomic) MECommentLabel* secondCommentLabel;

@@ -48,8 +48,9 @@ CGFloat const kDefaultShareViewHeight = 50;
 
 - (void)setupWithMedia:(InstagramMedia *)media
 {
-    [self.commentsContentView setupWithMedia:media];
+    [self layoutIfNeeded];
     [self updateConstraints];
+    [self.commentsContentView setupWithMedia:media];
 }
 
 #pragma mark - Lazy Load

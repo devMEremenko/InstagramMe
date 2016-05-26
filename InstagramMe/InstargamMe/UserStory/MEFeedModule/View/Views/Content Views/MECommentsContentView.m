@@ -13,6 +13,7 @@
 CGFloat const kMECommentContentViewOffset = 12.f;
 CGFloat const kMEViewAllCommentsHeight = 22.f;
 CGFloat const kMEMaxCommentHeight = 80.f;
+CGFloat const kMaxCommentHeight = 90.f;
 
 NSInteger const kMEMaxCommentLenght = 150;
 NSInteger const kMEMaxViewingComment = 2;
@@ -45,7 +46,7 @@ NSInteger const kMEMaxViewingComment = 2;
     for (NSString* message in comments)
     {
         CGRect rect = [message me_commentsBoundingWithSize:surfaceSize];
-        result += rect.size.height;
+        result += rect.size.height < kMaxCommentHeight ? : kMaxCommentHeight;
     }
     return result + [self offsetBetweenComments:comments];
 }
@@ -69,6 +70,10 @@ NSInteger const kMEMaxViewingComment = 2;
     }];
     
     [self.firstCommentLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(self.viewAllCommentsButton.mas_bottom).with.offset(kMECommentContentViewOffset);
+        make.left.equalTo(self.mas_left).with.offset(kMECommentContentViewOffset);
+        make.right.equalTo(self.mas_right).with.offset(-kMECommentContentViewOffset);
         
         CGFloat heigt = [self heightCommentAtIndex:0];
         make.height.equalTo(@(heigt));
@@ -101,8 +106,7 @@ NSInteger const kMEMaxViewingComment = 2;
 - (void)setupWithMedia:(InstagramMedia *)media
 {
     self.media = media;
-    
-    [self.viewAllCommentsButton setTitle:@"Показать все комментарии" forState:UIControlStateNormal];
+
     NSInteger commentsCount = media.mComments.count;
     if (commentsCount >= 1)
     {
@@ -140,16 +144,14 @@ NSInteger const kMEMaxViewingComment = 2;
 
 #pragma mark - Lazy Load
 
-- (UIButton *)viewAllCommentsButton
+- (MEViewAllButton *)viewAllCommentsButton
 {
     if (!_viewAllCommentsButton)
     {
-        _viewAllCommentsButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        _viewAllCommentsButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        _viewAllCommentsButton = [MEViewAllButton buttonWithType:UIButtonTypeCustom];
         [self addSubview:_viewAllCommentsButton];
-        
+
         [_viewAllCommentsButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            
             make.top.equalTo(self).with.offset(kMECommentContentViewOffset);
             make.left.equalTo(self.mas_left).with.offset(kMECommentContentViewOffset);
             make.right.equalTo(self.mas_right).with.offset(-kMECommentContentViewOffset);
@@ -164,12 +166,6 @@ NSInteger const kMEMaxViewingComment = 2;
     {
         _firstCommentLabel = [MECommentLabel new];
         [self addSubview:_firstCommentLabel];
-        
-        [_firstCommentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.viewAllCommentsButton.mas_bottom).with.offset(kMECommentContentViewOffset);
-            make.left.equalTo(self.mas_left).with.offset(kMECommentContentViewOffset);
-            make.right.equalTo(self.mas_right).with.offset(-kMECommentContentViewOffset);
-        }];
     }
     return _firstCommentLabel;
 }

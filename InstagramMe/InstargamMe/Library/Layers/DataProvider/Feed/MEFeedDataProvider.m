@@ -76,7 +76,7 @@ NSInteger const MERequestedMediaCount = 10;
 - (NSMutableArray *)randomComments
 {
     NSString* c1 = @"Small comment #small";
-    NSString* c2 = @"This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome";
+    NSString* c2 = @"@m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome";
 //    NSString* c3 = @"London is the capital of Great Britain! #Britain #London #Capital";
 //    NSString* c4 = @"Blah blah blah... @m_a_lastname #smart_comment";
     

@@ -25,9 +25,24 @@
     return [UIColor colorWithWhite:0.f alpha:0.2];
 }
 
-+ (UIColor *)me_hashTagsColor
++ (UIColor *)me_viewAllButtonTitleColor
 {
     return UIColorWithRed(64, 93, 230, 1);
+}
+
++ (UIColor *)me_hashTagsColor
+{
+    return UIColorWithRed(64, 93, 230, 0.95);
+}
+
++ (UIColor *)me_userLinksColor
+{
+    return UIColorWithRed(64, 93, 230, 1);
+}
+
++ (UIColor *)me_truncationColor
+{
+    return UIColorWithRed(0, 0, 0, 0.3);
 }
 
 @end

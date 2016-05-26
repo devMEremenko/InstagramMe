@@ -9,8 +9,6 @@
 #import "MECommentLabel.h"
 #import "NSString+MEStringSize.h"
 
-NSString* const kMETruncationString = @"... More";
-
 @implementation MECommentLabel
 
 - (instancetype)init
@@ -27,9 +25,10 @@ NSString* const kMETruncationString = @"... More";
         self.font = [UIFont me_commentsFont];
         self.textColor = [UIColor me_commentsColor];
         self.customTruncationEnabled = YES;
-        self.truncationToken = kMETruncationString;
         
         [self enableHashTagDetectionWithAttributes:[NSString me_hashTagsAttributes]];
+        [self enableUserHandleDetectionWithAttributes:[NSString me_userLinksAttributes]];
+        [self setAttributedTruncationToken:[NSString me_truncationAttributedString]];
     }
     return self;
 }

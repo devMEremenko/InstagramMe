@@ -15,12 +15,27 @@ NSString* const kMEHelveticaBoldFont = @"Helvetica-Bold";
 
 + (UIFont *)me_commentsFont
 {
-    return [UIFont fontWithName:kMEHelveticaRegularFont size:18];
+    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
+}
+
++ (UIFont *)me_viewAllButtonFont
+{
+    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
 }
 
 + (UIFont *)me_hashTagsFont
 {
-    return [UIFont fontWithName:kMEHelveticaBoldFont size:18];
+    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
+}
+
++ (UIFont *)me_userLinksFont
+{
+    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
+}
+
++ (UIFont *)me_truncationFont
+{
+    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
 }
 
 @end

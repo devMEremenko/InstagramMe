@@ -92,7 +92,7 @@ CGFloat const kButtonHeightOffset = 4.f;
     if (!_separator)
     {
         _separator = [UIView new];
-        _separator.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.2];
+        _separator.backgroundColor = [UIColor me_commentSeperatorColor];
         [self addSubview:_separator];
         
         [_separator mas_makeConstraints:^(MASConstraintMaker *make) {

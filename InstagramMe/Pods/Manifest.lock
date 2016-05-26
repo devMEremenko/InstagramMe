@@ -37,7 +37,6 @@ PODS:
   - InstagramKit/Exclude-UICKeyChainStore (3.8):
     - AFNetworking (~> 3.0)
   - Masonry (1.0.0)
-  - MONUniformFlowLayout (0.0.1)
   - ReactiveCocoa (2.4.7):
     - ReactiveCocoa/UI (= 2.4.7)
   - ReactiveCocoa/Core (2.4.7):
@@ -45,6 +44,7 @@ PODS:
   - ReactiveCocoa/no-arc (2.4.7)
   - ReactiveCocoa/UI (2.4.7):
     - ReactiveCocoa/Core
+  - ResponsiveLabel (1.0.11)
   - TLYShyNavBar (1.1.0)
   - YYCache (1.0.3)
   - YYImage (1.0.2):
@@ -60,7 +60,7 @@ DEPENDENCIES:
   - ANLogger
   - InstagramKit (~> 3.0)
   - Masonry
-  - MONUniformFlowLayout
+  - ResponsiveLabel (~> 1.0.11)
   - TLYShyNavBar
   - YYWebImage
 
@@ -73,8 +73,8 @@ SPEC CHECKSUMS:
   CocoaLumberjack: f58d8a19629f4d8379ae14bb3534def24161430e
   InstagramKit: 402d6bba375357b548039de08eea19a1b8716354
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
-  MONUniformFlowLayout: 30d902f87b57bd5e0eb6591d95cb298f9db497ef
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
+  ResponsiveLabel: 9e31c425ed082481faf2360689243bb0ec8f8b22
   TLYShyNavBar: 3150e9a03ff8ab5fd81de00167e8829b91af8326
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   YYImage: 2cc79ed49b9549b71c6715cefe7b0f5ab3d33abf

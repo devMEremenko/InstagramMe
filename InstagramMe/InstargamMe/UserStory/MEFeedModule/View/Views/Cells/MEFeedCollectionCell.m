@@ -18,7 +18,7 @@ CGFloat const kDefaultShareViewHeight = 50;
     CGSize result = CGSizeZero;
     result.height += CGRectGetWidth(collectionView.bounds);
     result.height += kDefaultShareViewHeight;
-    result.height += [MECommentsContentView heightWithComments:media.comments];
+    result.height += [MECommentsContentView heightWithMedia:media inSize:collectionView.bounds.size];
     
     result.width = CGRectGetWidth(collectionView.bounds);
 
@@ -48,7 +48,8 @@ CGFloat const kDefaultShareViewHeight = 50;
 
 - (void)setupWithMedia:(InstagramMedia *)media
 {
-    
+    [self.commentsContentView setupWithMedia:media];
+    [self updateConstraints];
 }
 
 #pragma mark - Lazy Load
@@ -98,9 +99,9 @@ CGFloat const kDefaultShareViewHeight = 50;
         
         [_commentsContentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.shareContentView.mas_bottom);
-            make.left.equalTo(self.contentView);
-            make.right.equalTo(self.contentView);
-            make.bottom.equalTo(self.contentView);
+            make.left.equalTo(self.contentView.mas_left);
+            make.right.equalTo(self.contentView.mas_right);
+            make.bottom.equalTo(self.contentView.mas_bottom);
         }];
     }
     return _commentsContentView;

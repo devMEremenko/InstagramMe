@@ -11,17 +11,17 @@
 #import "MEFeedCollectionCell.h"
 #import "TLYShyNavBarManager.h"
 #import "MERecentMediaDataSource.h"
-#import "MONUniformFlowLayout.h"
+#import "InstagramMe-Swift.h"
 
-@interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MONUniformFlowLayoutDelegate>
+@interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) UICollectionView* collectionView;
 @property (strong, nonatomic) TLYShyNavBarManager* topNavigationBar;
 @property (strong, nonatomic) id <MEFeedDataSourceProtocol> dataSource;
-@property (strong, nonatomic) MONUniformFlowLayout* layout;
 
 @end
 
+CGSize const MEFeedHeaderSize = {1, 58};
 NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier";
 
 @implementation MEFeedModuleViewController
@@ -83,29 +83,23 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
 {
     UICollectionReusableView *reusableview = nil;
     
-    if (kind == UICollectionElementKindSectionHeader) {
+    if (kind == UICollectionElementKindSectionHeader)
+    {
         UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
         headerView.backgroundColor = [UIColor purpleColor];
         
         reusableview = headerView;
     }
     
-    if (kind == UICollectionElementKindSectionFooter) {
-        UICollectionReusableView *footerview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"header" forIndexPath:indexPath];
-        
-        reusableview = footerview;
-    }
-    
     return reusableview;
 }
 
-#pragma mark - MONUniformFlowLayoutDelegate
+#pragma mark - UICollectionViewDelegateFlowLayout
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(MONUniformFlowLayout *)layout itemHeightInSection:(NSInteger)section
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSIndexPath* indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
     id media = [self.dataSource itemAtIndexPath:indexPath];
-    return [MEFeedCollectionCell sizeWithMedia:media inCollectionView:collectionView].height;
+    return [MEFeedCollectionCell sizeWithMedia:media inCollectionView:collectionView];
 }
 
 #pragma mark - Helpers
@@ -123,13 +117,9 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
 {
     if (!_collectionView)
     {
-        MONUniformFlowLayout* layout = [MONUniformFlowLayout new];
-        self.layout = layout;
-        layout.minimumLineSpacing = 0;
-        layout.interItemSpacing = MONInterItemSpacingMake(10.0f, 10.0f);
-        layout.enableStickyHeader = YES;
-        [layout setHeaderReferenceSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 60)];
-
+        ASFloatingHeadersFlowLayout* layout = [ASFloatingHeadersFlowLayout new];
+        layout.headerReferenceSize = MEFeedHeaderSize;
+        
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor orangeColor];
         _collectionView.dataSource = self;
@@ -137,8 +127,7 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
         [_collectionView registerClass:[MEFeedCollectionCell class]
             forCellWithReuseIdentifier:kFeedCollectionCellIdentifier];
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
-        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"header"];
-
+        
         [self.view addSubview:_collectionView];
         
         [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -34,6 +34,11 @@
 		FAF32CE41CF678B700C31DB1 /* MEMediaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CE31CF678B700C31DB1 /* MEMediaResponse.m */; };
 		FAF32CEB1CF67EC200C31DB1 /* MEFeedDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CEA1CF67EC200C31DB1 /* MEFeedDataProvider.m */; };
 		FAF32CEE1CF67F8400C31DB1 /* MERecentMediaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CED1CF67F8400C31DB1 /* MERecentMediaDataSource.m */; };
+		FAF32CF81CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CF71CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift */; };
+		FAF32D001CF75C2A00C31DB1 /* NSString+MEStringSize.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CFF1CF75C2A00C31DB1 /* NSString+MEStringSize.m */; };
+		FAF32D031CF75E3800C31DB1 /* UIFont+MEFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D021CF75E3800C31DB1 /* UIFont+MEFonts.m */; };
+		FAF32D061CF75EDE00C31DB1 /* UIColor+MEColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D051CF75EDE00C31DB1 /* UIColor+MEColors.m */; };
+		FAF32D0A1CF761BA00C31DB1 /* MECommentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D091CF761BA00C31DB1 /* MECommentLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +112,16 @@
 		FAF32CEC1CF67F8400C31DB1 /* MERecentMediaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERecentMediaDataSource.h; sourceTree = "<group>"; };
 		FAF32CED1CF67F8400C31DB1 /* MERecentMediaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERecentMediaDataSource.m; sourceTree = "<group>"; };
 		FAF32CF01CF6804600C31DB1 /* MEFeedDataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedDataSourceProtocol.h; sourceTree = "<group>"; };
+		FAF32CF71CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASFloatingHeadersFlowLayout.swift; sourceTree = "<group>"; };
+		FAF32CF91CF69DE400C31DB1 /* InstagramMe-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "InstagramMe-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAF32CFE1CF75C2A00C31DB1 /* NSString+MEStringSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MEStringSize.h"; sourceTree = "<group>"; };
+		FAF32CFF1CF75C2A00C31DB1 /* NSString+MEStringSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MEStringSize.m"; sourceTree = "<group>"; };
+		FAF32D011CF75E3800C31DB1 /* UIFont+MEFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MEFonts.h"; sourceTree = "<group>"; };
+		FAF32D021CF75E3800C31DB1 /* UIFont+MEFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MEFonts.m"; sourceTree = "<group>"; };
+		FAF32D041CF75EDE00C31DB1 /* UIColor+MEColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MEColors.h"; sourceTree = "<group>"; };
+		FAF32D051CF75EDE00C31DB1 /* UIColor+MEColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MEColors.m"; sourceTree = "<group>"; };
+		FAF32D081CF761BA00C31DB1 /* MECommentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECommentLabel.h; sourceTree = "<group>"; };
+		FAF32D091CF761BA00C31DB1 /* MECommentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECommentLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +364,7 @@
 		FAF32C851CF3C4DC00C31DB1 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				FAF32CFA1CF75AB300C31DB1 /* Builders */,
 				FAF32CAA1CF4880600C31DB1 /* Categories */,
 				FAF32C8A1CF3C57B00C31DB1 /* Headers */,
 				FAF32C861CF3C4FB00C31DB1 /* Layers */,
@@ -369,8 +385,9 @@
 		FAF32C8A1CF3C57B00C31DB1 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				FAF32C8B1CF3C57B00C31DB1 /* MEGlobalHeader.h */,
 				FAF32C8C1CF3C57B00C31DB1 /* MEPrefixHeader.pch */,
+				FAF32C8B1CF3C57B00C31DB1 /* MEGlobalHeader.h */,
+				FAF32CF91CF69DE400C31DB1 /* InstagramMe-Bridging-Header.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -378,6 +395,7 @@
 		FAF32C8D1CF3C92400C31DB1 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FAF32CF11CF69C1F00C31DB1 /* ASFloatingHeadersFlowLayout */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -388,6 +406,7 @@
 				FAF32C9F1CF485BE00C31DB1 /* Cells */,
 				FAF32C9B1CF4848500C31DB1 /* Content Views */,
 				FAF32CA31CF485D200C31DB1 /* Buttons */,
+				FAF32D071CF761A000C31DB1 /* Labels */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,8 +455,14 @@
 		FAF32CAA1CF4880600C31DB1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				FAF32D011CF75E3800C31DB1 /* UIFont+MEFonts.h */,
+				FAF32D021CF75E3800C31DB1 /* UIFont+MEFonts.m */,
+				FAF32D041CF75EDE00C31DB1 /* UIColor+MEColors.h */,
+				FAF32D051CF75EDE00C31DB1 /* UIColor+MEColors.m */,
 				FAF32CAC1CF4885200C31DB1 /* UIImage+MEDefault.h */,
 				FAF32CAD1CF4885200C31DB1 /* UIImage+MEDefault.m */,
+				FAF32CFE1CF75C2A00C31DB1 /* NSString+MEStringSize.h */,
+				FAF32CFF1CF75C2A00C31DB1 /* NSString+MEStringSize.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -484,6 +509,30 @@
 				FAF32CF01CF6804600C31DB1 /* MEFeedDataSourceProtocol.h */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		FAF32CF11CF69C1F00C31DB1 /* ASFloatingHeadersFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CF71CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift */,
+			);
+			path = ASFloatingHeadersFlowLayout;
+			sourceTree = "<group>";
+		};
+		FAF32CFA1CF75AB300C31DB1 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		FAF32D071CF761A000C31DB1 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32D081CF761BA00C31DB1 /* MECommentLabel.h */,
+				FAF32D091CF761BA00C31DB1 /* MECommentLabel.m */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF32D0A1CF761BA00C31DB1 /* MECommentLabel.m in Sources */,
 				FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */,
 				FAF32CE41CF678B700C31DB1 /* MEMediaResponse.m in Sources */,
 				FAF32CEB1CF67EC200C31DB1 /* MEFeedDataProvider.m in Sources */,
@@ -614,6 +664,7 @@
 				FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */,
 				FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */,
 				FAF32CA21CF485BE00C31DB1 /* MEFeedCollectionCell.m in Sources */,
+				FAF32D031CF75E3800C31DB1 /* UIFont+MEFonts.m in Sources */,
 				FAF32C9E1CF484BB00C31DB1 /* MEShareContentView.m in Sources */,
 				FADEDF2B1CF3C2BE008F6E75 /* MEAuthorizationPresenter.m in Sources */,
 				FADEDF2A1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m in Sources */,
@@ -622,9 +673,12 @@
 				FADEDF2C1CF3C2BE008F6E75 /* MEAuthorizationRouter.m in Sources */,
 				FADEDF2E1CF3C2BE008F6E75 /* MEFeedModuleAssembly.m in Sources */,
 				FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */,
+				FAF32D001CF75C2A00C31DB1 /* NSString+MEStringSize.m in Sources */,
 				FA14D3E01CF311790024F6CC /* main.m in Sources */,
+				FAF32D061CF75EDE00C31DB1 /* UIColor+MEColors.m in Sources */,
 				FAF32CA61CF485EE00C31DB1 /* MELikeButton.m in Sources */,
 				FAF32CEE1CF67F8400C31DB1 /* MERecentMediaDataSource.m in Sources */,
+				FAF32CF81CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift in Sources */,
 				FADEDF2F1CF3C2BE008F6E75 /* MEFeedModuleInteractor.m in Sources */,
 				FADEDF301CF3C2BE008F6E75 /* MEFeedModulePresenter.m in Sources */,
 				FADEDF291CF3C2BE008F6E75 /* MEAuthorizationAssembly.m in Sources */,
@@ -656,6 +710,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -675,6 +730,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = InstagramMe;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -700,6 +756,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -712,6 +769,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = InstagramMe;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -737,7 +795,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "InstargamMe/Vendor/ASFloatingHeadersFlowLayout/InstagramMe-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstargamMe/Library/Headers/InstagramMe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -761,7 +819,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "InstargamMe/Vendor/ASFloatingHeadersFlowLayout/InstagramMe-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstargamMe/Library/Headers/InstagramMe-Bridging-Header.h";
 			};
 			name = Release;
 		};

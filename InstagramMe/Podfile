@@ -23,7 +23,8 @@ pod 'ANBaseDomainModel'
 pod 'Masonry'
 pod 'YYWebImage'
 pod 'TLYShyNavBar'
-pod 'MONUniformFlowLayout'
+pod 'ResponsiveLabel', '~> 1.0.11'
+
 
 end
 

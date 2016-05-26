@@ -76,19 +76,24 @@ NSInteger const MERequestedMediaCount = 10;
 - (NSMutableArray *)randomComments
 {
     NSString* c1 = @"Small comment #small";
-    NSString* c2 = @"This is awesome! This is awesome! This is awesome! #awesome";
-    NSString* c3 = @"London is the capital of Great Britain! #Britain #London #Capital";
-    NSString* c4 = @"Blah blah blah... @m_a_lastname #smart_comment";
+    NSString* c2 = @"This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome";
+//    NSString* c3 = @"London is the capital of Great Britain! #Britain #London #Capital";
+//    NSString* c4 = @"Blah blah blah... @m_a_lastname #smart_comment";
     
-    NSArray* comments = @[c1, c2, c3, c4];
-    NSInteger countOfComments = arc4random() % comments.count;
+//    NSArray* comments = @[c1, c2, c3, c4];
+//    NSInteger countOfComments = arc4random() % comments.count;
     
     NSMutableArray* result = [NSMutableArray array];
+    /*
     for (NSInteger i = 0; i < countOfComments; i++)
     {
         NSInteger index = arc4random() % comments.count;
         [result addObject:comments[index]];
-    }
+    } */
+    [result addObject:c2];
+    [result addObject:c1];
+//    [result addObject:c1];
+
     return result;
 }
 

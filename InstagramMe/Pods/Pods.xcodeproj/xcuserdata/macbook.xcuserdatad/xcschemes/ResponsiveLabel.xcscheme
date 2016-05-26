@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E2A501A86CDCD2FC28DD1284'
-               BlueprintName = 'MONUniformFlowLayout'
+               BlueprintIdentifier = 'CAA516F3FA099E679C861970'
+               BlueprintName = 'ResponsiveLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMONUniformFlowLayout.a'>
+               BuildableName = 'libResponsiveLabel.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -169,6 +169,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)isEqualToMedia:(InstagramMedia *)media;
 
+@property (nonatomic, strong) NSMutableArray *mComments;
+
 @end
 
 NS_ASSUME_NONNULL_END

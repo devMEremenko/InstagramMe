@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EA6098F79EDB5E4F3A3114F5'
+               BlueprintIdentifier = '183E278D08C3350E1E93E862'
                BlueprintName = 'ANCategories'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libANCategories.a'>

@@ -42,17 +42,17 @@
 
 #pragma mark - MEFeedModuleInteractorOutput
 
-- (void)didFindRecentMedia:(MERecentMedia *)recentMedia
+- (void)didFindRecentMedia:(MEMediaResponse *)mediaResponse
 {
     ANDispatchBlockToMainQueue(^{
-        [self.view didFindRecentMedia:recentMedia];
+        [self.view didFindRecentMedia:mediaResponse];
     });
 }
 
-- (void)didFindNextPageRecentMedia:(MERecentMedia *)recentMedia
+- (void)didFindNextPageRecentMedia:(MEMediaResponse *)mediaResponse
 {
     ANDispatchBlockToMainQueue(^{
-        [self.view didFindNextPageRecentMedia:recentMedia];
+        [self.view didFindNextPageRecentMedia:mediaResponse];
     });
 }
 

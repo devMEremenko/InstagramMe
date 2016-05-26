@@ -23,6 +23,7 @@ pod 'ANBaseDomainModel'
 pod 'Masonry'
 pod 'YYWebImage'
 pod 'TLYShyNavBar'
+pod 'MONUniformFlowLayout'
 
 end
 

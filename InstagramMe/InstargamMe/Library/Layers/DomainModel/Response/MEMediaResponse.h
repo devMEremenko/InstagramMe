@@ -1,5 +1,5 @@
 //
-//  MERecentMedia.h
+//  MEMediaResponse.h
 //  InstagramMe
 //
 //  Created by Maxim Eremenko on 5/26/16.
@@ -7,10 +7,10 @@
 //
 
 #import <ANBaseDomainModel/ANBaseDomainModel.h>
-#import "InstagramKit.h"
+@class InstagramMedia;
 
-@interface MERecentMedia : ANBaseDomainModel
+@interface MEMediaResponse : NSObject
 
-@property (strong, nonatomic) NSArray<InstagramMedia*>* media;
+@property (strong, nonatomic) NSArray<InstagramMedia*>* recentMedia;
 
 @end

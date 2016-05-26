@@ -6,15 +6,15 @@
 //  Copyright 2016 Maxim Eremenko. All rights reserved.
 //
 
-@class MERecentMedia;
+@class MEMediaResponse;
 
 @protocol MEFeedModuleViewInput <NSObject>
 
 - (void)setupInitialState;
 
-- (void)didFindRecentMedia:(MERecentMedia *)recentMedia;
+- (void)didFindRecentMedia:(MEMediaResponse *)recentMedia;
 
-- (void)didFindNextPageRecentMedia:(MERecentMedia *)recentMedia;
+- (void)didFindNextPageRecentMedia:(MEMediaResponse *)recentMedia;
 
 - (void)failedFindRecentMedia;
 

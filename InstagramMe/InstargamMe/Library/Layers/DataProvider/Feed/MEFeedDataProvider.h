@@ -6,9 +6,9 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
-@class MERecentMedia;
+@class MEMediaResponse;
 
-typedef void(^MERecentMediaComletion)(MERecentMedia* recentMedia, NSError* error);
+typedef void(^MERecentMediaComletion)(MEMediaResponse* recentMedia, NSError* error);
 
 @interface MEFeedDataProvider : NSObject
 

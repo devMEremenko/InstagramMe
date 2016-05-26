@@ -7,10 +7,23 @@
 //
 
 #import "MEFeedCollectionCell.h"
+#import "InstagramKit.h"
 
-CGFloat const kDefaultShareViewHeight = 60;
+CGFloat const kDefaultShareViewHeight = 50;
 
 @implementation MEFeedCollectionCell
+
++ (CGSize)sizeWithMedia:(InstagramMedia *)media inCollectionView:(UICollectionView *)collectionView
+{
+    CGSize result = CGSizeZero;
+    result.height += CGRectGetWidth(collectionView.bounds);
+    result.height += kDefaultShareViewHeight;
+    result.height += [MECommentsContentView heightWithComments:media.comments];
+    
+    result.width = CGRectGetWidth(collectionView.bounds);
+
+    return result;
+}
 
 #pragma mark - Initialization
 
@@ -29,6 +42,13 @@ CGFloat const kDefaultShareViewHeight = 60;
         [self commentsContentView];
     }
     return self;
+}
+
+#pragma mark - 
+
+- (void)setupWithMedia:(InstagramMedia *)media
+{
+    
 }
 
 #pragma mark - Lazy Load

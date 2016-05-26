@@ -10,4 +10,9 @@
 
 @implementation MECommentsContentView
 
++ (CGFloat)heightWithComments:(NSArray<InstagramComment *> *)comments
+{
+    return 0.f;
+}
+
 @end

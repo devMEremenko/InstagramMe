@@ -6,13 +6,13 @@
 //  Copyright 2016 Maxim Eremenko. All rights reserved.
 //
 
-@class MERecentMedia;
+@class MEMediaResponse;
 
 @protocol MEFeedModuleInteractorOutput <NSObject>
 
-- (void)didFindRecentMedia:(MERecentMedia *)recentMedia;
+- (void)didFindRecentMedia:(MEMediaResponse *)mediaResponse;
 
-- (void)didFindNextPageRecentMedia:(MERecentMedia *)recentMedia;
+- (void)didFindNextPageRecentMedia:(MEMediaResponse *)mediaResponse;
 
 - (void)failedFindRecentMedia;
 

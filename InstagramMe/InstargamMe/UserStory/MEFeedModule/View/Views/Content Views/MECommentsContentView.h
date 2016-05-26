@@ -5,9 +5,10 @@
 //  Created by Maxim Eremenko on 5/24/16.
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
-
-#import <UIKit/UIKit.h>
+@class InstagramComment;
 
 @interface MECommentsContentView : UIView
+
++ (CGFloat)heightWithComments:(NSArray<InstagramComment *> *)comments;
 
 @end

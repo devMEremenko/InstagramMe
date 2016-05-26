@@ -31,7 +31,7 @@
 
 - (void)setupInitialState
 {
-    NSURL *authURL = [[InstagramEngine sharedEngine] authorizationURL];
+    NSURL *authURL = [[InstagramEngine sharedEngine] authorizationURLForScope:[self authorizationScope]];
     [self.webView loadRequest:[NSURLRequest requestWithURL:authURL]];
 }
 
@@ -83,6 +83,11 @@
         }];
     }
     return _topBar;
+}
+
+- (InstagramKitLoginScope)authorizationScope
+{
+    return InstagramKitLoginScopeBasic | InstagramKitLoginScopePublicContent | InstagramKitLoginScopeComments | InstagramKitLoginScopeLikes | InstagramKitLoginScopeFollowerList | InstagramKitLoginScopeRelationships;
 }
 
 @end

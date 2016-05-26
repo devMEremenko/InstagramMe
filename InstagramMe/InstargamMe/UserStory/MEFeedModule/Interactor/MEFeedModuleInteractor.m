@@ -20,25 +20,25 @@
 
 - (void)findRecentMediaForCurrentUser
 {
-    [self.feedDataProvider recentMediaForCurrentUser:^(MERecentMedia* recentMedia, NSError *error) {
-        [self notifyDelegateAboutRecentMedia:recentMedia error:error];
+    [self.feedDataProvider recentMediaForCurrentUser:^(MEMediaResponse* mediaResponse, NSError *error) {
+        [self notifyDelegateAboutRecentMedia:mediaResponse error:error];
     }];
 }
 
 - (void)findNextPageRecentMedia
 {
-    [self.feedDataProvider nextPageRecentMedia:^(MERecentMedia* recentMedia, NSError *error) {
-        [self notifyDelegateAboutNextPageRecentMedia:recentMedia error:error];
+    [self.feedDataProvider nextPageRecentMedia:^(MEMediaResponse* mediaResponse, NSError *error) {
+        [self notifyDelegateAboutNextPageRecentMedia:mediaResponse error:error];
     }];
 }
 
 #pragma mark - Output
 
-- (void)notifyDelegateAboutRecentMedia:(MERecentMedia *)recentMedia error:(NSError *)error
+- (void)notifyDelegateAboutRecentMedia:(MEMediaResponse *)mediaResponse error:(NSError *)error
 {
     if (!error)
     {
-        [self.output didFindRecentMedia:recentMedia];
+        [self.output didFindRecentMedia:mediaResponse];
     }
     else
     {
@@ -46,11 +46,11 @@
     }
 }
 
-- (void)notifyDelegateAboutNextPageRecentMedia:(MERecentMedia *)recentMedia error:(NSError *)error
+- (void)notifyDelegateAboutNextPageRecentMedia:(MEMediaResponse *)mediaResponse error:(NSError *)error
 {
     if (!error)
     {
-        [self.output didFindNextPageRecentMedia:recentMedia];
+        [self.output didFindNextPageRecentMedia:mediaResponse];
     }
     else
     {

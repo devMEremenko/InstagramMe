@@ -10,11 +10,15 @@
 #import "MEFeedModuleViewOutput.h"
 #import "MEFeedCollectionCell.h"
 #import "TLYShyNavBarManager.h"
+#import "MERecentMediaDataSource.h"
+#import "MONUniformFlowLayout.h"
 
-@interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MONUniformFlowLayoutDelegate>
 
 @property (strong, nonatomic) UICollectionView* collectionView;
 @property (strong, nonatomic) TLYShyNavBarManager* topNavigationBar;
+@property (strong, nonatomic) id <MEFeedDataSourceProtocol> dataSource;
+@property (strong, nonatomic) MONUniformFlowLayout* layout;
 
 @end
 
@@ -37,14 +41,16 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
     [self setupUserInterface];
 }
 
-- (void)didFindRecentMedia:(MERecentMedia *)recentMedia
+- (void)didFindRecentMedia:(MEMediaResponse *)mediaResponse
 {
-    
+    [self.dataSource setMediaFromResponse:mediaResponse];
+    [self.collectionView reloadData];
 }
 
-- (void)didFindNextPageRecentMedia:(MERecentMedia *)recentMedia
+- (void)didFindNextPageRecentMedia:(MEMediaResponse *)mediaResponse
 {
-    
+    [self.dataSource addMediaFromResponse:mediaResponse];
+    [self.collectionView reloadData];
 }
 
 - (void)failedFindRecentMedia
@@ -52,24 +58,24 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
     
 }
 
-
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 20;
+    return [self.dataSource numberOfItemSections];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.dataSource numberOfItemsInSection:section];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MEFeedCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kFeedCollectionCellIdentifier forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor redColor];
+    [cell setupWithMedia:[self.dataSource itemAtIndexPath:indexPath]];
+    
     return cell;
 }
 
@@ -85,12 +91,21 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
     }
     
     if (kind == UICollectionElementKindSectionFooter) {
-        UICollectionReusableView *footerview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
+        UICollectionReusableView *footerview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"header" forIndexPath:indexPath];
         
         reusableview = footerview;
     }
     
     return reusableview;
+}
+
+#pragma mark - MONUniformFlowLayoutDelegate
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(MONUniformFlowLayout *)layout itemHeightInSection:(NSInteger)section
+{
+    NSIndexPath* indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
+    id media = [self.dataSource itemAtIndexPath:indexPath];
+    return [MEFeedCollectionCell sizeWithMedia:media inCollectionView:collectionView].height;
 }
 
 #pragma mark - Helpers
@@ -108,9 +123,11 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
 {
     if (!_collectionView)
     {
-        UICollectionViewFlowLayout* layout = [UICollectionViewFlowLayout new];
+        MONUniformFlowLayout* layout = [MONUniformFlowLayout new];
+        self.layout = layout;
         layout.minimumLineSpacing = 0;
-        layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.frame), 500);
+        layout.interItemSpacing = MONInterItemSpacingMake(10.0f, 10.0f);
+        layout.enableStickyHeader = YES;
         [layout setHeaderReferenceSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 60)];
 
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
@@ -120,7 +137,8 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
         [_collectionView registerClass:[MEFeedCollectionCell class]
             forCellWithReuseIdentifier:kFeedCollectionCellIdentifier];
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
-        
+        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"header"];
+
         [self.view addSubview:_collectionView];
         
         [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -131,6 +149,17 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
         }];
     }
     return _collectionView;
+}
+
+#pragma mark - Lazy Load
+
+- (MERecentMediaDataSource <MEFeedDataSourceProtocol> *)dataSource
+{
+    if (!_dataSource)
+    {
+        _dataSource = [MERecentMediaDataSource new];
+    }
+    return _dataSource;
 }
 
 @end

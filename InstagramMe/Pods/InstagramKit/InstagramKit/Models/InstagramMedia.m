@@ -33,7 +33,6 @@
 @property (nonatomic, strong) InstagramComment *caption;
 @property (nonatomic, strong) NSMutableArray *mLikes;
 @property (nonatomic, assign) NSInteger likesCount;
-@property (nonatomic, strong) NSMutableArray *mComments;
 @property (nonatomic, assign) NSInteger commentsCount;
 @property (nonatomic, strong) NSMutableArray *mUsersInPhoto;
 @property (nonatomic, strong) NSArray *tags;

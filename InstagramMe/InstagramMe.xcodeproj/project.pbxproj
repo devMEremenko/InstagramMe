@@ -30,9 +30,10 @@
 		FAF32CB11CF48FD700C31DB1 /* MECommentsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB01CF48FD700C31DB1 /* MECommentsButton.m */; };
 		FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB61CF4A8A000C31DB1 /* MEReplyButton.m */; };
 		FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB91CF4AF8900C31DB1 /* MECommentsContentView.m */; };
-		FAF32CC51CF639BC00C31DB1 /* MEFeedDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CC41CF639BC00C31DB1 /* MEFeedDataProvider.m */; };
 		FAF32CC71CF6469600C31DB1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF32CC61CF6469600C31DB1 /* Security.framework */; };
-		FAF32CDD1CF6662F00C31DB1 /* MERecentMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CDC1CF6662F00C31DB1 /* MERecentMedia.m */; };
+		FAF32CE41CF678B700C31DB1 /* MEMediaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CE31CF678B700C31DB1 /* MEMediaResponse.m */; };
+		FAF32CEB1CF67EC200C31DB1 /* MEFeedDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CEA1CF67EC200C31DB1 /* MEFeedDataProvider.m */; };
+		FAF32CEE1CF67F8400C31DB1 /* MERecentMediaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CED1CF67F8400C31DB1 /* MERecentMediaDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,11 +99,14 @@
 		FAF32CB61CF4A8A000C31DB1 /* MEReplyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEReplyButton.m; sourceTree = "<group>"; };
 		FAF32CB81CF4AF8900C31DB1 /* MECommentsContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECommentsContentView.h; sourceTree = "<group>"; };
 		FAF32CB91CF4AF8900C31DB1 /* MECommentsContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECommentsContentView.m; sourceTree = "<group>"; };
-		FAF32CC31CF639BC00C31DB1 /* MEFeedDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedDataProvider.h; sourceTree = "<group>"; };
-		FAF32CC41CF639BC00C31DB1 /* MEFeedDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedDataProvider.m; sourceTree = "<group>"; };
 		FAF32CC61CF6469600C31DB1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		FAF32CDB1CF6662F00C31DB1 /* MERecentMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERecentMedia.h; sourceTree = "<group>"; };
-		FAF32CDC1CF6662F00C31DB1 /* MERecentMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERecentMedia.m; sourceTree = "<group>"; };
+		FAF32CE21CF678B700C31DB1 /* MEMediaResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEMediaResponse.h; sourceTree = "<group>"; };
+		FAF32CE31CF678B700C31DB1 /* MEMediaResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMediaResponse.m; sourceTree = "<group>"; };
+		FAF32CE91CF67EC200C31DB1 /* MEFeedDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedDataProvider.h; sourceTree = "<group>"; };
+		FAF32CEA1CF67EC200C31DB1 /* MEFeedDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedDataProvider.m; sourceTree = "<group>"; };
+		FAF32CEC1CF67F8400C31DB1 /* MERecentMediaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERecentMediaDataSource.h; sourceTree = "<group>"; };
+		FAF32CED1CF67F8400C31DB1 /* MERecentMediaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERecentMediaDataSource.m; sourceTree = "<group>"; };
+		FAF32CF01CF6804600C31DB1 /* MEFeedDataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedDataSourceProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,8 +452,7 @@
 		FAF32CC21CF6397100C31DB1 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
-				FAF32CC31CF639BC00C31DB1 /* MEFeedDataProvider.h */,
-				FAF32CC41CF639BC00C31DB1 /* MEFeedDataProvider.m */,
+				FAF32CE81CF67EC200C31DB1 /* Feed */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -457,10 +460,30 @@
 		FAF32CD71CF6647800C31DB1 /* DomainModel */ = {
 			isa = PBXGroup;
 			children = (
-				FAF32CDB1CF6662F00C31DB1 /* MERecentMedia.h */,
-				FAF32CDC1CF6662F00C31DB1 /* MERecentMedia.m */,
+				FAF32CE11CF678A400C31DB1 /* Response */,
 			);
 			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		FAF32CE11CF678A400C31DB1 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CE21CF678B700C31DB1 /* MEMediaResponse.h */,
+				FAF32CE31CF678B700C31DB1 /* MEMediaResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FAF32CE81CF67EC200C31DB1 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32CE91CF67EC200C31DB1 /* MEFeedDataProvider.h */,
+				FAF32CEA1CF67EC200C31DB1 /* MEFeedDataProvider.m */,
+				FAF32CEC1CF67F8400C31DB1 /* MERecentMediaDataSource.h */,
+				FAF32CED1CF67F8400C31DB1 /* MERecentMediaDataSource.m */,
+				FAF32CF01CF6804600C31DB1 /* MEFeedDataSourceProtocol.h */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,7 +608,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */,
-				FAF32CDD1CF6662F00C31DB1 /* MERecentMedia.m in Sources */,
+				FAF32CE41CF678B700C31DB1 /* MEMediaResponse.m in Sources */,
+				FAF32CEB1CF67EC200C31DB1 /* MEFeedDataProvider.m in Sources */,
 				FADEDF311CF3C2BE008F6E75 /* MEFeedModuleRouter.m in Sources */,
 				FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */,
 				FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */,
@@ -593,7 +617,6 @@
 				FAF32C9E1CF484BB00C31DB1 /* MEShareContentView.m in Sources */,
 				FADEDF2B1CF3C2BE008F6E75 /* MEAuthorizationPresenter.m in Sources */,
 				FADEDF2A1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m in Sources */,
-				FAF32CC51CF639BC00C31DB1 /* MEFeedDataProvider.m in Sources */,
 				FADEDF321CF3C2BE008F6E75 /* MEFeedModuleViewController.m in Sources */,
 				FADEDF2D1CF3C2BE008F6E75 /* MEAuthorizationViewController.m in Sources */,
 				FADEDF2C1CF3C2BE008F6E75 /* MEAuthorizationRouter.m in Sources */,
@@ -601,6 +624,7 @@
 				FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */,
 				FA14D3E01CF311790024F6CC /* main.m in Sources */,
 				FAF32CA61CF485EE00C31DB1 /* MELikeButton.m in Sources */,
+				FAF32CEE1CF67F8400C31DB1 /* MERecentMediaDataSource.m in Sources */,
 				FADEDF2F1CF3C2BE008F6E75 /* MEFeedModuleInteractor.m in Sources */,
 				FADEDF301CF3C2BE008F6E75 /* MEFeedModulePresenter.m in Sources */,
 				FADEDF291CF3C2BE008F6E75 /* MEAuthorizationAssembly.m in Sources */,

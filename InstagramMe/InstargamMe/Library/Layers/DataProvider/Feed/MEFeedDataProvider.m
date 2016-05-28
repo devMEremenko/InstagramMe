@@ -75,7 +75,7 @@ NSInteger const MERequestedMediaCount = 10;
 
 - (NSMutableArray *)randomComments
 {
-    NSString* c1 = @"@olegpanfyorov1988 Small comment #small about everything";
+    NSString* c1 = @"@olegpanfyorov1988 Small comment #small about everything. Small comment #small about everything. #hashtag Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything";
     NSString* c2 = @"@m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome";
 //    NSString* c3 = @"London is the capital of Great Britain! #Britain #London #Capital";
 //    NSString* c4 = @"Blah blah blah... @m_a_lastname #smart_comment";
@@ -93,7 +93,7 @@ NSInteger const MERequestedMediaCount = 10;
     
     InstagramComment* comment1 = [InstagramComment new];
     [comment1 setCommentCreatedDate:[NSDate date]];
-    [comment1 setCommentText:c2];
+    [comment1 setCommentText:c1];
     
     InstagramComment* comment2 = [InstagramComment new];
     [comment2 setCommentCreatedDate:[NSDate date]];

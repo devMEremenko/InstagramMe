@@ -23,4 +23,6 @@
 
 - (void)setupWithMedia:(InstagramMedia *)media;
 
+- (void)handleTapOnCommentLabel:(MECommentLabel *)label;
+
 @end

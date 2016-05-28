@@ -95,9 +95,7 @@
     
     NSTextContainer* container = [self containerWithUpdatingAttributes];
     container.size = rect.size;
-    
-    NSTextStorage* storage = [[NSTextStorage alloc]initWithAttributedString:self.attributedText];
-    [storage addLayoutManager:self.layoutManager];
+    [self.storage setAttributedString:self.attributedText];
     
     NSRange glyphRange = [self.layoutManager glyphRangeForTextContainer:container];
     CGRect frame = [self.layoutManager usedRectForTextContainer:container];
@@ -116,9 +114,7 @@
     
     NSTextContainer* container = [self containerWithUpdatingAttributes];
     container.size = size;
-    
-    NSTextStorage* storage = [[NSTextStorage alloc]initWithAttributedString:self.attributedText];
-    [storage addLayoutManager:self.layoutManager];
+    [self.storage setAttributedString:self.attributedText];
     
     CGRect frame = [self.layoutManager usedRectForTextContainer:container];
     return CGRectIntegral(frame).size;
@@ -130,25 +126,6 @@
     CGRect frame = self.frame;
     frame.size = [self sizeThatFits:size];
     self.frame = frame;
-}
-
-- (NSLayoutManager *)layoutManager
-{
-    if (!_layoutManager)
-    {
-        _layoutManager = [NSLayoutManager new];
-        [_layoutManager addTextContainer:self.container];
-    }
-    return _layoutManager;
-}
-
-- (NSTextContainer *)container
-{
-    if (!_container)
-    {
-        _container = [NSTextContainer new];
-    }
-    return _container;
 }
 
 - (NSTextContainer *)containerWithUpdatingAttributes
@@ -241,45 +218,33 @@
     return _contentAlignment;
 }
 
-/*
-- (NSAttributedString *)mergeAttributes:(NSAttributedString *)attributedText
+- (NSLayoutManager *)layoutManager
 {
-    NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc]initWithAttributedString:attributedText];
-    
-    [self addAttribute:attrString attrName:NSFontAttributeName attr:self.font];
-    
-    if (self.textColor)
+    if (!_layoutManager)
     {
-        [self addAttribute:attrString attrName:NSForegroundColorAttributeName attr:self.textColor];
+        _layoutManager = [NSLayoutManager new];
+        [_layoutManager addTextContainer:self.container];
     }
-    if (self.paragraphStyle)
-    {
-        [self addAttribute:attrString attrName:NSParagraphStyleAttributeName attr:self.paragraphStyle];
-    }
-    if (self.shadow)
-    {
-        [self addAttribute:attrString attrName:NSShadowAttributeName attr:self.shadow];
-    }
-    return attrString;
+    return _layoutManager;
 }
 
-- (void)addAttribute:(NSMutableAttributedString *)attrString
-            attrName:(NSString *)attrName attr:(id)attr
+- (NSTextContainer *)container
 {
-    NSRange range = NSMakeRange(0, attrString.length);
-    
-    [attrString
-     enumerateAttribute:attrName
-     inRange:range
-     options:NSAttributedStringEnumerationReverse
-     usingBlock:^(id  _Nullable value, NSRange range, BOOL * _Nonnull stop) {
-         
-         if (value)
-         {
-             [attrString addAttributes:@{attrName : value} range:range];
-         }
-     }];
+    if (!_container)
+    {
+        _container = [NSTextContainer new];
+    }
+    return _container;
 }
-*/
+
+- (NSTextStorage *)storage
+{
+    if (!_storage)
+    {
+        _storage = [NSTextStorage new];
+        [_storage addLayoutManager:self.layoutManager];
+    }
+    return _storage;
+}
 
 @end

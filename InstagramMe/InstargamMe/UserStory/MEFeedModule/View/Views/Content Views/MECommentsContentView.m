@@ -89,12 +89,6 @@ NSInteger const kMEMaxViewingComment = 2;
 
 #pragma mark - Layouts & Constraints
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    [self updateConstraints];
-}
-
 - (void)updateConstraints
 {
     BOOL isShowViewAllButton = [self isShowViewAllButton];
@@ -153,6 +147,21 @@ NSInteger const kMEMaxViewingComment = 2;
     [self updateConstraints];
 }
 
+- (void)handleTapOnCommentLabel:(MECommentLabel *)label
+{
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+//
+//    [UIView animateWithDuration:0.6
+//                          delay:0
+//         usingSpringWithDamping:1.2
+//          initialSpringVelocity:0.7
+//                        options:0
+//                     animations:^{
+//                         [self layoutIfNeeded];
+//                     } completion:nil];
+}
+
 #pragma mark - Helpers
 
 + (CGFloat)offsetBetweenComments:(NSArray *)comments
@@ -195,6 +204,21 @@ NSInteger const kMEMaxViewingComment = 2;
 {
     return media.commentCount > kMEMaxViewingComment;
 }
+
+- (BOOL)isExntededCommentAtIndex:(MECommentIndex)index
+{
+    return [self commentAtIndex:index].isExtended;
+}
+
+- (InstagramComment *)commentAtIndex:(MECommentIndex)index
+{
+    if (self.media.commentCount > index)
+    {
+        return self.media.comments[index];
+    }
+    return nil;
+}
+
 
 #pragma mark - Lazy Load
 

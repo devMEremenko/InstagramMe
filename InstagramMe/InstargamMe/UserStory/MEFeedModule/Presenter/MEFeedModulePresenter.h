@@ -12,6 +12,7 @@
 #import "MEAuthorizationModuleInput.h"
 #import "MENavigationModuleDelegate.h"
 #import "MENavigationModuleDelegateOutput.h"
+#import "MEFeedModuleInteractorInput.h"
 
 @protocol MEFeedModuleViewInput;
 @protocol MEFeedModuleInteractorInput;

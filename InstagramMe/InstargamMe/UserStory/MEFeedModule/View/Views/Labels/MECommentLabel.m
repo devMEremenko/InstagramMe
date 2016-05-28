@@ -13,6 +13,8 @@
 @interface MECommentLabel ()
 
 @property (strong, nonatomic) UITapGestureRecognizer* tapGesture;
+@property (strong, nonatomic) UIView* overlayView;
+@property (strong, nonatomic) MASConstraint* overlayTopConstraint;
 @property (weak, nonatomic) InstagramComment* comment;
 
 @end
@@ -43,6 +45,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.userInteractionEnabled = YES;
     [self tapGesture];
+    [self overlayView];
 }
 
 - (void)setupWithComment:(InstagramComment *)comment
@@ -52,6 +55,11 @@
     [self setAttributedTitle:comment.text];
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self updateConstraints];
+}
 
 #pragma mark - Actions
 
@@ -86,6 +94,27 @@
     });
 }
 
+- (void)updateConstraints
+{
+    [self.overlayView mas_updateConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(self).with.offset(CGRectGetHeight(self.bounds));
+        make.left.equalTo(self);
+        make.right.equalTo(self);
+        make.bottom.equalTo(self);
+    }];
+    
+    if (self.comment.isExtended)
+    {
+        [UIView animateWithDuration:0.2
+                         animations:^{
+                             [self.overlayView layoutIfNeeded];
+                         }];
+    }
+    
+    [super updateConstraints];
+}
+
 #pragma mark - Lazy Load
 
 - (UITapGestureRecognizer *)tapGesture
@@ -97,6 +126,17 @@
         [self addGestureRecognizer:_tapGesture];
     }
     return _tapGesture;
+}
+
+- (UIView *)overlayView
+{
+    if (!_overlayView)
+    {
+        _overlayView = [UIView new];
+        _overlayView.backgroundColor = [UIColor grayColor];
+        [self addSubview:_overlayView];
+    }
+    return _overlayView;
 }
 
 @end

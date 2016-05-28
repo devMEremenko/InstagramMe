@@ -42,14 +42,20 @@ CGFloat const kDefaultShareViewHeight = 50;
     self = [super initWithFrame:frame];
     if (self)
     {
-        [self imageView];
-        [self shareContentView];
-        [self commentsContentView];
+        [self setup];
     }
     return self;
 }
 
-#pragma mark - 
+- (void)setup
+{
+    self.clipsToBounds = YES;
+    [self imageView];
+    [self shareContentView];
+    [self commentsContentView];
+}
+
+#pragma mark -
 
 - (void)setupWithMedia:(InstagramMedia *)media
 {
@@ -58,15 +64,14 @@ CGFloat const kDefaultShareViewHeight = 50;
     
     self.media = media;
     [self.commentsContentView setupWithMedia:media];
+    [self.imageView setupWithMedia:media];
 }
 
 #pragma mark - MECommentLabelDelegate
 
 - (void)didTapCommentLabel:(MECommentLabel *)label
 {
-    [UIView animateWithDuration:0.9 delay:0 options:0 animations:^{
-        [self layoutIfNeeded];
-    } completion:nil];
+    [self.commentsContentView handleTapOnCommentLabel:label];
     
     if ([self.delegate respondsToSelector:@selector(feedCellDidTapped:onLabel:)])
     {
@@ -76,12 +81,11 @@ CGFloat const kDefaultShareViewHeight = 50;
 
 #pragma mark - Lazy Load
 
-- (UIImageView *)imageView
+- (MEFeedImageView *)imageView
 {
     if (!_imageView)
     {
-        _imageView = [UIImageView new];
-        _imageView.backgroundColor = [UIColor greenColor];
+        _imageView = [MEFeedImageView new];
         [self.contentView addSubview:_imageView];
         
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -9,6 +9,7 @@
 #import "MEFeedModuleInteractor.h"
 #import "MEFeedModuleInteractorOutput.h"
 #import "MEFeedDataProvider.h"
+#import "MEInstagramKit.h"
 
 @interface MEFeedModuleInteractor ()
 @property (strong, nonatomic) MEFeedDataProvider* feedDataProvider;
@@ -30,6 +31,11 @@
     [self.feedDataProvider nextPageRecentMedia:^(MEMediaResponse* mediaResponse, NSError *error) {
         [self notifyDelegateAboutNextPageRecentMedia:mediaResponse error:error];
     }];
+}
+
+- (BOOL)isExistCurrentUser
+{
+    return ![[InstagramEngine sharedEngine] isSessionValid];
 }
 
 #pragma mark - Output

@@ -8,13 +8,14 @@
 
 #import "MEShareContentView.h"
 #import "MECommentsContentView.h"
+#import "MEFeedImageView.h"
 
 @class InstagramMedia;
 @protocol MEFeedCollectionCellDelegate;
 
 @interface MEFeedCollectionCell : UICollectionViewCell
 
-@property (strong, nonatomic) UIImageView* imageView;
+@property (strong, nonatomic) MEFeedImageView* imageView;
 @property (strong, nonatomic) MEShareContentView* shareContentView;
 @property (strong, nonatomic) MECommentsContentView* commentsContentView;
 @property (weak, nonatomic) id <MEFeedCollectionCellDelegate> delegate;

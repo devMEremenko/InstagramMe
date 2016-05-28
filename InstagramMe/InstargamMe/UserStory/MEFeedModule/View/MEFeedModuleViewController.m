@@ -75,9 +75,19 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
     MEFeedCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kFeedCollectionCellIdentifier forIndexPath:indexPath];
     
     cell.delegate = self;
-    [cell setupWithMedia:[self.dataSource itemAtIndexPath:indexPath]];
+    
+    if (IOS7) // performance reasons...
+    {
+        [cell setupWithMedia:[self.dataSource itemAtIndexPath:indexPath]];
+    }
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MEFeedCollectionCell* feedCell = (MEFeedCollectionCell *)cell;
+    [feedCell setupWithMedia:[self.dataSource itemAtIndexPath:indexPath]];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
@@ -113,7 +123,6 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
     {
         [self.collectionView performBatchUpdates:^{
             [self.collectionView.collectionViewLayout invalidateLayout];
-            [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
         } completion:nil];
     }
 }

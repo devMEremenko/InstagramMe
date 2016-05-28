@@ -51,7 +51,7 @@
 @property (nonatomic, assign) CGSize lowResolutionVideoFrameSize;
 @property (nonatomic, strong) NSURL *standardResolutionVideoURL;
 @property (nonatomic, assign) CGSize standardResolutionVideoFrameSize;
-
+@property (nonatomic, strong) NSMutableArray* mComments;
 @end
 
 @implementation InstagramMedia
@@ -141,6 +141,10 @@
     NSDictionary *standardResInfo = videosInfo[kStandardResolution];
     self.standardResolutionVideoURL = IKNotNull(standardResInfo[kURL])? [[NSURL alloc] initWithString:standardResInfo[kURL]] : nil;
     self.standardResolutionVideoFrameSize = CGSizeMake([standardResInfo[kWidth] floatValue], [standardResInfo[kHeight] floatValue]);
+}
+- (void)setMComments:(NSMutableArray *)mComments
+{
+    _mComments = mComments;
 }
 
 #pragma Getters 

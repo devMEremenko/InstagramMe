@@ -2,12 +2,26 @@
 //  MECommentLabel.h
 //  InstagramMe
 //
-//  Created by Maxim Eremenko on 5/26/16.
+//  Created by Maxim Eremenko on 5/28/16.
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import "ResponsiveLabel.h"
+@class InstagramComment;
+@protocol MECommentLabelDelegate;
 
-@interface MECommentLabel : ResponsiveLabel
+#import "MELabel.h"
+
+@interface MECommentLabel : MELabel
+
+@property (weak, nonatomic) id <MECommentLabelDelegate> delegate;
+
+- (void)setupWithComment:(InstagramComment *)comment;
+
+@end
+
+@protocol MECommentLabelDelegate <NSObject>
+@optional
+
+- (void)didTapCommentLabel:(MECommentLabel *)label;
 
 @end

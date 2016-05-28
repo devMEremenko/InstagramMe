@@ -14,6 +14,7 @@
 
 #pragma mark - Attributes
 
++ (NSDictionary *)me_feedCommentsAttributes;
 + (NSDictionary *)me_hashTagsAttributes;
 + (NSDictionary *)me_userLinksAttributes;
 

@@ -7,7 +7,7 @@
 //
 
 #import "MEFeedDataProvider.h"
-#import "InstagramKit.h"
+#import "MEInstagramKit.h"
 #import "MEMediaResponse.h"
 
 @interface MEFeedDataProvider ()
@@ -69,14 +69,14 @@ NSInteger const MERequestedMediaCount = 10;
     // Because Instagram return only count of comments without description...
     for (InstagramMedia* obj in media)
     {
-        obj.mComments = [self randomComments];
+        [obj setMediaComments:[self randomComments]];
     }
 }
 
 - (NSMutableArray *)randomComments
 {
-    NSString* c1 = @"Small comment #small";
-    NSString* c2 = @"@m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome";
+    NSString* c1 = @"@olegpanfyorov1988 Small comment #small about everything";
+    NSString* c2 = @"@m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome";
 //    NSString* c3 = @"London is the capital of Great Britain! #Britain #London #Capital";
 //    NSString* c4 = @"Blah blah blah... @m_a_lastname #smart_comment";
     
@@ -90,9 +90,17 @@ NSInteger const MERequestedMediaCount = 10;
         NSInteger index = arc4random() % comments.count;
         [result addObject:comments[index]];
     } */
-    [result addObject:c2];
-    [result addObject:c1];
-//    [result addObject:c1];
+    
+    InstagramComment* comment1 = [InstagramComment new];
+    [comment1 setCommentCreatedDate:[NSDate date]];
+    [comment1 setCommentText:c2];
+    
+    InstagramComment* comment2 = [InstagramComment new];
+    [comment2 setCommentCreatedDate:[NSDate date]];
+    [comment2 setCommentText:c2];
+    
+    [result addObject:comment1];
+    [result addObject:comment2];
 
     return result;
 }

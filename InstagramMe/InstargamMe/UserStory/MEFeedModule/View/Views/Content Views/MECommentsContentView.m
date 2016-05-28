@@ -7,48 +7,74 @@
 //
 
 #import "MECommentsContentView.h"
-#import "InstagramKit.h"
-#import "NSString+MEStringSize.h"
+#import "MEInstagramKit.h"
+#import "NSString+MEString.h"
+#import "STTweetLabel.h"
 
-CGFloat const kMECommentContentViewOffset = 12.f;
-CGFloat const kMEViewAllCommentsHeight = 22.f;
-CGFloat const kMEMaxCommentHeight = 80.f;
-CGFloat const kMaxCommentHeight = 90.f;
+typedef NS_ENUM(NSUInteger, MECommentIndex) {
+    MECommentIndexFirst,
+    MECommentIndexSecond
+};
+
+@interface MECommentsContentView ()
+
+@property (weak, nonatomic) InstagramMedia* media;
+
+@end
+
+CGFloat const kMECommentViewDefaultOffset = 16.f;
+CGFloat const kMECommentViewButtonTopOffset = 10.f;
+CGFloat const kMECommentViewButtonBottomOffset = 10.f;
+
+CGFloat const kMEAllButtonHeight = 22.f;
+CGFloat const kMEMaxCommentHeight = 76.f;
 
 NSInteger const kMEMaxCommentLenght = 150;
 NSInteger const kMEMaxViewingComment = 2;
 
-@interface MECommentsContentView ()
-@property (weak, nonatomic) InstagramMedia* media;
-@end
-
 @implementation MECommentsContentView
+
 
 + (CGFloat)heightWithMedia:(InstagramMedia *)media inSize:(CGSize)inSize
 {
-    NSArray* comments = [self viewingCommentsFromArray:media.mComments];
+    NSArray* comments = [self viewingCommentsFromArray:media.comments];
     CGFloat result = [self commentsHeight:comments inSize:inSize];
-    result += [self heightViewAllButton];
-    return result + kMECommentContentViewOffset;
+    
+    if ([self isShowViewAllButtonForMedia:media])
+    {
+        result += [self heightAllCommentsButtonForMedia:media];
+    }
+    else
+    {
+        result += kMECommentViewDefaultOffset; // top offset insted button
+    }
+    return result + kMECommentViewDefaultOffset; // + bottom offset
 }
 
-+ (CGFloat)heightViewAllButton
++ (CGFloat)heightAllCommentsButtonForMedia:(InstagramMedia *)media
 {
-    return kMECommentContentViewOffset * 2.f + kMEViewAllCommentsHeight;
+    return kMEAllButtonHeight + kMECommentViewButtonTopOffset + kMECommentViewButtonBottomOffset;
 }
 
-+ (CGFloat)commentsHeight:(NSArray *)comments inSize:(CGSize)inSize
++ (CGFloat)commentsHeight:(NSArray *)commentsArr inSize:(CGSize)inSize
 {
     CGFloat result = 0.f;
-    CGFloat width = inSize.width - 2 * kMECommentContentViewOffset;
-    CGSize surfaceSize = CGSizeMake(width, CGFLOAT_MAX);
+    CGSize surfaceSize = [self commentsSizeWithViewSize:inSize];
     
-    for (NSString* message in comments)
+    for (InstagramComment* comment in commentsArr)
     {
-        CGRect rect = [message me_commentsBoundingWithSize:surfaceSize];
-        result += rect.size.height < kMaxCommentHeight ? : kMaxCommentHeight;
+        CGFloat height = [comment.text me_commentsBoundingWithSize:surfaceSize].size.height;
+        
+        if (comment.isExtended)
+        {
+            result += height;
+        }
+        else
+        {
+            result += height < kMEMaxCommentHeight ? height : kMEMaxCommentHeight;
+        }
     }
-    return result + [self offsetBetweenComments:comments];
+    return ceilf(result + [self offsetBetweenComments:commentsArr]);
 }
 
 + (NSArray *)viewingCommentsFromArray:(NSArray *)comments
@@ -61,44 +87,53 @@ NSInteger const kMEMaxViewingComment = 2;
     return comments;
 }
 
+#pragma mark - Layouts & Constraints
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self updateConstraints];
+}
+
 - (void)updateConstraints
 {
-    BOOL showViewAllButton = [self isShowViewAllButton];
+    BOOL isShowViewAllButton = [self isShowViewAllButton];
     
-    [self.viewAllCommentsButton mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(!showViewAllButton ? @0 : @(kMEViewAllCommentsHeight));
+    [self.allCommentsButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        
+        if (isShowViewAllButton)
+        {
+            make.height.equalTo(@(kMEAllButtonHeight));
+            [self.allCommentsButton setTitle];
+        }
+        else
+        {
+            make.height.equalTo(@0);
+            [self.allCommentsButton clearTitle];
+        }
     }];
     
-    [self.firstCommentLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.firstCommentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.viewAllCommentsButton.mas_bottom).with.offset(kMECommentContentViewOffset);
-        make.left.equalTo(self.mas_left).with.offset(kMECommentContentViewOffset);
-        make.right.equalTo(self.mas_right).with.offset(-kMECommentContentViewOffset);
-        
-        CGFloat heigt = [self heightCommentAtIndex:0];
-        make.height.equalTo(@(heigt));
+        if (isShowViewAllButton)
+        {
+            make.top.equalTo(self.allCommentsButton.mas_bottom).with.offset(kMECommentViewButtonTopOffset);
+        }
+        else
+        {
+            make.top.equalTo(self.mas_top).with.offset(kMECommentViewDefaultOffset);
+        }
+        make.left.equalTo(self.mas_left).with.offset(kMECommentViewDefaultOffset);
+        make.right.equalTo(self.mas_right).with.offset(-kMECommentViewDefaultOffset);
+        make.height.equalTo(@([self heightCommentAtIndex:MECommentIndexFirst]));
     }];
     
     [self.secondCommentLabel mas_updateConstraints:^(MASConstraintMaker *make) {
-       
-        CGFloat height = [self heightCommentAtIndex:1];
-        make.height.equalTo(@(height));
+        
+        make.height.equalTo(@([self heightCommentAtIndex:MECommentIndexSecond]));
     }];
     
     [super updateConstraints];
-}
-
-- (CGFloat)heightCommentAtIndex:(NSInteger)index
-{
-    CGFloat result = 0.f;
-    CGSize inSize = self.bounds.size;
-    NSArray* comments = self.media.mComments;
-
-    if (comments.count >= index + 1)
-    {
-        result = [[self class] commentsHeight:@[comments[index]] inSize:inSize];
-    }
-    return result;
 }
 
 #pragma mark -
@@ -107,15 +142,14 @@ NSInteger const kMEMaxViewingComment = 2;
 {
     self.media = media;
 
-    NSInteger commentsCount = media.mComments.count;
-    if (commentsCount >= 1)
-    {
-        self.firstCommentLabel.text = media.mComments[0];
-        if (commentsCount >= 2)
-        {
-            self.secondCommentLabel.text = media.mComments[1];
-        }
-    }
+    NSInteger commentsCount = media.comments.count;
+    
+    InstagramComment* comment1 = commentsCount >= 1 ? media.comments[MECommentIndexFirst] : nil;
+    InstagramComment* comment2 = commentsCount >= 2 ? media.comments[MECommentIndexSecond] : nil;
+    
+    [self.firstCommentLabel setupWithComment:comment1];
+    [self.secondCommentLabel setupWithComment:comment2];
+        
     [self updateConstraints];
 }
 
@@ -127,7 +161,27 @@ NSInteger const kMEMaxViewingComment = 2;
     {
         return 0.f;
     }
-    return (1 + comments.count) * kMECommentContentViewOffset;
+    CGFloat offset = (comments.count - 1) * kMECommentViewDefaultOffset;
+    return offset < 0 ? 0 : offset;
+}
+
++ (CGSize)commentsSizeWithViewSize:(CGSize)viewSize
+{
+    CGFloat width = viewSize.width - 2 * kMECommentViewDefaultOffset;
+    return CGSizeMake(width, CGFLOAT_MAX);
+}
+
+- (CGFloat)heightCommentAtIndex:(NSInteger)index
+{
+    CGFloat result = 0.f;
+    CGSize inSize = self.bounds.size;
+    NSArray* comments = self.media.comments;
+    
+    if (comments.count >= index + 1)
+    {
+        result = [[self class] commentsHeight:@[comments[index]] inSize:inSize];
+    }
+    return result;
 }
 
 #pragma mark -
@@ -139,25 +193,25 @@ NSInteger const kMEMaxViewingComment = 2;
 
 + (BOOL)isShowViewAllButtonForMedia:(InstagramMedia *)media
 {
-    return media.commentCount < kMEMaxViewingComment;
+    return media.commentCount > kMEMaxViewingComment;
 }
 
 #pragma mark - Lazy Load
 
-- (MEViewAllButton *)viewAllCommentsButton
+- (MEViewAllButton *)allCommentsButton
 {
-    if (!_viewAllCommentsButton)
+    if (!_allCommentsButton)
     {
-        _viewAllCommentsButton = [MEViewAllButton buttonWithType:UIButtonTypeCustom];
-        [self addSubview:_viewAllCommentsButton];
-
-        [_viewAllCommentsButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self).with.offset(kMECommentContentViewOffset);
-            make.left.equalTo(self.mas_left).with.offset(kMECommentContentViewOffset);
-            make.right.equalTo(self.mas_right).with.offset(-kMECommentContentViewOffset);
+        _allCommentsButton = [MEViewAllButton buttonWithType:UIButtonTypeCustom];
+        [self addSubview:_allCommentsButton];
+        
+        [_allCommentsButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).with.offset(kMECommentViewButtonTopOffset);
+            make.left.equalTo(self.mas_left).with.offset(kMECommentViewDefaultOffset);
+            make.right.equalTo(self.mas_right).with.offset(-kMECommentViewDefaultOffset);
         }];
     }
-    return _viewAllCommentsButton;
+    return _allCommentsButton;
 }
 
 - (MECommentLabel *)firstCommentLabel
@@ -178,9 +232,9 @@ NSInteger const kMEMaxViewingComment = 2;
         [self addSubview:_secondCommentLabel];
         
         [_secondCommentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.firstCommentLabel.mas_bottom);
-            make.left.equalTo(self.mas_left).with.offset(kMECommentContentViewOffset);
-            make.right.equalTo(self.mas_right).with.offset(-kMECommentContentViewOffset);
+            make.top.equalTo(self.firstCommentLabel.mas_bottom).with.offset(kMECommentViewDefaultOffset);
+            make.left.equalTo(self.mas_left).with.offset(kMECommentViewDefaultOffset);
+            make.right.equalTo(self.mas_right).with.offset(-kMECommentViewDefaultOffset);
         }];
     }
     return _secondCommentLabel;

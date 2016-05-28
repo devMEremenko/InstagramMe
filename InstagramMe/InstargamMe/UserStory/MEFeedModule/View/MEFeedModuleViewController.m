@@ -12,13 +12,13 @@
 #import "TLYShyNavBarManager.h"
 #import "MERecentMediaDataSource.h"
 #import "InstagramMe-Swift.h"
+#import "CustomLayout.h"
 
-@interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MEFeedCollectionCellDelegate>
 
 @property (strong, nonatomic) UICollectionView* collectionView;
 @property (strong, nonatomic) TLYShyNavBarManager* topNavigationBar;
 @property (strong, nonatomic) id <MEFeedDataSourceProtocol> dataSource;
-
 @end
 
 CGSize const MEFeedHeaderSize = {1, 58};
@@ -74,6 +74,7 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
 {
     MEFeedCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kFeedCollectionCellIdentifier forIndexPath:indexPath];
     
+    cell.delegate = self;
     [cell setupWithMedia:[self.dataSource itemAtIndexPath:indexPath]];
     
     return cell;
@@ -102,6 +103,33 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
     return [MEFeedCollectionCell sizeWithMedia:media inCollectionView:collectionView];
 }
 
+#pragma mark - MEFeedCollectionCellDelegate
+
+- (void)feedCellDidTapped:(MEFeedCollectionCell *)cell onLabel:(MECommentLabel *)label
+{
+    NSIndexPath* indexPath = [self.collectionView indexPathForCell:cell];
+    
+    if (indexPath && cell)
+    {
+        [self.collectionView performBatchUpdates:^{
+            [self.collectionView.collectionViewLayout invalidateLayout];
+            [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+        } completion:nil];
+    }
+}
+#pragma mark - Transition & Rotation
+
+- (void)viewWillTransitionToSize:(CGSize)size
+       withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+        [self.collectionView.collectionViewLayout invalidateLayout];
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+        [self.collectionView reloadData];
+    }];
+}
+
 #pragma mark - Helpers
 
 - (void)setupUserInterface
@@ -117,7 +145,7 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
 {
     if (!_collectionView)
     {
-        ASFloatingHeadersFlowLayout* layout = [ASFloatingHeadersFlowLayout new];
+        CustomLayout * layout = [CustomLayout new];
         layout.headerReferenceSize = MEFeedHeaderSize;
         
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];

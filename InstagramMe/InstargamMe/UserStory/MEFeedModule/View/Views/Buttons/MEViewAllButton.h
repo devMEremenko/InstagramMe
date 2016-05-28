@@ -8,4 +8,8 @@
 
 @interface MEViewAllButton : UIButton
 
+- (void)setTitle;
+
+- (void)clearTitle;
+
 @end

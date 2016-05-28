@@ -18,10 +18,19 @@ NSString* const kMEViewAllButtonTitle = @"View all comments";
     button.titleLabel.font = [UIFont me_viewAllButtonFont];
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 
+    [button setTitleColor:[UIColor me_viewAllButtonHighlightedColor] forState: UIControlStateHighlighted];
     [button setTitleColor:[UIColor me_viewAllButtonTitleColor] forState:UIControlStateNormal];
-    [button setTitle:kMEViewAllButtonTitle forState:UIControlStateNormal];
-
     return button;
+}
+
+- (void)setTitle
+{
+    [self setTitle:kMEViewAllButtonTitle forState:UIControlStateNormal];
+}
+
+- (void)clearTitle
+{
+    [self setTitle:nil forState:UIControlStateNormal];
 }
 
 @end

@@ -45,6 +45,7 @@ PODS:
   - ReactiveCocoa/UI (2.4.7):
     - ReactiveCocoa/Core
   - ResponsiveLabel (1.0.11)
+  - STTweetLabel (3.1.21)
   - TLYShyNavBar (1.1.0)
   - YYCache (1.0.3)
   - YYImage (1.0.2):
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - InstagramKit (~> 3.0)
   - Masonry
   - ResponsiveLabel (~> 1.0.11)
+  - STTweetLabel
   - TLYShyNavBar
   - YYWebImage
 
@@ -75,6 +77,7 @@ SPEC CHECKSUMS:
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   ResponsiveLabel: 9e31c425ed082481faf2360689243bb0ec8f8b22
+  STTweetLabel: 842bc86cdf13288414440405757478bd4820e1be
   TLYShyNavBar: 3150e9a03ff8ab5fd81de00167e8829b91af8326
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   YYImage: 2cc79ed49b9549b71c6715cefe7b0f5ab3d33abf

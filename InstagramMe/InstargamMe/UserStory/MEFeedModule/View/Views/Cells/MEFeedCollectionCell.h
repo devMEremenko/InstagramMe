@@ -10,15 +10,24 @@
 #import "MECommentsContentView.h"
 
 @class InstagramMedia;
+@protocol MEFeedCollectionCellDelegate;
 
 @interface MEFeedCollectionCell : UICollectionViewCell
 
 @property (strong, nonatomic) UIImageView* imageView;
 @property (strong, nonatomic) MEShareContentView* shareContentView;
 @property (strong, nonatomic) MECommentsContentView* commentsContentView;
+@property (weak, nonatomic) id <MEFeedCollectionCellDelegate> delegate;
 
 + (CGSize)sizeWithMedia:(InstagramMedia *)media inCollectionView:(UICollectionView *)collectionView;
 
 - (void)setupWithMedia:(InstagramMedia *)media;
+
+@end
+
+@protocol MEFeedCollectionCellDelegate <NSObject>
+@optional
+
+- (void)feedCellDidTapped:(MEFeedCollectionCell *)cell onLabel:(MECommentLabel *)label;
 
 @end

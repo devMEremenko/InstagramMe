@@ -8,7 +8,7 @@
 //
 
 #import "MERecentMediaDataSource.h"
-#import "InstagramKit.h"
+#import "MEInstagramKit.h"
 #import "MEMediaResponse.h"
 
 @interface MERecentMediaDataSource ()

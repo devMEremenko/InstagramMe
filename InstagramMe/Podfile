@@ -24,6 +24,7 @@ pod 'Masonry'
 pod 'YYWebImage'
 pod 'TLYShyNavBar'
 pod 'ResponsiveLabel', '~> 1.0.11'
+pod 'STTweetLabel'
 
 
 end

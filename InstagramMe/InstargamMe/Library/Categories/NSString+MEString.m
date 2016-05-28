@@ -6,7 +6,7 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import "NSString+MEStringSize.h"
+#import "NSString+MEString.h"
 
 @implementation NSString (MEString)
 

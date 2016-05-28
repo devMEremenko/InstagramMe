@@ -7,9 +7,13 @@
 //
 
 #import "MEFeedCollectionCell.h"
-#import "InstagramKit.h"
+#import "MEInstagramKit.h"
 
 CGFloat const kDefaultShareViewHeight = 50;
+
+@interface MEFeedCollectionCell () <MECommentLabelDelegate>
+@property (weak, nonatomic) InstagramMedia* media;
+@end
 
 @implementation MEFeedCollectionCell
 
@@ -21,7 +25,8 @@ CGFloat const kDefaultShareViewHeight = 50;
     result.height += [MECommentsContentView heightWithMedia:media inSize:collectionView.bounds.size];
     
     result.width = CGRectGetWidth(collectionView.bounds);
-
+    
+    result.height = ceilf(result.height);
     return result;
 }
 
@@ -50,7 +55,23 @@ CGFloat const kDefaultShareViewHeight = 50;
 {
     [self layoutIfNeeded];
     [self updateConstraints];
+    
+    self.media = media;
     [self.commentsContentView setupWithMedia:media];
+}
+
+#pragma mark - MECommentLabelDelegate
+
+- (void)didTapCommentLabel:(MECommentLabel *)label
+{
+    [UIView animateWithDuration:0.9 delay:0 options:0 animations:^{
+        [self layoutIfNeeded];
+    } completion:nil];
+    
+    if ([self.delegate respondsToSelector:@selector(feedCellDidTapped:onLabel:)])
+    {
+        [self.delegate feedCellDidTapped:self onLabel:label];
+    }
 }
 
 #pragma mark - Lazy Load
@@ -95,6 +116,8 @@ CGFloat const kDefaultShareViewHeight = 50;
     if (!_commentsContentView)
     {
         _commentsContentView = [MECommentsContentView new];
+        _commentsContentView.firstCommentLabel.delegate = self;
+        _commentsContentView.secondCommentLabel.delegate = self;
         _commentsContentView.backgroundColor = [UIColor grayColor];
         [self.contentView addSubview:_commentsContentView];
         

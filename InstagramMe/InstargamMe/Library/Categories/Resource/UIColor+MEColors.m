@@ -30,6 +30,11 @@
     return UIColorWithRed(64, 93, 230, 1);
 }
 
++ (UIColor *)me_viewAllButtonHighlightedColor
+{
+    return UIColorWithRed(34, 63, 240, 1);
+}
+
 + (UIColor *)me_hashTagsColor
 {
     return UIColorWithRed(64, 93, 230, 0.95);

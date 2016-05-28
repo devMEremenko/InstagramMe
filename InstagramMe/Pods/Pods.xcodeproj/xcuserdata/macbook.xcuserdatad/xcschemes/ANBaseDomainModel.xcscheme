@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '48C8E1B28EB67F8A65B1E035'
+               BlueprintIdentifier = '4E26C0AAA19F83840D1536C9'
                BlueprintName = 'ANBaseDomainModel'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libANBaseDomainModel.a'>

@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>STTweetLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TLYShyNavBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,12 +87,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00C92CE34AFD53125E15F35CE5FC5331</key>
+		<key>033C5BF42A41CF479059E64ED77CE6E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>04D11FC58B663503DF38E5C5DA6EC6D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>254471335FF4E3C6B58533912285DB43</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +112,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3754182242329374AB3768607396C672</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>55C9B87954B493A512B29AF7C27025CE</key>
+		<key>7932AAFA14850C8EB22C670200DF9551</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>701855601F331EA0D6A74D1230F1AEF3</key>
+		<key>83A3AFC8EAFDE1EF5C8909F7D2FA561C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,7 +137,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90EE4E395DBBD25AC07DD10A109F8248</key>
+		<key>91B3A4D38DE79B2BD9371D19E5F16599</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +147,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CCF2582868F5EECE3A49B016F0E2CBC4</key>
+		<key>A69AF4CFD60EB0513B0628EEB36AE067</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -148,11 +163,6 @@
 			<true/>
 		</dict>
 		<key>E57EB80C1FDDCB4E9A2BF59CFC77EA42</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EC5F69E4194D37016BE608F9033D41DB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

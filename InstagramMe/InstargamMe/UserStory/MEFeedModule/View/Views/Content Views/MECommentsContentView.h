@@ -7,15 +7,17 @@
 //
 @class InstagramMedia;
 
-#import "MECommentLabel.h"
 #import "MEViewAllButton.h"
+#import "InstagramMe-Swift.h"
+#import "MESTCommentLabel.h"
+#import "MECommentLabel.h"
 
 @interface MECommentsContentView : UIView
 
-@property (strong, nonatomic) MEViewAllButton* viewAllCommentsButton;
+@property (strong, nonatomic) MEViewAllButton* allCommentsButton;
 
-@property (strong, nonatomic) MECommentLabel* firstCommentLabel;
-@property (strong, nonatomic) MECommentLabel* secondCommentLabel;
+@property (strong, nonatomic) MECommentLabel* firstCommentLabel; // or use MESTCommentLabel
+@property (strong, nonatomic) MECommentLabel* secondCommentLabel; // or use MESTCommentLabel
 
 + (CGFloat)heightWithMedia:(InstagramMedia *)media inSize:(CGSize)inSize;
 

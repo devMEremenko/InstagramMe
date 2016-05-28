@@ -11,7 +11,10 @@
 // Feed
 + (UIColor *)me_commentsColor;
 + (UIColor *)me_commentSeperatorColor;
+
 + (UIColor *)me_viewAllButtonTitleColor;
++ (UIColor *)me_viewAllButtonHighlightedColor;
+
 + (UIColor *)me_hashTagsColor;
 + (UIColor *)me_userLinksColor;
 + (UIColor *)me_truncationColor;

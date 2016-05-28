@@ -26,7 +26,6 @@
 		FAF32CA21CF485BE00C31DB1 /* MEFeedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CA11CF485BE00C31DB1 /* MEFeedCollectionCell.m */; };
 		FAF32CA61CF485EE00C31DB1 /* MELikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CA51CF485EE00C31DB1 /* MELikeButton.m */; };
 		FAF32CA91CF4872800C31DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF32CA81CF4872800C31DB1 /* Assets.xcassets */; };
-		FAF32CAE1CF4885200C31DB1 /* UIImage+MEDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CAD1CF4885200C31DB1 /* UIImage+MEDefault.m */; };
 		FAF32CB11CF48FD700C31DB1 /* MECommentsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB01CF48FD700C31DB1 /* MECommentsButton.m */; };
 		FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB61CF4A8A000C31DB1 /* MEReplyButton.m */; };
 		FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CB91CF4AF8900C31DB1 /* MECommentsContentView.m */; };
@@ -34,12 +33,20 @@
 		FAF32CE41CF678B700C31DB1 /* MEMediaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CE31CF678B700C31DB1 /* MEMediaResponse.m */; };
 		FAF32CEB1CF67EC200C31DB1 /* MEFeedDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CEA1CF67EC200C31DB1 /* MEFeedDataProvider.m */; };
 		FAF32CEE1CF67F8400C31DB1 /* MERecentMediaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CED1CF67F8400C31DB1 /* MERecentMediaDataSource.m */; };
-		FAF32CF81CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CF71CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift */; };
-		FAF32D001CF75C2A00C31DB1 /* NSString+MEStringSize.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CFF1CF75C2A00C31DB1 /* NSString+MEStringSize.m */; };
-		FAF32D031CF75E3800C31DB1 /* UIFont+MEFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D021CF75E3800C31DB1 /* UIFont+MEFonts.m */; };
-		FAF32D061CF75EDE00C31DB1 /* UIColor+MEColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D051CF75EDE00C31DB1 /* UIColor+MEColors.m */; };
-		FAF32D0A1CF761BA00C31DB1 /* MECommentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D091CF761BA00C31DB1 /* MECommentLabel.m */; };
+		FAF32D001CF75C2A00C31DB1 /* NSString+MEString.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CFF1CF75C2A00C31DB1 /* NSString+MEString.m */; };
 		FAF32D0D1CF771DD00C31DB1 /* MEViewAllButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D0C1CF771DD00C31DB1 /* MEViewAllButton.m */; };
+		FAF32D111CF8BA1100C31DB1 /* MEStringBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D101CF8BA1100C31DB1 /* MEStringBuilder.m */; };
+		FAF32D151CF900DD00C31DB1 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D141CF900DD00C31DB1 /* AttributedLabel.swift */; };
+		FAF32D1E1CF90E7400C31DB1 /* MESTCommentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D1D1CF90E7400C31DB1 /* MESTCommentLabel.m */; };
+		FAF32D241CF93C8400C31DB1 /* MECommentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D231CF93C8400C31DB1 /* MECommentLabel.m */; };
+		FAF32D381CF9D15600C31DB1 /* UIColor+MEColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D331CF9D15600C31DB1 /* UIColor+MEColors.m */; };
+		FAF32D391CF9D15600C31DB1 /* UIFont+MEFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D351CF9D15600C31DB1 /* UIFont+MEFonts.m */; };
+		FAF32D3A1CF9D15600C31DB1 /* UIImage+MEDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D371CF9D15600C31DB1 /* UIImage+MEDefault.m */; };
+		FAF32D3D1CF9D17300C31DB1 /* InstagramMedia+MEMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D3C1CF9D17300C31DB1 /* InstagramMedia+MEMedia.m */; };
+		FAF32D401CF9D1FE00C31DB1 /* InstagramComment+MEComment.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D3F1CF9D1FE00C31DB1 /* InstagramComment+MEComment.m */; };
+		FAF32D441CF9E68300C31DB1 /* MELabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D431CF9E68300C31DB1 /* MELabel.m */; };
+		FAF32D521CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D501CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift */; };
+		FAF32D551CFA026100C31DB1 /* CustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D541CFA026100C31DB1 /* CustomLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,8 +104,6 @@
 		FAF32CA41CF485EE00C31DB1 /* MELikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELikeButton.h; sourceTree = "<group>"; };
 		FAF32CA51CF485EE00C31DB1 /* MELikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELikeButton.m; sourceTree = "<group>"; };
 		FAF32CA81CF4872800C31DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FAF32CAC1CF4885200C31DB1 /* UIImage+MEDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MEDefault.h"; sourceTree = "<group>"; };
-		FAF32CAD1CF4885200C31DB1 /* UIImage+MEDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MEDefault.m"; sourceTree = "<group>"; };
 		FAF32CAF1CF48FD700C31DB1 /* MECommentsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECommentsButton.h; sourceTree = "<group>"; };
 		FAF32CB01CF48FD700C31DB1 /* MECommentsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECommentsButton.m; sourceTree = "<group>"; };
 		FAF32CB51CF4A8A000C31DB1 /* MEReplyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEReplyButton.h; sourceTree = "<group>"; };
@@ -113,18 +118,35 @@
 		FAF32CEC1CF67F8400C31DB1 /* MERecentMediaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERecentMediaDataSource.h; sourceTree = "<group>"; };
 		FAF32CED1CF67F8400C31DB1 /* MERecentMediaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERecentMediaDataSource.m; sourceTree = "<group>"; };
 		FAF32CF01CF6804600C31DB1 /* MEFeedDataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedDataSourceProtocol.h; sourceTree = "<group>"; };
-		FAF32CF71CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASFloatingHeadersFlowLayout.swift; sourceTree = "<group>"; };
 		FAF32CF91CF69DE400C31DB1 /* InstagramMe-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "InstagramMe-Bridging-Header.h"; sourceTree = "<group>"; };
-		FAF32CFE1CF75C2A00C31DB1 /* NSString+MEStringSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MEStringSize.h"; sourceTree = "<group>"; };
-		FAF32CFF1CF75C2A00C31DB1 /* NSString+MEStringSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MEStringSize.m"; sourceTree = "<group>"; };
-		FAF32D011CF75E3800C31DB1 /* UIFont+MEFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MEFonts.h"; sourceTree = "<group>"; };
-		FAF32D021CF75E3800C31DB1 /* UIFont+MEFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MEFonts.m"; sourceTree = "<group>"; };
-		FAF32D041CF75EDE00C31DB1 /* UIColor+MEColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MEColors.h"; sourceTree = "<group>"; };
-		FAF32D051CF75EDE00C31DB1 /* UIColor+MEColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MEColors.m"; sourceTree = "<group>"; };
-		FAF32D081CF761BA00C31DB1 /* MECommentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECommentLabel.h; sourceTree = "<group>"; };
-		FAF32D091CF761BA00C31DB1 /* MECommentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECommentLabel.m; sourceTree = "<group>"; };
+		FAF32CFE1CF75C2A00C31DB1 /* NSString+MEString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MEString.h"; sourceTree = "<group>"; };
+		FAF32CFF1CF75C2A00C31DB1 /* NSString+MEString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MEString.m"; sourceTree = "<group>"; };
 		FAF32D0B1CF771DD00C31DB1 /* MEViewAllButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEViewAllButton.h; sourceTree = "<group>"; };
 		FAF32D0C1CF771DD00C31DB1 /* MEViewAllButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEViewAllButton.m; sourceTree = "<group>"; };
+		FAF32D0F1CF8BA1100C31DB1 /* MEStringBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEStringBuilder.h; sourceTree = "<group>"; };
+		FAF32D101CF8BA1100C31DB1 /* MEStringBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEStringBuilder.m; sourceTree = "<group>"; };
+		FAF32D131CF900DD00C31DB1 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedLabel.h; sourceTree = "<group>"; };
+		FAF32D141CF900DD00C31DB1 /* AttributedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
+		FAF32D1C1CF90E7400C31DB1 /* MESTCommentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESTCommentLabel.h; sourceTree = "<group>"; };
+		FAF32D1D1CF90E7400C31DB1 /* MESTCommentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESTCommentLabel.m; sourceTree = "<group>"; };
+		FAF32D221CF93C8400C31DB1 /* MECommentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECommentLabel.h; sourceTree = "<group>"; };
+		FAF32D231CF93C8400C31DB1 /* MECommentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECommentLabel.m; sourceTree = "<group>"; };
+		FAF32D321CF9D15600C31DB1 /* UIColor+MEColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MEColors.h"; sourceTree = "<group>"; };
+		FAF32D331CF9D15600C31DB1 /* UIColor+MEColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MEColors.m"; sourceTree = "<group>"; };
+		FAF32D341CF9D15600C31DB1 /* UIFont+MEFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MEFonts.h"; sourceTree = "<group>"; };
+		FAF32D351CF9D15600C31DB1 /* UIFont+MEFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MEFonts.m"; sourceTree = "<group>"; };
+		FAF32D361CF9D15600C31DB1 /* UIImage+MEDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MEDefault.h"; sourceTree = "<group>"; };
+		FAF32D371CF9D15600C31DB1 /* UIImage+MEDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MEDefault.m"; sourceTree = "<group>"; };
+		FAF32D3B1CF9D17300C31DB1 /* InstagramMedia+MEMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "InstagramMedia+MEMedia.h"; sourceTree = "<group>"; };
+		FAF32D3C1CF9D17300C31DB1 /* InstagramMedia+MEMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "InstagramMedia+MEMedia.m"; sourceTree = "<group>"; };
+		FAF32D3E1CF9D1FE00C31DB1 /* InstagramComment+MEComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "InstagramComment+MEComment.h"; sourceTree = "<group>"; };
+		FAF32D3F1CF9D1FE00C31DB1 /* InstagramComment+MEComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "InstagramComment+MEComment.m"; sourceTree = "<group>"; };
+		FAF32D411CF9D36100C31DB1 /* MEInstagramKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEInstagramKit.h; sourceTree = "<group>"; };
+		FAF32D421CF9E68300C31DB1 /* MELabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELabel.h; sourceTree = "<group>"; };
+		FAF32D431CF9E68300C31DB1 /* MELabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELabel.m; sourceTree = "<group>"; };
+		FAF32D501CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASFloatingHeadersFlowLayout.swift; sourceTree = "<group>"; };
+		FAF32D531CFA026100C31DB1 /* CustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayout.h; sourceTree = "<group>"; };
+		FAF32D541CFA026100C31DB1 /* CustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +413,7 @@
 				FAF32C8C1CF3C57B00C31DB1 /* MEPrefixHeader.pch */,
 				FAF32C8B1CF3C57B00C31DB1 /* MEGlobalHeader.h */,
 				FAF32CF91CF69DE400C31DB1 /* InstagramMe-Bridging-Header.h */,
+				FAF32D411CF9D36100C31DB1 /* MEInstagramKit.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -398,7 +421,8 @@
 		FAF32C8D1CF3C92400C31DB1 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				FAF32CF11CF69C1F00C31DB1 /* ASFloatingHeadersFlowLayout */,
+				FAF32D4E1CFA023100C31DB1 /* FeedLayout */,
+				FAF32D121CF900DD00C31DB1 /* AttributedLabel */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -460,14 +484,10 @@
 		FAF32CAA1CF4880600C31DB1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				FAF32D011CF75E3800C31DB1 /* UIFont+MEFonts.h */,
-				FAF32D021CF75E3800C31DB1 /* UIFont+MEFonts.m */,
-				FAF32D041CF75EDE00C31DB1 /* UIColor+MEColors.h */,
-				FAF32D051CF75EDE00C31DB1 /* UIColor+MEColors.m */,
-				FAF32CAC1CF4885200C31DB1 /* UIImage+MEDefault.h */,
-				FAF32CAD1CF4885200C31DB1 /* UIImage+MEDefault.m */,
-				FAF32CFE1CF75C2A00C31DB1 /* NSString+MEStringSize.h */,
-				FAF32CFF1CF75C2A00C31DB1 /* NSString+MEStringSize.m */,
+				FAF32D311CF9D15600C31DB1 /* Resource */,
+				FAF32D301CF9D15600C31DB1 /* Instagram */,
+				FAF32CFE1CF75C2A00C31DB1 /* NSString+MEString.h */,
+				FAF32CFF1CF75C2A00C31DB1 /* NSString+MEString.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -516,17 +536,11 @@
 			path = Feed;
 			sourceTree = "<group>";
 		};
-		FAF32CF11CF69C1F00C31DB1 /* ASFloatingHeadersFlowLayout */ = {
-			isa = PBXGroup;
-			children = (
-				FAF32CF71CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift */,
-			);
-			path = ASFloatingHeadersFlowLayout;
-			sourceTree = "<group>";
-		};
 		FAF32CFA1CF75AB300C31DB1 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
+				FAF32D0F1CF8BA1100C31DB1 /* MEStringBuilder.h */,
+				FAF32D101CF8BA1100C31DB1 /* MEStringBuilder.m */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -534,10 +548,73 @@
 		FAF32D071CF761A000C31DB1 /* Labels */ = {
 			isa = PBXGroup;
 			children = (
-				FAF32D081CF761BA00C31DB1 /* MECommentLabel.h */,
-				FAF32D091CF761BA00C31DB1 /* MECommentLabel.m */,
+				FAF32D1C1CF90E7400C31DB1 /* MESTCommentLabel.h */,
+				FAF32D1D1CF90E7400C31DB1 /* MESTCommentLabel.m */,
+				FAF32D221CF93C8400C31DB1 /* MECommentLabel.h */,
+				FAF32D231CF93C8400C31DB1 /* MECommentLabel.m */,
+				FAF32D421CF9E68300C31DB1 /* MELabel.h */,
+				FAF32D431CF9E68300C31DB1 /* MELabel.m */,
 			);
 			path = Labels;
+			sourceTree = "<group>";
+		};
+		FAF32D121CF900DD00C31DB1 /* AttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32D131CF900DD00C31DB1 /* AttributedLabel.h */,
+				FAF32D141CF900DD00C31DB1 /* AttributedLabel.swift */,
+			);
+			path = AttributedLabel;
+			sourceTree = "<group>";
+		};
+		FAF32D301CF9D15600C31DB1 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32D3B1CF9D17300C31DB1 /* InstagramMedia+MEMedia.h */,
+				FAF32D3C1CF9D17300C31DB1 /* InstagramMedia+MEMedia.m */,
+				FAF32D3E1CF9D1FE00C31DB1 /* InstagramComment+MEComment.h */,
+				FAF32D3F1CF9D1FE00C31DB1 /* InstagramComment+MEComment.m */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		FAF32D311CF9D15600C31DB1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32D321CF9D15600C31DB1 /* UIColor+MEColors.h */,
+				FAF32D331CF9D15600C31DB1 /* UIColor+MEColors.m */,
+				FAF32D341CF9D15600C31DB1 /* UIFont+MEFonts.h */,
+				FAF32D351CF9D15600C31DB1 /* UIFont+MEFonts.m */,
+				FAF32D361CF9D15600C31DB1 /* UIImage+MEDefault.h */,
+				FAF32D371CF9D15600C31DB1 /* UIImage+MEDefault.m */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FAF32D4E1CFA023100C31DB1 /* FeedLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32D511CFA023100C31DB1 /* CustomLayout */,
+				FAF32D4F1CFA023100C31DB1 /* ASFloatingHeadersFlowLayout */,
+			);
+			path = FeedLayout;
+			sourceTree = "<group>";
+		};
+		FAF32D4F1CFA023100C31DB1 /* ASFloatingHeadersFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32D501CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift */,
+			);
+			path = ASFloatingHeadersFlowLayout;
+			sourceTree = "<group>";
+		};
+		FAF32D511CFA023100C31DB1 /* CustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FAF32D531CFA026100C31DB1 /* CustomLayout.h */,
+				FAF32D541CFA026100C31DB1 /* CustomLayout.m */,
+			);
+			path = CustomLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,34 +738,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF32D0A1CF761BA00C31DB1 /* MECommentLabel.m in Sources */,
+				FAF32D401CF9D1FE00C31DB1 /* InstagramComment+MEComment.m in Sources */,
 				FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */,
 				FAF32CE41CF678B700C31DB1 /* MEMediaResponse.m in Sources */,
 				FAF32CEB1CF67EC200C31DB1 /* MEFeedDataProvider.m in Sources */,
 				FAF32D0D1CF771DD00C31DB1 /* MEViewAllButton.m in Sources */,
 				FADEDF311CF3C2BE008F6E75 /* MEFeedModuleRouter.m in Sources */,
 				FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */,
+				FAF32D391CF9D15600C31DB1 /* UIFont+MEFonts.m in Sources */,
 				FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */,
+				FAF32D521CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift in Sources */,
+				FAF32D381CF9D15600C31DB1 /* UIColor+MEColors.m in Sources */,
 				FAF32CA21CF485BE00C31DB1 /* MEFeedCollectionCell.m in Sources */,
-				FAF32D031CF75E3800C31DB1 /* UIFont+MEFonts.m in Sources */,
+				FAF32D3A1CF9D15600C31DB1 /* UIImage+MEDefault.m in Sources */,
 				FAF32C9E1CF484BB00C31DB1 /* MEShareContentView.m in Sources */,
+				FAF32D151CF900DD00C31DB1 /* AttributedLabel.swift in Sources */,
 				FADEDF2B1CF3C2BE008F6E75 /* MEAuthorizationPresenter.m in Sources */,
 				FADEDF2A1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m in Sources */,
 				FADEDF321CF3C2BE008F6E75 /* MEFeedModuleViewController.m in Sources */,
+				FAF32D551CFA026100C31DB1 /* CustomLayout.m in Sources */,
 				FADEDF2D1CF3C2BE008F6E75 /* MEAuthorizationViewController.m in Sources */,
 				FADEDF2C1CF3C2BE008F6E75 /* MEAuthorizationRouter.m in Sources */,
+				FAF32D241CF93C8400C31DB1 /* MECommentLabel.m in Sources */,
+				FAF32D1E1CF90E7400C31DB1 /* MESTCommentLabel.m in Sources */,
 				FADEDF2E1CF3C2BE008F6E75 /* MEFeedModuleAssembly.m in Sources */,
+				FAF32D441CF9E68300C31DB1 /* MELabel.m in Sources */,
 				FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */,
-				FAF32D001CF75C2A00C31DB1 /* NSString+MEStringSize.m in Sources */,
+				FAF32D001CF75C2A00C31DB1 /* NSString+MEString.m in Sources */,
 				FA14D3E01CF311790024F6CC /* main.m in Sources */,
-				FAF32D061CF75EDE00C31DB1 /* UIColor+MEColors.m in Sources */,
+				FAF32D111CF8BA1100C31DB1 /* MEStringBuilder.m in Sources */,
 				FAF32CA61CF485EE00C31DB1 /* MELikeButton.m in Sources */,
 				FAF32CEE1CF67F8400C31DB1 /* MERecentMediaDataSource.m in Sources */,
-				FAF32CF81CF69D3500C31DB1 /* ASFloatingHeadersFlowLayout.swift in Sources */,
+				FAF32D3D1CF9D17300C31DB1 /* InstagramMedia+MEMedia.m in Sources */,
 				FADEDF2F1CF3C2BE008F6E75 /* MEFeedModuleInteractor.m in Sources */,
 				FADEDF301CF3C2BE008F6E75 /* MEFeedModulePresenter.m in Sources */,
 				FADEDF291CF3C2BE008F6E75 /* MEAuthorizationAssembly.m in Sources */,
-				FAF32CAE1CF4885200C31DB1 /* UIImage+MEDefault.m in Sources */,
 				FAF32CB11CF48FD700C31DB1 /* MECommentsButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

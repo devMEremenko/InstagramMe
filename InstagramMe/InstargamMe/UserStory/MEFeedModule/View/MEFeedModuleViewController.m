@@ -13,6 +13,9 @@
 #import "MERecentMediaDataSource.h"
 #import "InstagramMe-Swift.h"
 #import "CustomLayout.h"
+#import "MELogoImageView.h"
+#import "MEDirectItem.h"
+#import "MEFeedHeaderView.h"
 
 @interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MEFeedCollectionCellDelegate>
 
@@ -22,7 +25,8 @@
 @end
 
 CGSize const MEFeedHeaderSize = {1, 58};
-NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier";
+NSString* const kMEFeedCollectionCellIdentifier = @"kMEFeedCollectionCellIdentifier";
+NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIdentifier";
 
 @implementation MEFeedModuleViewController
 
@@ -72,7 +76,7 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MEFeedCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kFeedCollectionCellIdentifier forIndexPath:indexPath];
+    MEFeedCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kMEFeedCollectionCellIdentifier forIndexPath:indexPath];
     
     cell.delegate = self;
     
@@ -92,16 +96,18 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionReusableView *reusableview = nil;
+    MEFeedHeaderView* reusableview = nil;
     
     if (kind == UICollectionElementKindSectionHeader)
     {
-        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
-        headerView.backgroundColor = [UIColor purpleColor];
+        reusableview = [collectionView
+                        dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                        withReuseIdentifier:kMEFeedCollectionHeaderIdentifier
+                        forIndexPath:indexPath];
         
-        reusableview = headerView;
+        id media = [self.dataSource itemAtIndexPath:indexPath];
+        [reusableview setupWithMedia:media];
     }
-    
     return reusableview;
 }
 
@@ -139,13 +145,27 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
     }];
 }
 
-#pragma mark - Helpers
+#pragma mark - Action
+
+- (void)actionDidPressDirectButton:(UIButton *)sender
+{
+    
+}
+
+#pragma mark - User Interface
 
 - (void)setupUserInterface
 {
     TLYShyNavBarManager *shyManager = [TLYShyNavBarManager new];
     self.shyNavBarManager = shyManager;
     self.shyNavBarManager.scrollView = self.collectionView;
+    
+    MEDirectItem* item = [MEDirectItem directItem];
+    [item addTarget:self andAction:@selector(actionDidPressDirectButton:)];
+    
+    self.navigationItem.rightBarButtonItem = item;
+    self.navigationItem.titleView = [MELogoImageView new];
+    self.navigationController.navigationBar.barTintColor = [UIColor me_feedBarColor];
 }
 
 #pragma mark - Lazy Load
@@ -158,12 +178,12 @@ NSString* const kFeedCollectionCellIdentifier = @"kFeedCollectionCellIdentifier"
         layout.headerReferenceSize = MEFeedHeaderSize;
         
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
-        _collectionView.backgroundColor = [UIColor orangeColor];
+        _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         [_collectionView registerClass:[MEFeedCollectionCell class]
-            forCellWithReuseIdentifier:kFeedCollectionCellIdentifier];
-        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+            forCellWithReuseIdentifier:kMEFeedCollectionCellIdentifier];
+        [_collectionView registerClass:[MEFeedHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kMEFeedCollectionHeaderIdentifier];
         
         [self.view addSubview:_collectionView];
         

@@ -86,6 +86,7 @@ CGFloat const kDefaultShareViewHeight = 50;
     if (!_imageView)
     {
         _imageView = [MEFeedImageView new];
+        _imageView.backgroundColor = [UIColor me_feedImageColor];
         [self.contentView addSubview:_imageView];
         
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -103,6 +104,7 @@ CGFloat const kDefaultShareViewHeight = 50;
     if (!_shareContentView)
     {
         _shareContentView = [MEShareContentView new];
+        _shareContentView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_shareContentView];
         
         [_shareContentView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -122,7 +124,7 @@ CGFloat const kDefaultShareViewHeight = 50;
         _commentsContentView = [MECommentsContentView new];
         _commentsContentView.firstCommentLabel.delegate = self;
         _commentsContentView.secondCommentLabel.delegate = self;
-        _commentsContentView.backgroundColor = [UIColor grayColor];
+        _commentsContentView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_commentsContentView];
         
         [_commentsContentView mas_makeConstraints:^(MASConstraintMaker *make) {

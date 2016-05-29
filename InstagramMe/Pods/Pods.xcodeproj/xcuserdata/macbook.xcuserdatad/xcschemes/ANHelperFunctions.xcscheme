@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '372B9AB701A7BF6650FE3406'
+               BlueprintIdentifier = '7C38648299284C75792655F1'
                BlueprintName = 'ANHelperFunctions'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libANHelperFunctions.a'>

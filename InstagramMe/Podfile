@@ -26,6 +26,9 @@ pod 'TLYShyNavBar'
 pod 'ResponsiveLabel', '~> 1.0.11'
 pod 'STTweetLabel'
 
+#ANIMATIONS
+pod 'pop', :git => 'https://github.com/facebook/pop.git'
+
 
 end
 

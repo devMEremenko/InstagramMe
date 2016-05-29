@@ -95,7 +95,6 @@
     
     NSTextContainer* container = [self containerWithUpdatingAttributes];
     container.size = rect.size;
-    [self.storage setAttributedString:self.attributedText];
     
     NSRange glyphRange = [self.layoutManager glyphRangeForTextContainer:container];
     CGRect frame = [self.layoutManager usedRectForTextContainer:container];
@@ -156,6 +155,7 @@
 - (void)setAttributedText:(NSAttributedString *)attributedText
 {
     _attributedText = attributedText;
+    [self.storage setAttributedString:self.attributedText];
     [self setNeedsDisplay];
 }
 

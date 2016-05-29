@@ -325,7 +325,7 @@ static void * const kTLYShyNavBarManagerKVOContext = (void*)&kTLYShyNavBarManage
                 [self.delegate shyNavBarManagerDidBecomeFullyContracted:self];
             }
         }
-
+        
         [self.navBarController updateYOffset:deltaY];
     }
 

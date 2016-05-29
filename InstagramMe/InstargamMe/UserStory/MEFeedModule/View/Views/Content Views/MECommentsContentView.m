@@ -151,15 +151,14 @@ NSInteger const kMEMaxViewingComment = 2;
 {
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
-//
-//    [UIView animateWithDuration:0.6
-//                          delay:0
-//         usingSpringWithDamping:1.2
-//          initialSpringVelocity:0.7
-//                        options:0
-//                     animations:^{
-//                         [self layoutIfNeeded];
-//                     } completion:nil];
+    
+    if ([label isEqual:self.firstCommentLabel])
+    {
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             [self.secondCommentLabel layoutIfNeeded];
+                         }];
+    }
 }
 
 #pragma mark - Helpers
@@ -205,11 +204,6 @@ NSInteger const kMEMaxViewingComment = 2;
     return media.commentCount > kMEMaxViewingComment;
 }
 
-- (BOOL)isExntededCommentAtIndex:(MECommentIndex)index
-{
-    return [self commentAtIndex:index].isExtended;
-}
-
 - (InstagramComment *)commentAtIndex:(MECommentIndex)index
 {
     if (self.media.commentCount > index)
@@ -218,7 +212,6 @@ NSInteger const kMEMaxViewingComment = 2;
     }
     return nil;
 }
-
 
 #pragma mark - Lazy Load
 

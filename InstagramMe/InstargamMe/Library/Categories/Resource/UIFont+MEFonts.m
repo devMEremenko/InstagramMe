@@ -8,34 +8,39 @@
 
 #import "UIFont+MEFonts.h"
 
-NSString* const kMEHelveticaRegularFont = @"Helvetica";
-NSString* const kMEHelveticaBoldFont = @"Helvetica-Bold";
+NSString* const kMESemiboldFontName = @"SFUIText-Semibold";
+NSString* const kMERegularFontName = @"SFUIText-Regular";
 
 @implementation UIFont (MEFonts)
 
 + (UIFont *)me_commentsFont
 {
-    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
+    return [UIFont fontWithName:kMERegularFontName size:16];
+}
+
++ (UIFont *)me_feedUserFont
+{
+    return [UIFont fontWithName:kMESemiboldFontName size:16];
 }
 
 + (UIFont *)me_viewAllButtonFont
 {
-    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
+    return [UIFont fontWithName:kMERegularFontName size:16];
 }
 
 + (UIFont *)me_hashTagsFont
 {
-    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
+    return [UIFont fontWithName:kMERegularFontName size:16];
 }
 
 + (UIFont *)me_userLinksFont
 {
-    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
+    return [UIFont fontWithName:kMERegularFontName size:16];
 }
 
 + (UIFont *)me_truncationFont
 {
-    return [UIFont fontWithName:kMEHelveticaRegularFont size:16];
+    return [UIFont fontWithName:kMERegularFontName size:16];
 }
 
 @end

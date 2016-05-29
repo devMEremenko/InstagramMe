@@ -15,14 +15,39 @@
 
 // Feed
 
++ (UIColor *)me_feedBarColor
+{
+    return UIColorWithRed(250, 250, 250, 1);
+}
+
++ (UIColor *)me_feedUserColor
+{
+    return UIColorWithRed(38, 38, 38, 1);
+}
+
++ (UIColor *)me_feedImageCornerColor
+{
+    return  UIColorWithRed(155, 155, 155, 1);
+}
+
++ (UIColor *)me_feedHeaderSeparatorColor
+{
+    return UIColorWithRed(230, 230, 230, 1);
+}
+
 + (UIColor *)me_commentsColor
 {
-    return [UIColor colorWithWhite:0.f alpha:0.6];
+    return UIColorWithRed(38, 38, 38, 1);
 }
 
 + (UIColor *)me_commentSeperatorColor
 {
-    return [UIColor colorWithWhite:0.f alpha:0.2];
+    return UIColorWithRed(230, 230, 230, 1);
+}
+
++ (UIColor *)me_feedImageColor
+{
+    return UIColorWithRed(204, 221, 255, 1);
 }
 
 + (UIColor *)me_viewAllButtonTitleColor
@@ -37,7 +62,7 @@
 
 + (UIColor *)me_hashTagsColor
 {
-    return UIColorWithRed(64, 93, 230, 0.95);
+    return UIColorWithRed(0, 53, 105, 1);
 }
 
 + (UIColor *)me_userLinksColor

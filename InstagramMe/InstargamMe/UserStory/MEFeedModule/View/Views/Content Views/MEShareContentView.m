@@ -8,8 +8,9 @@
 
 #import "MEShareContentView.h"
 
-CGFloat const kDefaultButtonSide = 30.f;
-CGFloat const kButtonWidthOffset = 14.f;
+CGFloat const kDefaultButtonSide = 25.f;
+CGFloat const kDefaultLeftOffset = 20.f;
+CGFloat const kButtonWidthOffset = 18.f;
 CGFloat const kButtonHeightOffset = 4.f;
 
 @implementation MEShareContentView
@@ -44,7 +45,7 @@ CGFloat const kButtonHeightOffset = 4.f;
         [self addSubview:_likeButton];
         
         [_likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).with.offset(kButtonWidthOffset);
+            make.left.equalTo(self).with.offset(kDefaultLeftOffset);
             make.centerY.equalTo(self);
             make.height.equalTo(@(kDefaultButtonSide));
             make.width.equalTo(@(kDefaultButtonSide));

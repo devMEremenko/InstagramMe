@@ -14,8 +14,14 @@
 
 - (void)setupWithMedia:(InstagramMedia *)media
 {
-    [self yy_setImageWithURL:media.standardResolutionImageURL
-                     options:YYWebImageOptionProgressiveBlur | YYWebImageOptionSetImageWithFadeAnimation];
+    [self yy_setImageWithURL:media.standardResolutionImageURL options:[self options]];
+}
+
+#pragma mark -
+
+- (YYWebImageOptions)options
+{
+    return YYWebImageOptionProgressiveBlur | YYWebImageOptionSetImageWithFadeAnimation;
 }
 
 @end

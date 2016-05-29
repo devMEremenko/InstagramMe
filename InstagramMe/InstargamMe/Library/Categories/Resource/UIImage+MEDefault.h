@@ -14,4 +14,8 @@
 + (UIImage *)me_replyImage;
 + (UIImage *)me_commentsImage;
 
++ (UIImage *)me_logoImage;
++ (UIImage *)me_directImage;
++ (UIImage *)me_additionallyImage;
+
 @end

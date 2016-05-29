@@ -6,6 +6,8 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
+#import "YYWebImage.h"
+
 @interface MEImageView : UIImageView
 
 @end

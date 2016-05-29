@@ -13,6 +13,10 @@ static NSString* const kLikeHighlightedImageName = @"like_button_highlighted";
 static NSString* const kCommentsImageName = @"comments_button";
 static NSString* const kReplyImageName = @"reply_button";
 
+static NSString* const kLogoImageName = @"insta-logo";
+static NSString* const kDirectImageName = @"direct_button";
+static NSString* const kAdditionallyImageName = @"additionally-button";
+
 @implementation UIImage (MEDefault)
 
 + (UIImage *)me_likeImage
@@ -33,6 +37,21 @@ static NSString* const kReplyImageName = @"reply_button";
 + (UIImage *)me_commentsImage
 {
     return [UIImage imageNamed:kCommentsImageName];
+}
+
++ (UIImage *)me_logoImage
+{
+    return [UIImage imageNamed:kLogoImageName];
+}
+
++ (UIImage *)me_directImage
+{
+    return [UIImage imageNamed:kDirectImageName];
+}
+
++ (UIImage *)me_additionallyImage
+{
+    return [UIImage imageNamed:kAdditionallyImageName];
 }
 
 @end

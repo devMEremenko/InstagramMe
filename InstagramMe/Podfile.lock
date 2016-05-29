@@ -37,6 +37,7 @@ PODS:
   - InstagramKit/Exclude-UICKeyChainStore (3.8):
     - AFNetworking (~> 3.0)
   - Masonry (1.0.0)
+  - pop (1.0.9)
   - ReactiveCocoa (2.4.7):
     - ReactiveCocoa/UI (= 2.4.7)
   - ReactiveCocoa/Core (2.4.7):
@@ -61,10 +62,20 @@ DEPENDENCIES:
   - ANLogger
   - InstagramKit (~> 3.0)
   - Masonry
+  - pop (from `https://github.com/facebook/pop.git`)
   - ResponsiveLabel (~> 1.0.11)
   - STTweetLabel
   - TLYShyNavBar
   - YYWebImage
+
+EXTERNAL SOURCES:
+  pop:
+    :git: https://github.com/facebook/pop.git
+
+CHECKOUT OPTIONS:
+  pop:
+    :commit: b30efd828111e4dfd1651635c8586f859d1fd3c2
+    :git: https://github.com/facebook/pop.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -75,6 +86,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: f58d8a19629f4d8379ae14bb3534def24161430e
   InstagramKit: 402d6bba375357b548039de08eea19a1b8716354
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   ResponsiveLabel: 9e31c425ed082481faf2360689243bb0ec8f8b22
   STTweetLabel: 842bc86cdf13288414440405757478bd4820e1be

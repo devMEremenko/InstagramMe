@@ -42,8 +42,8 @@
 {
     self.numberOfLines = 0;
     self.opaque = NO;
-    self.backgroundColor = [UIColor clearColor];
     self.userInteractionEnabled = YES;
+    self.backgroundColor = [UIColor clearColor];
     [self tapGesture];
     [self overlayView];
 }
@@ -53,12 +53,6 @@
     self.comment = comment;
     self.userInteractionEnabled = YES;
     [self setAttributedTitle:comment.text];
-}
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    [self updateConstraints];
 }
 
 #pragma mark - Actions
@@ -89,16 +83,23 @@
         
         ANDispatchBlockToMainQueue(^{
             self.attributedText = attributedComment;
-            [self layoutIfNeeded];
         });
     });
+}
+
+#pragma mark - Layouts
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self updateConstraints];
 }
 
 - (void)updateConstraints
 {
     [self.overlayView mas_updateConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self).with.offset(CGRectGetHeight(self.bounds));
+        make.top.equalTo(self).with.offset(CGRectGetHeight(self.bounds)).priorityHigh();
         make.left.equalTo(self);
         make.right.equalTo(self);
         make.bottom.equalTo(self);
@@ -106,13 +107,23 @@
     
     if (self.comment.isExtended)
     {
-        [UIView animateWithDuration:0.2
-                         animations:^{
-                             [self.overlayView layoutIfNeeded];
-                         }];
+        [self animateOverlayView];
     }
-    
     [super updateConstraints];
+}
+
+#pragma mark - Animation
+
+- (void)animateOverlayView
+{
+    [UIView animateWithDuration:0.6
+                          delay:0
+         usingSpringWithDamping:0.3
+          initialSpringVelocity:2
+                        options:0
+                     animations:^{
+                         [self.overlayView layoutIfNeeded];
+                     } completion:nil];
 }
 
 #pragma mark - Lazy Load
@@ -133,7 +144,7 @@
     if (!_overlayView)
     {
         _overlayView = [UIView new];
-        _overlayView.backgroundColor = [UIColor grayColor];
+        _overlayView.backgroundColor = [UIColor whiteColor];
         [self addSubview:_overlayView];
     }
     return _overlayView;

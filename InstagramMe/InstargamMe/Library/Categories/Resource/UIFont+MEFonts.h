@@ -9,6 +9,7 @@
 @interface UIFont (MEFonts)
 
 + (UIFont *)me_commentsFont;
++ (UIFont *)me_feedUserFont;
 + (UIFont *)me_viewAllButtonFont;
 + (UIFont *)me_hashTagsFont;
 + (UIFont *)me_userLinksFont;

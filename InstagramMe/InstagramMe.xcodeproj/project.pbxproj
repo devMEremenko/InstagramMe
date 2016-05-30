@@ -10,6 +10,8 @@
 		F822ED030B5A54ADF1C870B7 /* libPods-InstagramMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */; };
 		FA14D3E01CF311790024F6CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14D3DE1CF311790024F6CC /* main.m */; };
 		FA556B1A1CFB2D4300C71906 /* MELikeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA556B191CFB2D4300C71906 /* MELikeImageView.m */; };
+		FA5D19631CFCDDDC00E8F874 /* MEMediaBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D19621CFCDDDC00E8F874 /* MEMediaBuilder.m */; };
+		FA5D19841CFCEB1600E8F874 /* Comments.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA5D19821CFCEB1600E8F874 /* Comments.strings */; };
 		FA9014231CFB285A003D9435 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA93B9AE1CFB26BA00FD5554 /* SF-UI-Text-Regular.otf */; };
 		FA93B9491CFA1DE400FD5554 /* MEImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B9481CFA1DE400FD5554 /* MEImageView.m */; };
 		FA93B94C1CFA1DFB00FD5554 /* MEFeedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B94B1CFA1DFB00FD5554 /* MEFeedImageView.m */; };
@@ -74,6 +76,9 @@
 		FA14D3DE1CF311790024F6CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA556B181CFB2D4300C71906 /* MELikeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELikeImageView.h; sourceTree = "<group>"; };
 		FA556B191CFB2D4300C71906 /* MELikeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELikeImageView.m; sourceTree = "<group>"; };
+		FA5D19611CFCDDDC00E8F874 /* MEMediaBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEMediaBuilder.h; sourceTree = "<group>"; };
+		FA5D19621CFCDDDC00E8F874 /* MEMediaBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMediaBuilder.m; sourceTree = "<group>"; };
+		FA5D19831CFCEB1600E8F874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Comments.strings; sourceTree = "<group>"; };
 		FA93B9471CFA1DE400FD5554 /* MEImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEImageView.h; sourceTree = "<group>"; };
 		FA93B9481CFA1DE400FD5554 /* MEImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEImageView.m; sourceTree = "<group>"; };
 		FA93B94A1CFA1DFB00FD5554 /* MEFeedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedImageView.h; sourceTree = "<group>"; };
@@ -250,6 +255,22 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA5D196D1CFCE95A00E8F874 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D19811CFCEB1600E8F874 /* Base.lproj */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		FA5D19811CFCEB1600E8F874 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D19821CFCEB1600E8F874 /* Comments.strings */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		FA93B9461CFA1DC300FD5554 /* ImageViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +356,7 @@
 			children = (
 				FA93B9631CFB1F8D00FD5554 /* Fonts */,
 				FAF32CA71CF4871500C31DB1 /* Images */,
+				FA5D196D1CFCE95A00E8F874 /* Strings */,
 				FADEDEF51CF3C2BE008F6E75 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
@@ -657,6 +679,8 @@
 			children = (
 				FAF32D0F1CF8BA1100C31DB1 /* MEStringBuilder.h */,
 				FAF32D101CF8BA1100C31DB1 /* MEStringBuilder.m */,
+				FA5D19611CFCDDDC00E8F874 /* MEMediaBuilder.h */,
+				FA5D19621CFCDDDC00E8F874 /* MEMediaBuilder.m */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -776,7 +800,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = FA14D3B31CF310570024F6CC;
@@ -797,6 +820,7 @@
 				FA93B9A21CFB253700FD5554 /* SF-UI-Text-Bold.otf in Resources */,
 				FA93B9A41CFB253700FD5554 /* SF-UI-Text-Heavy.otf in Resources */,
 				FA93B9A61CFB253700FD5554 /* SF-UI-Text-Light.otf in Resources */,
+				FA5D19841CFCEB1600E8F874 /* Comments.strings in Resources */,
 				FA93B9A81CFB253700FD5554 /* SF-UI-Text-Medium.otf in Resources */,
 				FA93B9AA1CFB253700FD5554 /* SF-UI-Text-Semibold.otf in Resources */,
 				FAF32CA91CF4872800C31DB1 /* Assets.xcassets in Resources */,
@@ -861,6 +885,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE6E91C1CFCAA860003032F /* METextNode.m in Sources */,
+				FA5D19631CFCDDDC00E8F874 /* MEMediaBuilder.m in Sources */,
 				FAF32D401CF9D1FE00C31DB1 /* InstagramComment+MEComment.m in Sources */,
 				FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */,
 				FA93B94F1CFA427100FD5554 /* MELogoImageView.m in Sources */,
@@ -910,6 +935,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA5D19821CFCEB1600E8F874 /* Comments.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA5D19831CFCEB1600E8F874 /* Base */,
+			);
+			name = Comments.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FA14D3D11CF310570024F6CC /* Debug */ = {

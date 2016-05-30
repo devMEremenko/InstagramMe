@@ -1,0 +1,28 @@
+/* 
+  Comments.strings
+  InstagramMe
+
+  Created by Maxim Eremenko on 5/31/16.
+  Copyright © 2016 Maxim Eremenko. All rights reserved.
+*/
+
+"comment_1" = "@olegpanfyorov1988 Small comment #small about everything. Similar to internationalizing user interface files, we need to create a .strings file in order for the @system to find the string for the #key";
+
+"comment_2" = "@m_a_eremenko This is awesome! #awesome! London is the capital of Great Britain! #Britain #London #Capital Blah blah blah... #smart_comment";
+
+"comment_3" = "@maria Students can test and @debug their applications using #Xcode’s graphical debugger, or collect real-time performance data in #Instruments’ timeline view. To see their work in action and ensure proper functionality, students can install their applications directly on iPad, iPhone and iPod touch. #Test #on #iPad #iPhone #iPod";
+
+"comment_4" = "@apple With the @suite of sophisticated and elegant tools included in the #iOS #SDK #Development #Resources, and a wide-range of resources #available on the Apple Developer website, students participating in the class will have everything they need to create innovative applications for iPad, iPhone, and iPod touch";
+
+"comment_5" = "@google Apple developers share how they approach finding success on the App Store and what they’ve learned along the way.";
+
+"comment_6" = "@oksmaro The #Apple_Developer_Program provides all the resources to distribute on the App Store. #Look, we’re not here to nag. We all know we’re supposed to use sunscreen more reliably than we probably do.";
+
+"comment_7" = "@olegpanfyorov1988 #apps, #agreements, #tax and banking information, @sales reports, and more. Depending on your body size, experts recommend @using enough lotion to fill a shot glass, or an ounce, when you’re at the beach. Even if people are smart enough to apply sunscreen, they may not use enough, said Dr. Jerry Brewer, a dermatologic surgeon at the #Mayo #Clinic #in #Minnesota.";
+
+"comment_8" = "@google #Google is an #American multinational @technology company specializing in #Internet-related services and products. These include @online advertising technologies, search, cloud computing, and software. Most of its profits are derived from #AdWords, an online advertising service that places advertising near the list of #search results.";
+
+"comment_9" = "@m_a_eremenko #Apple #Google @oksmaro is beautiful and cool girl! But tssss... :) Today we revere “Lolita” for Nabokov’s bold, multilayered subject matter and his dazzling and allusive prose. But Nabokov’s most @enduring contribution may be his portrait of the brash, kitschy, postwar America he observed on his cross-country journeys. Nabokov never learned to drive, and so he estimated that between 1949 and 1959 Véra drove him 150,000 miles — #almost all of them on the two-lane blue highways that preceded the interstates.";
+
+
+

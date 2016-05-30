@@ -11,6 +11,7 @@
 #import "MEStringBuilder.h"
 #import "AsyncDisplayKit.h"
 #import "METextNode.h"
+#import "NSString+MEString.h"
 
 @interface MECommentLabel () <ASTextNodeDelegate>
 
@@ -144,6 +145,7 @@
         ANDispatchBlockToMainQueue(^{
             _textNode = [METextNode new];
             _textNode.delegate = self;
+            _textNode.truncationAttributedString = [NSString me_truncationAttributedString];
             _textNode.backgroundColor = [UIColor clearColor];
             
             [self addSubview:_textNode.view];

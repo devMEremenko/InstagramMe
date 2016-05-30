@@ -41,15 +41,18 @@ NSInteger const kMEMaxViewingComment = 2;
     NSArray* comments = [self viewingCommentsFromArray:media.comments];
     CGFloat result = [self commentsHeight:comments inSize:inSize];
     
+    CGFloat bottomOffset =  comments.count > 0 ? kMECommentViewTopBottomOffset : 0;
+    CGFloat topOffset = comments.count > 0 ? kMECommentViewTopBottomOffset : 0;
+    
     if ([self isShowViewAllButtonForMedia:media])
     {
         result += [self heightAllCommentsButtonForMedia:media];
     }
     else
     {
-        result += kMECommentViewTopBottomOffset; // top offset insted button
+        result = result + topOffset; // top offset insted button
     }
-    return result + kMECommentViewTopBottomOffset; // + bottom offset
+    return result + bottomOffset;
 }
 
 + (CGFloat)heightAllCommentsButtonForMedia:(InstagramMedia *)media
@@ -99,12 +102,10 @@ NSInteger const kMEMaxViewingComment = 2;
         if (isShowViewAllButton)
         {
             make.height.equalTo(@(kMEAllButtonHeight));
-            [self.allCommentsButton setTitle];
         }
         else
         {
             make.height.equalTo(@0);
-            [self.allCommentsButton clearTitle];
         }
     }];
     
@@ -144,6 +145,7 @@ NSInteger const kMEMaxViewingComment = 2;
     
     [self.firstCommentLabel setupWithComment:comment1];
     [self.secondCommentLabel setupWithComment:comment2];
+    [self.allCommentsButton setupWithMedia:media];
     
     [self layoutIfNeeded];
     [self updateConstraints];

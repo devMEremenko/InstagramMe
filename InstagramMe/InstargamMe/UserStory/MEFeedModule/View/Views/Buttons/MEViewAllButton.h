@@ -6,10 +6,10 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
+@class InstagramMedia;
+
 @interface MEViewAllButton : UIButton
 
-- (void)setTitle;
-
-- (void)clearTitle;
+- (void)setupWithMedia:(InstagramMedia *)media;
 
 @end

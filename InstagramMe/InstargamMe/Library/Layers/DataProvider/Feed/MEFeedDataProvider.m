@@ -9,6 +9,7 @@
 #import "MEFeedDataProvider.h"
 #import "MEInstagramKit.h"
 #import "MEMediaResponse.h"
+#import "MEMediaBuilder.h"
 
 @interface MEFeedDataProvider ()
 
@@ -75,40 +76,9 @@ NSInteger const MERequestedMediaCount = 10;
     // Because Instagram return only count of comments without description...
     for (InstagramMedia* obj in media)
     {
-        [obj setMediaComments:[self randomComments]];
+        [obj setMediaComments:[MEMediaBuilder buildInstagramComments]];
     }
 }
 
-- (NSMutableArray *)randomComments
-{
-    NSString* c1 = @"@olegpanfyorov1988 Small comment #small about everything. Small comment #small about everything. #hashtag Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This";
-    NSString* c2 = @"@m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome";
-//    NSString* c3 = @"London is the capital of Great Britain! #Britain #London #Capital";
-//    NSString* c4 = @"Blah blah blah... @m_a_lastname #smart_comment";
-    
-//    NSArray* comments = @[c1, c2, c3, c4];
-//    NSInteger countOfComments = arc4random() % comments.count;
-    
-    NSMutableArray* result = [NSMutableArray array];
-    /*
-    for (NSInteger i = 0; i < countOfComments; i++)
-    {
-        NSInteger index = arc4random() % comments.count;
-        [result addObject:comments[index]];
-    } */
-    
-    InstagramComment* comment1 = [InstagramComment new];
-    [comment1 setCommentCreatedDate:[NSDate date]];
-    [comment1 setCommentText:c1];
-    
-    InstagramComment* comment2 = [InstagramComment new];
-    [comment2 setCommentCreatedDate:[NSDate date]];
-    [comment2 setCommentText:c2];
-    
-    [result addObject:comment1];
-    [result addObject:comment2];
-
-    return result;
-}
 
 @end

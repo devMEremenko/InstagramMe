@@ -7,8 +7,15 @@
 //
 
 #import "MEViewAllButton.h"
+#import "MEInstagramKit.h"
 
 NSString* const kMEViewAllButtonTitle = @"View all comments";
+
+@interface MEViewAllButton ()
+
+@property (weak, nonatomic) InstagramMedia* media;
+
+@end
 
 @implementation MEViewAllButton
 
@@ -23,14 +30,31 @@ NSString* const kMEViewAllButtonTitle = @"View all comments";
     return button;
 }
 
+- (void)setupWithMedia:(InstagramMedia *)media
+{
+    self.media = media;
+    
+    NSInteger commentsCount = media.comments.count;
+    
+    if (commentsCount > 2)
+    {
+        NSString* title = [NSString stringWithFormat:@"View all %li comments", commentsCount];
+        [self setTitle:title forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self setTitle:nil forState:UIControlStateNormal];
+    }
+}
+
 - (void)setTitle
 {
-    [self setTitle:kMEViewAllButtonTitle forState:UIControlStateNormal];
+//    [self setTitle:kMEViewAllButtonTitle forState:UIControlStateNormal];
 }
 
 - (void)clearTitle
 {
-    [self setTitle:nil forState:UIControlStateNormal];
+//    [self setTitle:nil forState:UIControlStateNormal];
 }
 
 @end

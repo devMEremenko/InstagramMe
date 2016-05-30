@@ -52,12 +52,12 @@
 
 + (UIColor *)me_viewAllButtonTitleColor
 {
-    return UIColorWithRed(64, 93, 230, 1);
+    return UIColorWithRed(171, 173, 174, 1);
 }
 
 + (UIColor *)me_viewAllButtonHighlightedColor
 {
-    return UIColorWithRed(34, 63, 240, 1);
+    return UIColorWithRed(141, 143, 144, 1);
 }
 
 + (UIColor *)me_hashTagsColor

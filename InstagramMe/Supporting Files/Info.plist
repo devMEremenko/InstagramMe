@@ -21,7 +21,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>InstagramAppClientId</key>
-	<string>499d43d413cd40289edea14f55912f43</string>
+	<string>e3d7a7cd1d9244eb9c2089a7f473d5e1</string>
 	<key>InstagramAppRedirectURL</key>
 	<string>https://instagram.com/login/callback</string>
 	<key>LSRequiresIPhoneOS</key>

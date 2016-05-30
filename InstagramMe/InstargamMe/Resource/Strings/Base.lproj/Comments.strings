@@ -6,15 +6,15 @@
   Copyright © 2016 Maxim Eremenko. All rights reserved.
 */
 
-"comment_1" = "@olegpanfyorov1988 Small comment #small about everything. Similar to internationalizing user interface files, we need to create a .strings file in order for the @system to find the string for the #key";
+"comment_1" = "@olegpanfyorov1988 Small comment #small about everything. #Similar #to #internationalizing user @interface_files, we need to create a .strings file in order for the @system to find the string for the #key";
 
-"comment_2" = "@m_a_eremenko This is awesome! #awesome! London is the capital of Great Britain! #Britain #London #Capital Blah blah blah... #smart_comment";
+"comment_2" = "@m_a_eremenko This is awesome! #awesome! @London is the capital of #Great_Britain! #Britain #London #Capital Blah blah blah... #smart_comment. The city is served by a transit network, which includes four international airports, nine railway terminals, numerous trams, a monorail system and one of the #deepest underground rapid transit systems in the world, the Moscow Metro, the @fourth-largest in the world and largest outside of Asia in terms of @passenger numbers, and the busiest in Europe. It is recognized as one of the city's #landmarks due to the rich architecture of its 200 stations.";
 
 "comment_3" = "@maria Students can test and @debug their applications using #Xcode’s graphical debugger, or collect real-time performance data in #Instruments’ timeline view. To see their work in action and ensure proper functionality, students can install their applications directly on iPad, iPhone and iPod touch. #Test #on #iPad #iPhone #iPod";
 
 "comment_4" = "@apple With the @suite of sophisticated and elegant tools included in the #iOS #SDK #Development #Resources, and a wide-range of resources #available on the Apple Developer website, students participating in the class will have everything they need to create innovative applications for iPad, iPhone, and iPod touch";
 
-"comment_5" = "@google Apple developers share how they approach finding success on the App Store and what they’ve learned along the way.";
+"comment_5" = "@google #Apple developers share how they @approach finding success on the App Store and what they’ve learned along the way. #Moscow is a major political, economic, cultural, and scientific center of  Moscow has been ranked as the ninth most expensive city in the world by Mercer and has one of the world's Cities Research Network, and is also one of the fastest growing tourist destinations in the world according to the MasterCard Global Destination Cities Index. Moscow is the northernmost and coldest megacity and metropolis on Earth. It is home to the #Ostankino Tower, the tallest free standing structure in Europe; the Federation Tower, the tallest skyscraper in Europe; and the Moscow International Business Center. By its territorial expansion on July 1, 2012 southwest into the Moscow Oblast, the area of the capital more than doubled, going from 1,091 to 2,511 square @kilometers (421 to 970 sq mi), and it gained an additional population of 233,000 people";
 
 "comment_6" = "@oksmaro The #Apple_Developer_Program provides all the resources to distribute on the App Store. #Look, we’re not here to nag. We all know we’re supposed to use sunscreen more reliably than we probably do.";
 
@@ -22,7 +22,7 @@
 
 "comment_8" = "@google #Google is an #American multinational @technology company specializing in #Internet-related services and products. These include @online advertising technologies, search, cloud computing, and software. Most of its profits are derived from #AdWords, an online advertising service that places advertising near the list of #search results.";
 
-"comment_9" = "@m_a_eremenko #Apple #Google @oksmaro is beautiful and cool girl! But tssss... :) Today we revere “Lolita” for Nabokov’s bold, multilayered subject matter and his dazzling and allusive prose. But Nabokov’s most @enduring contribution may be his portrait of the brash, kitschy, postwar America he observed on his cross-country journeys. Nabokov never learned to drive, and so he estimated that between 1949 and 1959 Véra drove him 150,000 miles — #almost all of them on the two-lane blue highways that preceded the interstates.";
+"comment_9" = "@m_a_eremenko @oksmaro is beautiful and cool girl! But tssss... :) #Apple #Google #Today we revere “Lolita” for Nabokov’s bold, multilayered subject matter and his dazzling and allusive prose. But Nabokov’s most @enduring contribution may be his portrait of the brash, kitschy, postwar America he observed on his cross-country journeys. Nabokov never learned to drive, and so he estimated that between 1949 and 1959 Véra drove him 150,000 miles — #almost all of them on the two-lane blue highways that preceded the interstates.";
 
 
 

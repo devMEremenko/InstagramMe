@@ -8,6 +8,7 @@
 
 #import "MEMediaBuilder.h"
 
+NSString* const kMEMediaBuilderSourceTable = @"Comments";
 NSInteger const kMEMediaBuilderCommentsCount = 9;
 
 @implementation MEMediaBuilder
@@ -31,7 +32,8 @@ NSInteger const kMEMediaBuilderCommentsCount = 9;
 {
     NSInteger index = arc4random() % kMEMediaBuilderCommentsCount;
     NSString* key = [NSString stringWithFormat:@"comment_%li", (long) index + 1];
-    return NSLocalizedStringFromTable(key, @"Comments", nil);
+    
+    return NSLocalizedStringFromTable(key, kMEMediaBuilderSourceTable, nil);
 }
 
 @end

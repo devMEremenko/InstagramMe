@@ -31,8 +31,6 @@ CGFloat const kMECommentViewButtonBottomOffset = 10.f;
 CGFloat const kMEAllButtonHeight = 22.f;
 CGFloat const kMEMaxCommentHeight = 82.f;
 
-NSInteger const kMEMaxViewingComment = 2;
-
 @implementation MECommentsContentView
 
 
@@ -83,9 +81,9 @@ NSInteger const kMEMaxViewingComment = 2;
 
 + (NSArray *)viewingCommentsFromArray:(NSArray *)comments
 {
-    if (comments.count > kMEMaxViewingComment)
+    if (comments.count > kMEMaxViewingCommentCount)
     {
-        NSRange commentsRange = NSMakeRange(0, kMEMaxViewingComment);
+        NSRange commentsRange = NSMakeRange(0, kMEMaxViewingCommentCount);
         comments = [comments subarrayWithRange:commentsRange];
     }
     return comments;
@@ -205,7 +203,7 @@ NSInteger const kMEMaxViewingComment = 2;
 
 + (BOOL)isShowViewAllButtonForMedia:(InstagramMedia *)media
 {
-    return media.commentCount > kMEMaxViewingComment;
+    return media.commentCount > kMEMaxViewingCommentCount;
 }
 
 - (InstagramComment *)commentAtIndex:(MECommentIndex)index

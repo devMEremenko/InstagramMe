@@ -30,15 +30,24 @@ NSString* const kMEViewAllButtonTitle = @"View all comments";
     return button;
 }
 
+#pragma mark - Public
+
 - (void)setupWithMedia:(InstagramMedia *)media
 {
     self.media = media;
     
+    [self setTitleWithMedia:media];
+}
+
+#pragma mark -
+
+- (void)setTitleWithMedia:(InstagramMedia *)media
+{
     NSInteger commentsCount = media.comments.count;
     
-    if (commentsCount > 2)
+    if (commentsCount > kMEMaxViewingCommentCount)
     {
-        NSString* title = [NSString stringWithFormat:@"View all %li comments", commentsCount];
+        NSString* title = [NSString stringWithFormat:@"View all %li comments", (long)commentsCount];
         [self setTitle:title forState:UIControlStateNormal];
     }
     else
@@ -47,14 +56,5 @@ NSString* const kMEViewAllButtonTitle = @"View all comments";
     }
 }
 
-- (void)setTitle
-{
-//    [self setTitle:kMEViewAllButtonTitle forState:UIControlStateNormal];
-}
-
-- (void)clearTitle
-{
-//    [self setTitle:nil forState:UIControlStateNormal];
-}
 
 @end

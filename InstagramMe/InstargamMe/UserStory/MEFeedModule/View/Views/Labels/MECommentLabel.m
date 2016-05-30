@@ -9,13 +9,17 @@
 #import "MECommentLabel.h"
 #import "MEInstagramKit.h"
 #import "MEStringBuilder.h"
+#import "AsyncDisplayKit.h"
+#import "METextNode.h"
 
-@interface MECommentLabel ()
+@interface MECommentLabel () <ASTextNodeDelegate>
 
 @property (strong, nonatomic) UITapGestureRecognizer* tapGesture;
 @property (strong, nonatomic) UIView* overlayView;
 @property (strong, nonatomic) MASConstraint* overlayTopConstraint;
 @property (weak, nonatomic) InstagramComment* comment;
+
+@property (strong, nonatomic) METextNode* textNode;
 
 @end
 
@@ -40,19 +44,21 @@
 
 - (void)setup
 {
-    self.numberOfLines = 0;
-    self.opaque = NO;
     self.userInteractionEnabled = YES;
-    self.backgroundColor = [UIColor clearColor];
     [self tapGesture];
+    [self textNode];
     [self overlayView];
 }
+
+#pragma mark - Public
 
 - (void)setupWithComment:(InstagramComment *)comment
 {
     self.comment = comment;
     self.userInteractionEnabled = YES;
     [self setAttributedTitle:comment.text];
+    
+    [self updateConstraints];
 }
 
 #pragma mark - Actions
@@ -80,10 +86,7 @@
     ANDispatchBlockToBackgroundQueue(^{
         
         NSAttributedString* attributedComment = [MEStringBuilder buildCommentsString:text];
-        
-        ANDispatchBlockToMainQueue(^{
-            self.attributedText = attributedComment;
-        });
+        self.textNode.attributedText = attributedComment;
     });
 }
 
@@ -98,13 +101,19 @@
 - (void)updateConstraints
 {
     [self.overlayView mas_updateConstraints:^(MASConstraintMaker *make) {
-        
         make.top.equalTo(self).with.offset(CGRectGetHeight(self.bounds)).priorityHigh();
         make.left.equalTo(self);
         make.right.equalTo(self);
         make.bottom.equalTo(self);
     }];
     
+    [self.textNode.view mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_top);
+        make.left.equalTo(self.mas_left);
+        make.right.equalTo(self.mas_right);
+        make.bottom.equalTo(self.mas_bottom);
+    }];
+        
     if (self.comment.isExtended)
     {
         [self animateOverlayView];
@@ -127,6 +136,21 @@
 }
 
 #pragma mark - Lazy Load
+
+- (METextNode *)textNode
+{
+    if (!_textNode)
+    {
+        ANDispatchBlockToMainQueue(^{
+            _textNode = [METextNode new];
+            _textNode.delegate = self;
+            _textNode.backgroundColor = [UIColor clearColor];
+            
+            [self addSubview:_textNode.view];
+        });
+    }
+    return _textNode;
+}
 
 - (UITapGestureRecognizer *)tapGesture
 {

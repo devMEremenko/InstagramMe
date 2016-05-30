@@ -6,6 +6,7 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 @class InstagramMedia;
+@class ASTextNode;
 
 #import "MEViewAllButton.h"
 #import "InstagramMe-Swift.h"

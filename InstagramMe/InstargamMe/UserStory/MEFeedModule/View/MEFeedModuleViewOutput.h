@@ -10,4 +10,6 @@
 
 - (void)didTriggerViewReadyEvent;
 
+- (void)findNextPageRecentMedia;
+
 @end

@@ -316,9 +316,9 @@
                               id modelObject = [[modelClass alloc] initWithInfo:dataDictionary];
                               [objects addObject:modelObject];
                           }];
-                          dispatch_async(dispatch_get_main_queue(), ^{
+//                          dispatch_async(dispatch_get_main_queue(), ^{
                               success([objects copy], paginationInfo);
-                          });
+//                          });
                       });
                   }
                   failure:^(NSURLSessionDataTask *task, NSError *error) {

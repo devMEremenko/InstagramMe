@@ -16,6 +16,7 @@
 #import "MELogoImageView.h"
 #import "MEDirectItem.h"
 #import "MEFeedHeaderView.h"
+#import "MEMediaResponse.h"
 
 @interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MEFeedCollectionCellDelegate>
 
@@ -53,8 +54,7 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
 
 - (void)didFindNextPageRecentMedia:(MEMediaResponse *)mediaResponse
 {
-    [self.dataSource addMediaFromResponse:mediaResponse];
-    [self.collectionView reloadData];
+    [self insertNewMedia:mediaResponse];
 }
 
 - (void)failedFindRecentMedia
@@ -79,19 +79,11 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
     MEFeedCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kMEFeedCollectionCellIdentifier forIndexPath:indexPath];
     
     cell.delegate = self;
+    [cell setupWithMedia:[self.dataSource itemAtIndexPath:indexPath]];
     
-    if (IOS7) // performance reasons...
-    {
-        [cell setupWithMedia:[self.dataSource itemAtIndexPath:indexPath]];
-    }
+    [self uploadMoreIfNeededWithIndexPath:indexPath];
     
     return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    MEFeedCollectionCell* feedCell = (MEFeedCollectionCell *)cell;
-    [feedCell setupWithMedia:[self.dataSource itemAtIndexPath:indexPath]];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
@@ -165,7 +157,46 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
     
     self.navigationItem.rightBarButtonItem = item;
     self.navigationItem.titleView = [MELogoImageView new];
+    self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = [UIColor me_feedBarColor];
+}
+
+#pragma mark -
+
+- (void)insertNewMedia:(MEMediaResponse *)mediaResponse
+{
+    if (mediaResponse.recentMedia.count == 0)
+    {
+        return;
+    }
+    
+    NSInteger itemBeforeUpdate = [self.dataSource numberOfItemSections];
+    NSRange range = NSMakeRange(itemBeforeUpdate, mediaResponse.recentMedia.count);
+    
+    [self.dataSource addMediaFromResponse:mediaResponse];
+    
+    NSIndexSet* indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
+    
+    [self.collectionView performBatchUpdates:^{
+        
+        [self.collectionView insertSections:indexSet];
+        
+    } completion:nil];
+}
+
+#pragma mark - Helpers
+
+- (void)uploadMoreIfNeededWithIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self isLastCell:indexPath])
+    {
+        [self.output findNextPageRecentMedia];
+    }
+}
+
+- (BOOL)isLastCell:(NSIndexPath *)indexPath
+{
+    return indexPath.section + 1 == [self.dataSource numberOfItemSections];
 }
 
 #pragma mark - Lazy Load

@@ -22,14 +22,15 @@ typedef NS_ENUM(NSUInteger, MECommentIndex) {
 
 @end
 
-CGFloat const kMECommentViewDefaultOffset = 16.f;
+CGFloat const kMECommentViewLeftRightOffset = 16.f;
+CGFloat const kMECommentViewTopBottomOffset = 18.f;
+
 CGFloat const kMECommentViewButtonTopOffset = 10.f;
 CGFloat const kMECommentViewButtonBottomOffset = 10.f;
 
 CGFloat const kMEAllButtonHeight = 22.f;
-CGFloat const kMEMaxCommentHeight = 76.f;
+CGFloat const kMEMaxCommentHeight = 82.f;
 
-NSInteger const kMEMaxCommentLenght = 150;
 NSInteger const kMEMaxViewingComment = 2;
 
 @implementation MECommentsContentView
@@ -46,9 +47,9 @@ NSInteger const kMEMaxViewingComment = 2;
     }
     else
     {
-        result += kMECommentViewDefaultOffset; // top offset insted button
+        result += kMECommentViewTopBottomOffset; // top offset insted button
     }
-    return result + kMECommentViewDefaultOffset; // + bottom offset
+    return result + kMECommentViewTopBottomOffset; // + bottom offset
 }
 
 + (CGFloat)heightAllCommentsButtonForMedia:(InstagramMedia *)media
@@ -115,10 +116,10 @@ NSInteger const kMEMaxViewingComment = 2;
         }
         else
         {
-            make.top.equalTo(self.mas_top).with.offset(kMECommentViewDefaultOffset);
+            make.top.equalTo(self.mas_top).with.offset(kMECommentViewTopBottomOffset);
         }
-        make.left.equalTo(self.mas_left).with.offset(kMECommentViewDefaultOffset);
-        make.right.equalTo(self.mas_right).with.offset(-kMECommentViewDefaultOffset);
+        make.left.equalTo(self.mas_left).with.offset(kMECommentViewLeftRightOffset);
+        make.right.equalTo(self.mas_right).with.offset(-kMECommentViewLeftRightOffset);
         make.height.equalTo(@([self heightCommentAtIndex:MECommentIndexFirst]));
     }];
     
@@ -143,7 +144,8 @@ NSInteger const kMEMaxViewingComment = 2;
     
     [self.firstCommentLabel setupWithComment:comment1];
     [self.secondCommentLabel setupWithComment:comment2];
-        
+    
+    [self layoutIfNeeded];
     [self updateConstraints];
 }
 
@@ -169,13 +171,13 @@ NSInteger const kMEMaxViewingComment = 2;
     {
         return 0.f;
     }
-    CGFloat offset = (comments.count - 1) * kMECommentViewDefaultOffset;
+    CGFloat offset = (comments.count - 1) * kMECommentViewTopBottomOffset;
     return offset < 0 ? 0 : offset;
 }
 
 + (CGSize)commentsSizeWithViewSize:(CGSize)viewSize
 {
-    CGFloat width = viewSize.width - 2 * kMECommentViewDefaultOffset;
+    CGFloat width = viewSize.width - 2 * kMECommentViewLeftRightOffset;
     return CGSizeMake(width, CGFLOAT_MAX);
 }
 
@@ -224,8 +226,8 @@ NSInteger const kMEMaxViewingComment = 2;
         
         [_allCommentsButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self).with.offset(kMECommentViewButtonTopOffset);
-            make.left.equalTo(self.mas_left).with.offset(kMECommentViewDefaultOffset);
-            make.right.equalTo(self.mas_right).with.offset(-kMECommentViewDefaultOffset);
+            make.left.equalTo(self.mas_left).with.offset(kMECommentViewLeftRightOffset);
+            make.right.equalTo(self.mas_right).with.offset(-kMECommentViewLeftRightOffset);
         }];
     }
     return _allCommentsButton;
@@ -249,9 +251,9 @@ NSInteger const kMEMaxViewingComment = 2;
         [self addSubview:_secondCommentLabel];
         
         [_secondCommentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.firstCommentLabel.mas_bottom).with.offset(kMECommentViewDefaultOffset);
-            make.left.equalTo(self.mas_left).with.offset(kMECommentViewDefaultOffset);
-            make.right.equalTo(self.mas_right).with.offset(-kMECommentViewDefaultOffset);
+            make.top.equalTo(self.firstCommentLabel.mas_bottom).with.offset(kMECommentViewTopBottomOffset);
+            make.left.equalTo(self.mas_left).with.offset(kMECommentViewLeftRightOffset);
+            make.right.equalTo(self.mas_right).with.offset(-kMECommentViewLeftRightOffset);
         }];
     }
     return _secondCommentLabel;

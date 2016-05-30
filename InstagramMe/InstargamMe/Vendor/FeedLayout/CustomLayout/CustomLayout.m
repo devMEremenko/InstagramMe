@@ -10,20 +10,21 @@
 
 @implementation CustomLayout
 
-- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
-    
-    NSMutableArray *answer = [[super layoutAttributesForElementsInRect:rect] mutableCopy];
+- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
+{
+    NSMutableArray *answer = [NSMutableArray arrayWithArray:[super layoutAttributesForElementsInRect:rect]];
     UICollectionView * const cv = self.collectionView;
     CGPoint const contentOffset = cv.contentOffset;
     
     NSMutableIndexSet *missingSections = [NSMutableIndexSet indexSet];
-    for (UICollectionViewLayoutAttributes *layoutAttributes in answer) {
-        if (layoutAttributes.representedElementCategory == UICollectionElementCategoryCell) {
+    for (UICollectionViewLayoutAttributes *layoutAttributes in answer)
+    {
+        if (layoutAttributes.representedElementCategory == UICollectionElementCategoryCell)
+        {
             [missingSections addIndex:layoutAttributes.indexPath.section];
         }
-    }
-    for (UICollectionViewLayoutAttributes *layoutAttributes in answer) {
-        if ([layoutAttributes.representedElementKind isEqualToString:UICollectionElementKindSectionHeader]) {
+        if ([layoutAttributes.representedElementKind isEqualToString:UICollectionElementKindSectionHeader])
+        {
             [missingSections removeIndex:layoutAttributes.indexPath.section];
         }
     }
@@ -42,8 +43,8 @@
     
     for (UICollectionViewLayoutAttributes *layoutAttributes in answer) {
         
-        if ([layoutAttributes.representedElementKind isEqualToString:UICollectionElementKindSectionHeader]) {
-            
+        if ([layoutAttributes.representedElementKind isEqualToString:UICollectionElementKindSectionHeader])
+        {
             NSInteger section = layoutAttributes.indexPath.section;
             NSInteger numberOfItemsInSection = [cv numberOfItemsInSection:section];
             
@@ -54,17 +55,18 @@
             UICollectionViewLayoutAttributes *firstObjectAttrs;
             UICollectionViewLayoutAttributes *lastObjectAttrs;
             
-            if (numberOfItemsInSection > 0) { // use cell data if items exist
+            if (numberOfItemsInSection > 0) // use cell data if items exist
+            {
                 cellsExist = YES;
                 firstObjectAttrs = [self layoutAttributesForItemAtIndexPath:firstObjectIndexPath];
                 lastObjectAttrs = [self layoutAttributesForItemAtIndexPath:lastObjectIndexPath];
-            } else { // else use the header and footer
+            }
+            else  // else use the header and footer
+            {
                 cellsExist = NO;
-                firstObjectAttrs = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader
-                                                                        atIndexPath:firstObjectIndexPath];
-                lastObjectAttrs = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter
-                                                                       atIndexPath:lastObjectIndexPath];
+                firstObjectAttrs = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader atIndexPath:firstObjectIndexPath];
                 
+                lastObjectAttrs = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter atIndexPath:lastObjectIndexPath];
             }
             
             CGFloat topHeaderHeight = (cellsExist) ? CGRectGetHeight(layoutAttributes.frame) : 0;
@@ -87,14 +89,13 @@
                 .origin = origin,
                 .size = layoutAttributes.frame.size
             };
-            
         }
-        
     }
     return answer;
 }
 
-- (BOOL) shouldInvalidateLayoutForBoundsChange:(CGRect)newBound {
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBound
+{
     return YES;
 }
 

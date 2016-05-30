@@ -35,7 +35,7 @@
 
 - (BOOL)isExistCurrentUser
 {
-    return ![[InstagramEngine sharedEngine] isSessionValid];
+    return [[InstagramEngine sharedEngine] isSessionValid];
 }
 
 #pragma mark - Output

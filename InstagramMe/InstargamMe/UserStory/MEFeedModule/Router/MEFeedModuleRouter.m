@@ -46,7 +46,7 @@
 
 - (void)presentAuthorizationModuleIfNeeded
 {
-    if ([self.presenter.interactor isExistCurrentUser])
+    if (![self.presenter.interactor isExistCurrentUser])
     {
         UIViewController* vc = [self.presenter.authorizationModule controller];
         [self.presenter.authorizationModule preparePresentInModule:self.presenter];

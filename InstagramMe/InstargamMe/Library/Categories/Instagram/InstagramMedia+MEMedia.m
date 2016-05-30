@@ -7,8 +7,10 @@
 //
 
 #import "InstagramMedia+MEMedia.h"
+#import <objc/runtime.h>
 
 NSString* const kMEInstagramMediaComments = @"self.mComments";
+static const void *MEInstagramMediaIsLikedRunTimeKey = &MEInstagramMediaIsLikedRunTimeKey;
 
 @implementation InstagramMedia (MEMedia)
 
@@ -19,6 +21,23 @@ NSString* const kMEInstagramMediaComments = @"self.mComments";
     [self willChangeValueForKey:kMEInstagramMediaComments];
     [self setValue:mutableComments forKeyPath:kMEInstagramMediaComments];
     [self didChangeValueForKey:kMEInstagramMediaComments];
+}
+
+#pragma mark -
+
+- (void)setLiked:(BOOL)liked
+{
+    objc_setAssociatedObject(self, MEInstagramMediaIsLikedRunTimeKey, @(liked), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)liked
+{
+    return [objc_getAssociatedObject(self, MEInstagramMediaIsLikedRunTimeKey) boolValue];
+}
+
+- (BOOL)isLiked
+{
+    return [self liked];
 }
 
 @end

@@ -25,12 +25,18 @@ NSInteger const MERequestedMediaCount = 10;
 
 - (void)recentMediaForCurrentUser:(MERecentMediaComletion)completion
 {
-    self.paginationInfo = nil;
+    self.paginationInfo = [InstagramPaginationInfo new];
     [self nextPageRecentMedia:completion];
 }
 
 - (void)nextPageRecentMedia:(MERecentMediaComletion)completion
 {
+    if (!self.paginationInfo)
+    {
+        [self notifyDelegateWithMedia:nil andError:nil];
+        return;
+    }
+    
     self.recentCompletion = completion;
     
     [[InstagramEngine sharedEngine]
@@ -75,7 +81,7 @@ NSInteger const MERequestedMediaCount = 10;
 
 - (NSMutableArray *)randomComments
 {
-    NSString* c1 = @"@olegpanfyorov1988 Small comment #small about everything. Small comment #small about everything. #hashtag Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything";
+    NSString* c1 = @"@olegpanfyorov1988 Small comment #small about everything. Small comment #small about everything. #hashtag Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything Small comment #small about everything is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This";
     NSString* c2 = @"@m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome @m_a_eremenko This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome This is awesome! This is awesome! This is awesome! #awesome";
 //    NSString* c3 = @"London is the capital of Great Britain! #Britain #London #Capital";
 //    NSString* c4 = @"Blah blah blah... @m_a_lastname #smart_comment";

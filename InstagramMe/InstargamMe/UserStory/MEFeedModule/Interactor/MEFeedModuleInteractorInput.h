@@ -12,4 +12,6 @@
 
 - (void)findRecentMediaForCurrentUser;
 
+- (void)findNextPageRecentMedia;
+
 @end

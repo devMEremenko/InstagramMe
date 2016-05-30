@@ -35,6 +35,11 @@ CGFloat const kButtonHeightOffset = 4.f;
     return self;
 }
 
+- (void)setupWithMedia:(InstagramMedia *)media
+{
+    [self.likeButton setupWithMedia:media];
+}
+
 #pragma mark - Lazy Load
 
 - (MELikeButton *)likeButton

@@ -9,10 +9,12 @@
 #import "MEFeedCollectionCell.h"
 #import "MEInstagramKit.h"
 
-CGFloat const kDefaultShareViewHeight = 50;
+CGFloat const kDefaultShareViewHeight = 46.f;
 
-@interface MEFeedCollectionCell () <MECommentLabelDelegate>
+@interface MEFeedCollectionCell () <MECommentLabelDelegate, MEFeedImageViewDelegate>
+
 @property (weak, nonatomic) InstagramMedia* media;
+
 @end
 
 @implementation MEFeedCollectionCell
@@ -50,21 +52,17 @@ CGFloat const kDefaultShareViewHeight = 50;
 - (void)setup
 {
     self.clipsToBounds = YES;
-    [self imageView];
     [self shareContentView];
-    [self commentsContentView];
 }
 
 #pragma mark -
 
 - (void)setupWithMedia:(InstagramMedia *)media
 {
-    [self layoutIfNeeded];
-    [self updateConstraints];
-    
     self.media = media;
+    [self.feedImageView setupWithMedia:media];
+    [self.shareContentView setupWithMedia:media];
     [self.commentsContentView setupWithMedia:media];
-    [self.imageView setupWithMedia:media];
 }
 
 #pragma mark - MECommentLabelDelegate
@@ -79,24 +77,32 @@ CGFloat const kDefaultShareViewHeight = 50;
     }
 }
 
+#pragma mark - MEFeedImageViewDelegate
+
+- (void)feedImageView:(MEFeedImageView *)feedImage didPressLikeImageView:(MELikeImageView *)imageView
+{
+    self.media.liked = YES;
+    [self.shareContentView.likeButton setLikedStyleAnimated:YES];
+}
+
 #pragma mark - Lazy Load
 
-- (MEFeedImageView *)imageView
+- (MEFeedImageView *)feedImageView
 {
-    if (!_imageView)
+    if (!_feedImageView)
     {
-        _imageView = [MEFeedImageView new];
-        _imageView.backgroundColor = [UIColor me_feedImageColor];
-        [self.contentView addSubview:_imageView];
+        _feedImageView = [MEFeedImageView new];
+        _feedImageView.delegate = self;
+        [self.contentView addSubview:_feedImageView];
         
-        [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_feedImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.contentView.mas_top);
             make.left.equalTo(self.contentView.mas_left);
             make.right.equalTo(self.contentView.mas_right);
             make.height.equalTo(self.contentView.mas_width);
         }];
     }
-    return _imageView;
+    return _feedImageView;
 }
 
 - (MEShareContentView *)shareContentView
@@ -108,7 +114,7 @@ CGFloat const kDefaultShareViewHeight = 50;
         [self.contentView addSubview:_shareContentView];
         
         [_shareContentView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.imageView.mas_bottom);
+            make.top.equalTo(self.feedImageView.mas_bottom);
             make.left.equalTo(self.contentView);
             make.right.equalTo(self.contentView);
             make.height.equalTo(@(kDefaultShareViewHeight));

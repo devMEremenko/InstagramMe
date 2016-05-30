@@ -11,7 +11,7 @@
 
 #import "MELabel.h"
 
-@interface MECommentLabel : MELabel
+@interface MECommentLabel : UIView
 
 @property (weak, nonatomic) id <MECommentLabelDelegate> delegate;
 

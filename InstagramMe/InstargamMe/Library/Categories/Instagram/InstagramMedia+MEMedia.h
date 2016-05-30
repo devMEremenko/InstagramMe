@@ -10,6 +10,8 @@
 
 @interface InstagramMedia (MEMedia)
 
+@property (assign, nonatomic, getter=isLiked) BOOL liked;
+
 - (void)setMediaComments:(NSArray <InstagramComment *> *)comments;
 
 @end

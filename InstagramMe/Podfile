@@ -13,6 +13,7 @@ target 'InstagramMe' do
 
 #SOCIAL
 pod 'InstagramKit', '~> 3.0'
+pod 'UICKeyChainStore'
 
 #ANODA
 pod 'ANLogger'
@@ -22,6 +23,7 @@ pod 'ANBaseDomainModel'
 #UI
 pod 'Masonry'
 pod 'YYWebImage'
+pod 'AsyncDisplayKit'
 pod 'TLYShyNavBar'
 pod 'ResponsiveLabel', '~> 1.0.11'
 pod 'STTweetLabel'

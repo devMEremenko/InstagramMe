@@ -9,6 +9,7 @@
 #import "MELikeButton.h"
 #import "MEReplyButton.h"
 #import "MECommentsButton.h"
+#import "MEInstagramKit.h"
 
 @interface MEShareContentView : UIView
 
@@ -17,5 +18,7 @@
 @property (strong, nonatomic) MEReplyButton* replyButton;
 
 @property (strong, nonatomic) UIView* separator;
+
+- (void)setupWithMedia:(InstagramMedia *)media;
 
 @end

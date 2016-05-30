@@ -15,7 +15,7 @@
 
 @interface MEFeedCollectionCell : UICollectionViewCell
 
-@property (strong, nonatomic) MEFeedImageView* imageView;
+@property (strong, nonatomic) MEFeedImageView* feedImageView;
 @property (strong, nonatomic) MEShareContentView* shareContentView;
 @property (strong, nonatomic) MECommentsContentView* commentsContentView;
 @property (weak, nonatomic) id <MEFeedCollectionCellDelegate> delegate;

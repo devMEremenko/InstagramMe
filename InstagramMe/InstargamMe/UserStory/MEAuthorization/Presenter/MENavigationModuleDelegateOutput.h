@@ -11,8 +11,6 @@
 
 @protocol MENavigationModuleDelegateOutput <NSObject>
 
-- (void)presentModule:(id<MENavigationModuleDelegate>)module;
-
 - (void)dismissModule:(id<MENavigationModuleDelegate>)module;
 
 @end

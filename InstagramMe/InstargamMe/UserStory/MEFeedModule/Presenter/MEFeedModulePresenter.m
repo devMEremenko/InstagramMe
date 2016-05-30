@@ -22,11 +22,6 @@
 
 #pragma mark - MENavigationModuleDelegateOutput
 
-- (void)presentModule:(id<MENavigationModuleDelegate>)module
-{
-    
-}
-
 - (void)dismissModule:(id<MENavigationModuleDelegate>)module
 {
     [self.router dismissModule:module];
@@ -38,6 +33,14 @@
 - (void)didTriggerViewReadyEvent
 {
     [self.view setupInitialState];
+    [self.interactor findRecentMediaForCurrentUser];
+}
+
+- (void)findNextPageRecentMedia
+{
+    ANDispatchBlockToBackgroundQueue(^{
+        [self.interactor findNextPageRecentMedia];
+    });
 }
 
 #pragma mark - MEFeedModuleInteractorOutput

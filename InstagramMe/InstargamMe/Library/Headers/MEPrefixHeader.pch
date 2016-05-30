@@ -1,0 +1,14 @@
+//
+//  MEPrefixHeader.pch
+//  InstagramMe
+//
+//  Created by Maxim Eremenko on 5/23/16.
+//  Copyright © 2016 Maxim Eremenko. All rights reserved.
+//
+
+#ifdef __OBJC__
+@import UIKit;
+@import Foundation;
+#endif
+
+#import "MEGlobalHeader.h"

@@ -1,0 +1,36 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '7.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/anodamobi/ANODA-CocoaPods.git'
+
+inhibit_all_warnings!
+
+
+target 'InstagramMe' do
+
+#SOCIAL
+pod 'InstagramKit', '~> 3.0'
+pod 'UICKeyChainStore'
+
+#ANODA
+pod 'ANLogger'
+pod 'ANHelperFunctions'
+pod 'ANBaseDomainModel'
+
+#UI
+pod 'Masonry'
+pod 'YYWebImage'
+pod 'AsyncDisplayKit'
+pod 'TLYShyNavBar'
+pod 'ResponsiveLabel', '~> 1.0.11'
+pod 'STTweetLabel'
+
+#ANIMATIONS
+pod 'pop', :git => 'https://github.com/facebook/pop.git'
+
+
+end
+

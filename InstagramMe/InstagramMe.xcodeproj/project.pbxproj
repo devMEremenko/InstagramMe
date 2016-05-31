@@ -27,6 +27,7 @@
 		FA93B9A81CFB253700FD5554 /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA93B9741CFB1FBA00FD5554 /* SF-UI-Text-Medium.otf */; };
 		FA93B9AA1CFB253700FD5554 /* SF-UI-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA93B9781CFB1FBA00FD5554 /* SF-UI-Text-Semibold.otf */; };
 		FACD9E771CFD003B00924235 /* MEUserContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD9E761CFD003B00924235 /* MEUserContentView.m */; };
+		FACD9E7B1CFD170D00924235 /* MEHelperFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD9E7A1CFD170D00924235 /* MEHelperFunctions.m */; };
 		FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEEB1CF3C2BE008F6E75 /* AppDelegate.m */; };
 		FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEEE1CF3C2BE008F6E75 /* MEPreloader.m */; };
 		FADEDF281CF3C2BE008F6E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADEDEF51CF3C2BE008F6E75 /* LaunchScreen.storyboard */; };
@@ -105,6 +106,8 @@
 		FA93B9AE1CFB26BA00FD5554 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
 		FACD9E751CFD003B00924235 /* MEUserContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEUserContentView.h; sourceTree = "<group>"; };
 		FACD9E761CFD003B00924235 /* MEUserContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEUserContentView.m; sourceTree = "<group>"; };
+		FACD9E791CFD170D00924235 /* MEHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEHelperFunctions.h; sourceTree = "<group>"; };
+		FACD9E7A1CFD170D00924235 /* MEHelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEHelperFunctions.m; sourceTree = "<group>"; };
 		FADEDEEA1CF3C2BE008F6E75 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FADEDEEB1CF3C2BE008F6E75 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FADEDEED1CF3C2BE008F6E75 /* MEPreloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEPreloader.h; sourceTree = "<group>"; };
@@ -332,6 +335,15 @@
 			path = "San Francisco";
 			sourceTree = "<group>";
 		};
+		FACD9E781CFD16E600924235 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FACD9E791CFD170D00924235 /* MEHelperFunctions.h */,
+				FACD9E7A1CFD170D00924235 /* MEHelperFunctions.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FADEDEE81CF3C2BE008F6E75 /* InstargamMe */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,6 +546,7 @@
 				FAF32CFA1CF75AB300C31DB1 /* Builders */,
 				FA5D19851CFCF84400E8F874 /* Constants */,
 				FAF32CAA1CF4880600C31DB1 /* Categories */,
+				FACD9E781CFD16E600924235 /* Helpers */,
 				FAF32C8A1CF3C57B00C31DB1 /* Headers */,
 				FAF32C861CF3C4FB00C31DB1 /* Layers */,
 			);
@@ -932,6 +945,7 @@
 				FAF32D241CF93C8400C31DB1 /* MECommentLabel.m in Sources */,
 				FA93B95F1CFB084300FD5554 /* MEAdditionallyButton.m in Sources */,
 				FAF32D1E1CF90E7400C31DB1 /* MESTCommentLabel.m in Sources */,
+				FACD9E7B1CFD170D00924235 /* MEHelperFunctions.m in Sources */,
 				FADEDF2E1CF3C2BE008F6E75 /* MEFeedModuleAssembly.m in Sources */,
 				FAF32D441CF9E68300C31DB1 /* MELabel.m in Sources */,
 				FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */,

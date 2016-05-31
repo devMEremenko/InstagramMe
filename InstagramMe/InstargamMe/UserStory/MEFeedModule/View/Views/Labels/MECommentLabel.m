@@ -13,6 +13,8 @@
 #import "METextNode.h"
 #import "NSString+MEString.h"
 
+NSInteger const kMEWordsPerSecond = 700;
+
 @interface MECommentLabel () <ASTextNodeDelegate>
 
 @property (strong, nonatomic) UITapGestureRecognizer* tapGesture;
@@ -98,7 +100,8 @@
 {
     CGSize size = CGSizeMake(CGRectGetWidth(self.bounds), CGFLOAT_MAX);
     CGRect textRect = [self.comment.text me_commentsBoundingWithSize:size];
-    self.textNode.view.frame = textRect;
+    
+    self.textNode.view.frame = me_ceilRect(textRect);
     
     [super layoutSubviews];
     [self updateConstraints];
@@ -124,9 +127,11 @@
 
 - (void)animateOverlayView
 {
-    [UIView animateWithDuration:0.6
+    CGFloat duration = self.comment.text.length / kMEWordsPerSecond;    
+    
+    [UIView animateWithDuration:duration
                           delay:0
-         usingSpringWithDamping:0.3
+         usingSpringWithDamping:0.65
           initialSpringVelocity:2
                         options:0
                      animations:^{

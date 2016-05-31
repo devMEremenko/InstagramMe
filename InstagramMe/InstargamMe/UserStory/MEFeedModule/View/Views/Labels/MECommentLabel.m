@@ -113,13 +113,6 @@
         make.bottom.equalTo(self);
     }];
     
-//    [self.textNode.view mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.mas_top);
-//        make.left.equalTo(self.mas_left);
-//        make.right.equalTo(self.mas_right);
-//        make.bottom.equalTo(self.mas_bottom);
-//    }];
-    
     if (self.comment.isExtended)
     {
         [self animateOverlayView];
@@ -147,14 +140,12 @@
 {
     if (!_textNode)
     {
-        ANDispatchBlockToMainQueue(^{
-            _textNode = [METextNode new];
-            _textNode.delegate = self;
-            _textNode.truncationAttributedString = [NSString me_truncationAttributedString];
-            _textNode.backgroundColor = [UIColor clearColor];
-            
-            [self addSubview:_textNode.view];
-        });
+        _textNode = [METextNode new];
+        _textNode.delegate = self;
+        _textNode.truncationAttributedString = [NSString me_truncationAttributedString];
+        _textNode.backgroundColor = [UIColor clearColor];
+        
+        [self addSubview:_textNode.view];
     }
     return _textNode;
 }

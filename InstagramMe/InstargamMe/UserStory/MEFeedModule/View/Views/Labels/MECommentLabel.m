@@ -46,6 +46,7 @@
 - (void)setup
 {
     self.userInteractionEnabled = YES;
+    self.clipsToBounds = YES;
     [self tapGesture];
     [self textNode];
     [self overlayView];
@@ -95,6 +96,10 @@
 
 - (void)layoutSubviews
 {
+    CGSize size = CGSizeMake(CGRectGetWidth(self.bounds), CGFLOAT_MAX);
+    CGRect textRect = [self.comment.text me_commentsBoundingWithSize:size];
+    self.textNode.view.frame = textRect;
+    
     [super layoutSubviews];
     [self updateConstraints];
 }
@@ -108,13 +113,13 @@
         make.bottom.equalTo(self);
     }];
     
-    [self.textNode.view mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top);
-        make.left.equalTo(self.mas_left);
-        make.right.equalTo(self.mas_right);
-        make.bottom.equalTo(self.mas_bottom);
-    }];
-        
+//    [self.textNode.view mas_updateConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.mas_top);
+//        make.left.equalTo(self.mas_left);
+//        make.right.equalTo(self.mas_right);
+//        make.bottom.equalTo(self.mas_bottom);
+//    }];
+    
     if (self.comment.isExtended)
     {
         [self animateOverlayView];

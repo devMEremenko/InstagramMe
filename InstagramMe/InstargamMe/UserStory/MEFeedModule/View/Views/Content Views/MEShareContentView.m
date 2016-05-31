@@ -8,10 +8,11 @@
 
 #import "MEShareContentView.h"
 
-CGFloat const kDefaultButtonSide = 25.f;
-CGFloat const kDefaultLeftOffset = 20.f;
-CGFloat const kButtonWidthOffset = 18.f;
-CGFloat const kButtonHeightOffset = 4.f;
+CGFloat const kMEDefaultButtonSide = 25.f;
+CGFloat const kMEDefaultLeftOffset = 19.f;
+CGFloat const kMEButtonWidthOffset = 18.f;
+CGFloat const kMEButtonHeightOffset = 4.f;
+CGFloat const kMESeparatorLeftRightOffset = 16.f;
 
 @implementation MEShareContentView
 
@@ -50,10 +51,10 @@ CGFloat const kButtonHeightOffset = 4.f;
         [self addSubview:_likeButton];
         
         [_likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).with.offset(kDefaultLeftOffset);
+            make.left.equalTo(self).with.offset(kMEDefaultLeftOffset);
             make.centerY.equalTo(self);
-            make.height.equalTo(@(kDefaultButtonSide));
-            make.width.equalTo(@(kDefaultButtonSide));
+            make.height.equalTo(@(kMEDefaultButtonSide));
+            make.width.equalTo(@(kMEDefaultButtonSide));
         }];
     }
     return _likeButton;
@@ -68,9 +69,9 @@ CGFloat const kButtonHeightOffset = 4.f;
         
         [_commentsButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self);
-            make.height.equalTo(@(kDefaultButtonSide));
-            make.width.equalTo(@(kDefaultButtonSide));
-            make.left.equalTo(_likeButton.mas_right).offset(kButtonWidthOffset);
+            make.height.equalTo(@(kMEDefaultButtonSide));
+            make.width.equalTo(@(kMEDefaultButtonSide));
+            make.left.equalTo(_likeButton.mas_right).offset(kMEButtonWidthOffset);
         }];
     }
     return _commentsButton;
@@ -85,9 +86,9 @@ CGFloat const kButtonHeightOffset = 4.f;
         
         [_replyButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self);
-            make.height.equalTo(@(kDefaultButtonSide));
-            make.width.equalTo(@(kDefaultButtonSide));
-            make.left.equalTo(_commentsButton.mas_right).offset(kButtonWidthOffset);
+            make.height.equalTo(@(kMEDefaultButtonSide));
+            make.width.equalTo(@(kMEDefaultButtonSide));
+            make.left.equalTo(_commentsButton.mas_right).offset(kMEButtonWidthOffset);
         }];
     }
     return _replyButton;
@@ -104,8 +105,8 @@ CGFloat const kButtonHeightOffset = 4.f;
         [_separator mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@1);
             make.bottom.equalTo(self);
-            make.left.equalTo(self).with.offset(kButtonWidthOffset);
-            make.right.equalTo(self).with.offset(-kButtonWidthOffset);
+            make.left.equalTo(self).with.offset(kMESeparatorLeftRightOffset);
+            make.right.equalTo(self).with.offset(-kMESeparatorLeftRightOffset);
         }];
     }
     return _separator;

@@ -29,7 +29,7 @@ CGFloat const kMECommentViewButtonTopOffset = 10.f;
 CGFloat const kMECommentViewButtonBottomOffset = 10.f;
 
 CGFloat const kMEAllButtonHeight = 22.f;
-CGFloat const kMEMaxCommentHeight = 82.f;
+CGFloat const kMEMaxCommentHeight = 80.f;
 
 @implementation MECommentsContentView
 

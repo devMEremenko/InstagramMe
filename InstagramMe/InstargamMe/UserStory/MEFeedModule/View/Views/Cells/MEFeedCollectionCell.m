@@ -9,7 +9,7 @@
 #import "MEFeedCollectionCell.h"
 #import "MEInstagramKit.h"
 
-CGFloat const kDefaultShareViewHeight = 46.f;
+CGFloat const kDefaultShareViewHeight = 48.f;
 
 @interface MEFeedCollectionCell () <MECommentLabelDelegate, MEFeedImageViewDelegate>
 

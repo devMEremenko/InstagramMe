@@ -18,26 +18,6 @@
 @implementation MELabel
 @synthesize contentAlignment = _contentAlignment;
 
-- (CGPoint)alignOffset:(CGSize)viewSize containerSize:(CGSize)containerSize
-{
-    CGFloat xMargin = viewSize.width - containerSize.width;
-    CGFloat yMargin = viewSize.height = containerSize.height;
-    
-    switch (self.contentAlignment)
-    {
-        case ContentAlignmentCenter: return CGPointMake(MAX(xMargin / 2, 0), MAX(yMargin / 2, 0)); break;
-        case ContentAlignmentTop: return CGPointMake(MAX(xMargin / 2, 0), 0); break;
-        case ContentAlignmentBottom: return CGPointMake(MAX(xMargin / 2, 0), MAX(yMargin, 0)); break;
-        case ContentAlignmentLeft: return CGPointMake(0, MAX(yMargin / 2, 0)); break;
-        case ContentAlignmentTopLeft: return CGPointMake(0, 0); break;
-        case ContentAlignmentTopRight: return CGPointMake(MAX(xMargin, 0), 0); break;
-        case ContentAlignmentBottomLeft: return CGPointMake(0, MAX(yMargin, 0)); break;
-        case ContentAlignmentBottomRight: return CGPointMake(MAX(xMargin, 0), MAX(yMargin, 0)); break;
-        default: break;
-    }
-    return CGPointZero;
-}
-
 - (instancetype)init
 {
     return [self initWithFrame:CGRectZero];
@@ -245,6 +225,28 @@
         [_storage addLayoutManager:self.layoutManager];
     }
     return _storage;
+}
+
+#pragma mark -
+
+- (CGPoint)alignOffset:(CGSize)viewSize containerSize:(CGSize)containerSize
+{
+    CGFloat xMargin = viewSize.width - containerSize.width;
+    CGFloat yMargin = viewSize.height = containerSize.height;
+    
+    switch (self.contentAlignment)
+    {
+        case ContentAlignmentCenter: return CGPointMake(MAX(xMargin / 2, 0), MAX(yMargin / 2, 0)); break;
+        case ContentAlignmentTop: return CGPointMake(MAX(xMargin / 2, 0), 0); break;
+        case ContentAlignmentBottom: return CGPointMake(MAX(xMargin / 2, 0), MAX(yMargin, 0)); break;
+        case ContentAlignmentLeft: return CGPointMake(0, MAX(yMargin / 2, 0)); break;
+        case ContentAlignmentTopLeft: return CGPointMake(0, 0); break;
+        case ContentAlignmentTopRight: return CGPointMake(MAX(xMargin, 0), 0); break;
+        case ContentAlignmentBottomLeft: return CGPointMake(0, MAX(yMargin, 0)); break;
+        case ContentAlignmentBottomRight: return CGPointMake(MAX(xMargin, 0), MAX(yMargin, 0)); break;
+        default: break;
+    }
+    return CGPointZero;
 }
 
 @end

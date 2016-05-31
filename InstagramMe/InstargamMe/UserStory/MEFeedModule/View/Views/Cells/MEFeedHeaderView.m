@@ -50,7 +50,7 @@ NSInteger const KMESeparatorHeight = 1;
 
 - (void)setupWithMedia:(InstagramMedia *)media
 {
-    self.userNameLabel.text = @"asadasd asda sdasdada asdasdasdad"; //media.user.username;
+    self.userNameLabel.text = media.user.username;
     [self.imageView setupWithMedia:media];
     
     [self layoutSubviews];

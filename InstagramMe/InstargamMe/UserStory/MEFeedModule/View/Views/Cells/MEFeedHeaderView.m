@@ -14,8 +14,8 @@ NSInteger const kMEImageLeftOffset = 18;
 NSInteger const kMEImageSide = 36;
 
 NSInteger const kMEUserLabelLeftOffset = 10;
+NSInteger const kMEUserLabelRightOffset = 10;
 NSInteger const kMEUserLabelHeight = 36;
-NSInteger const kMEUserLabelWidth = 120;
 
 NSInteger const kMEAdditionallyButtonRightOffset = 20;
 NSInteger const kMEAdditionallyButtonSide = 18;
@@ -50,7 +50,7 @@ NSInteger const KMESeparatorHeight = 1;
 
 - (void)setupWithMedia:(InstagramMedia *)media
 {
-    self.userNameLabel.text = media.user.username;
+    self.userNameLabel.text = @"asadasd asda sdasdada asdasdasdad"; //media.user.username;
     [self.imageView setupWithMedia:media];
     
     [self layoutSubviews];
@@ -66,15 +66,19 @@ NSInteger const KMESeparatorHeight = 1;
                                   CGRectGetMidY(self.bounds) - kMEImageSide / 2,
                                   kMEImageSide, kMEImageSide);
     
-    _userNameLabel.frame = CGRectMake(CGRectGetMaxX(_imageView.frame) + kMEUserLabelLeftOffset,
-                                      CGRectGetMidY(_imageView.frame) - kMEImageSide / 2,
-                                      kMEUserLabelWidth, kMEUserLabelHeight);
-    
     CGFloat xButton = CGRectGetWidth(self.bounds) - kMEAdditionallyButtonRightOffset - kMEAdditionallyButtonSide;
     
     _additionallyButton.frame = CGRectMake(xButton,
                                            CGRectGetMidY(self.bounds) - kMEAdditionallyButtonSide / 2,
                                            kMEAdditionallyButtonSide, kMEAdditionallyButtonSide);
+    
+    CGFloat labelOffsets = CGRectGetMaxX(_imageView.frame) + kMEUserLabelLeftOffset + CGRectGetWidth(_additionallyButton.frame) + kMEAdditionallyButtonRightOffset + kMEUserLabelRightOffset;
+    
+    CGFloat labelWidth = CGRectGetWidth(self.bounds) - labelOffsets;
+    
+    _userNameLabel.frame = CGRectMake(CGRectGetMaxX(_imageView.frame) + kMEUserLabelLeftOffset,
+                                      CGRectGetMidY(_imageView.frame) - kMEImageSide / 2,
+                                      labelWidth, kMEUserLabelHeight);
     
     _separator.frame = CGRectMake(0,
                                   CGRectGetHeight(self.bounds) - KMESeparatorHeight,

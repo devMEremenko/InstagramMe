@@ -21,7 +21,8 @@
 
 #pragma mark -  
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	[super viewDidLoad];
 
 	[self.output didTriggerViewReadyEvent];

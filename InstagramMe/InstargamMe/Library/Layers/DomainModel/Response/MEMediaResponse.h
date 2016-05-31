@@ -6,7 +6,6 @@
 //  Copyright © 2016 Maxim Eremenko. All rights reserved.
 //
 
-#import <ANBaseDomainModel/ANBaseDomainModel.h>
 @class InstagramMedia;
 
 @interface MEMediaResponse : NSObject

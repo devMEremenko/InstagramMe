@@ -73,7 +73,7 @@ NSInteger const MERequestedMediaCount = 10;
 
 - (void)hackWithMedia:(NSArray<InstagramMedia *>*)media
 {
-    // Because Instagram return only count of comments without description...
+    // Because Instagram returning only count of comments without description...
     for (InstagramMedia* obj in media)
     {
         [obj setMediaComments:[MEMediaBuilder buildInstagramComments]];

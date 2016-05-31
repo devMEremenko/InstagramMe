@@ -11,7 +11,6 @@
 #import "MEFeedCollectionCell.h"
 #import "TLYShyNavBarManager.h"
 #import "MERecentMediaDataSource.h"
-#import "InstagramMe-Swift.h"
 #import "CustomLayout.h"
 #import "MELogoImageView.h"
 #import "MEDirectItem.h"
@@ -59,7 +58,7 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
 
 - (void)failedFindRecentMedia
 {
-    
+    NSLog(@"Internet connection is unavailable")
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -141,7 +140,7 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
 
 - (void)actionDidPressDirectButton:(UIButton *)sender
 {
-    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 #pragma mark - User Interface

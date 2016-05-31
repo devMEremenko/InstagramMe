@@ -19,19 +19,6 @@ CGFloat const kMEDefaultShareViewHeight = 48.f;
 
 @implementation MEFeedCollectionCell
 
-+ (CGSize)sizeWithMedia:(InstagramMedia *)media inCollectionView:(UICollectionView *)collectionView
-{
-    CGSize result = CGSizeZero;
-    result.height += CGRectGetWidth(collectionView.bounds);
-    result.height += kMEDefaultShareViewHeight;
-    result.height += [MECommentsContentView heightWithMedia:media inSize:collectionView.bounds.size];
-    
-    result.width = CGRectGetWidth(collectionView.bounds);
-    
-    result.height = ceilf(result.height);
-    return result;
-}
-
 #pragma mark - Initialization
 
 - (instancetype)init
@@ -53,6 +40,21 @@ CGFloat const kMEDefaultShareViewHeight = 48.f;
 {
     self.clipsToBounds = YES;
     [self shareContentView];
+}
+
+#pragma mark - Public
+
++ (CGSize)sizeWithMedia:(InstagramMedia *)media inCollectionView:(UICollectionView *)collectionView
+{
+    CGSize result = CGSizeZero;
+    result.height += CGRectGetWidth(collectionView.bounds);
+    result.height += kMEDefaultShareViewHeight;
+    result.height += [MECommentsContentView heightWithMedia:media inSize:collectionView.bounds.size];
+    
+    result.width = CGRectGetWidth(collectionView.bounds);
+    
+    result.height = ceilf(result.height);
+    return result;
 }
 
 #pragma mark -
@@ -87,18 +89,6 @@ CGFloat const kMEDefaultShareViewHeight = 48.f;
 {
     self.media.liked = YES;
     [self.shareContentView.likeButton setLikedStyleAnimated:YES];
-}
-
-#pragma mark - Layouts
-
-- (void)updateConstraints
-{
-//    [self.userContentView mas_updateConstraints:^(MASConstraintMaker *make) {
-//        CGFloat height = [[self.userContentView class]heightWithMedia:self.media inSize:self.bounds.size];
-//        make.height.equalTo(@(height));
-//    }];
-    
-    [super updateConstraints];
 }
 
 #pragma mark - Lazy Load
@@ -138,27 +128,6 @@ CGFloat const kMEDefaultShareViewHeight = 48.f;
     }
     return _shareContentView;
 }
-
-/*
-- (MEUserContentView *)userContentView
-{
-    return nil;
-    
-    if (!_userContentView)
-    {
-        _userContentView = [MEUserContentView new];
-        _userContentView.userLabel.delegate = self;
-        [self.contentView addSubview:_userContentView];
-        
-        [_userContentView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.shareContentView.mas_bottom);
-            make.left.equalTo(self.contentView.mas_left);
-            make.right.equalTo(self.contentView.mas_right);
-        }];
-    }
-    return _userContentView;
-}
-*/
 
 - (MECommentsContentView *)commentsContentView
 {

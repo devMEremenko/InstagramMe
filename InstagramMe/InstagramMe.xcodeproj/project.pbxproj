@@ -55,7 +55,6 @@
 		FAF32D001CF75C2A00C31DB1 /* NSString+MEString.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32CFF1CF75C2A00C31DB1 /* NSString+MEString.m */; };
 		FAF32D0D1CF771DD00C31DB1 /* MEViewAllButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D0C1CF771DD00C31DB1 /* MEViewAllButton.m */; };
 		FAF32D111CF8BA1100C31DB1 /* MEStringBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D101CF8BA1100C31DB1 /* MEStringBuilder.m */; };
-		FAF32D151CF900DD00C31DB1 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D141CF900DD00C31DB1 /* AttributedLabel.swift */; };
 		FAF32D1E1CF90E7400C31DB1 /* MESTCommentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D1D1CF90E7400C31DB1 /* MESTCommentLabel.m */; };
 		FAF32D241CF93C8400C31DB1 /* MECommentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D231CF93C8400C31DB1 /* MECommentLabel.m */; };
 		FAF32D381CF9D15600C31DB1 /* UIColor+MEColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D331CF9D15600C31DB1 /* UIColor+MEColors.m */; };
@@ -64,7 +63,6 @@
 		FAF32D3D1CF9D17300C31DB1 /* InstagramMedia+MEMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D3C1CF9D17300C31DB1 /* InstagramMedia+MEMedia.m */; };
 		FAF32D401CF9D1FE00C31DB1 /* InstagramComment+MEComment.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D3F1CF9D1FE00C31DB1 /* InstagramComment+MEComment.m */; };
 		FAF32D441CF9E68300C31DB1 /* MELabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D431CF9E68300C31DB1 /* MELabel.m */; };
-		FAF32D521CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D501CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift */; };
 		FAF32D551CFA026100C31DB1 /* CustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF32D541CFA026100C31DB1 /* CustomLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -176,8 +174,6 @@
 		FAF32D0C1CF771DD00C31DB1 /* MEViewAllButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEViewAllButton.m; sourceTree = "<group>"; };
 		FAF32D0F1CF8BA1100C31DB1 /* MEStringBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEStringBuilder.h; sourceTree = "<group>"; };
 		FAF32D101CF8BA1100C31DB1 /* MEStringBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEStringBuilder.m; sourceTree = "<group>"; };
-		FAF32D131CF900DD00C31DB1 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedLabel.h; sourceTree = "<group>"; };
-		FAF32D141CF900DD00C31DB1 /* AttributedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
 		FAF32D1C1CF90E7400C31DB1 /* MESTCommentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESTCommentLabel.h; sourceTree = "<group>"; };
 		FAF32D1D1CF90E7400C31DB1 /* MESTCommentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESTCommentLabel.m; sourceTree = "<group>"; };
 		FAF32D221CF93C8400C31DB1 /* MECommentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECommentLabel.h; sourceTree = "<group>"; };
@@ -195,7 +191,6 @@
 		FAF32D411CF9D36100C31DB1 /* MEInstagramKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEInstagramKit.h; sourceTree = "<group>"; };
 		FAF32D421CF9E68300C31DB1 /* MELabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELabel.h; sourceTree = "<group>"; };
 		FAF32D431CF9E68300C31DB1 /* MELabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELabel.m; sourceTree = "<group>"; };
-		FAF32D501CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASFloatingHeadersFlowLayout.swift; sourceTree = "<group>"; };
 		FAF32D531CFA026100C31DB1 /* CustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayout.h; sourceTree = "<group>"; };
 		FAF32D541CFA026100C31DB1 /* CustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -575,7 +570,6 @@
 			isa = PBXGroup;
 			children = (
 				FAF32D4E1CFA023100C31DB1 /* FeedLayout */,
-				FAF32D121CF900DD00C31DB1 /* AttributedLabel */,
 				FAE6E9111CFC710C0003032F /* UICKeyChainStore */,
 			);
 			path = Vendor;
@@ -721,15 +715,6 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
-		FAF32D121CF900DD00C31DB1 /* AttributedLabel */ = {
-			isa = PBXGroup;
-			children = (
-				FAF32D131CF900DD00C31DB1 /* AttributedLabel.h */,
-				FAF32D141CF900DD00C31DB1 /* AttributedLabel.swift */,
-			);
-			path = AttributedLabel;
-			sourceTree = "<group>";
-		};
 		FAF32D301CF9D15600C31DB1 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,17 +743,8 @@
 			isa = PBXGroup;
 			children = (
 				FAF32D511CFA023100C31DB1 /* CustomLayout */,
-				FAF32D4F1CFA023100C31DB1 /* ASFloatingHeadersFlowLayout */,
 			);
 			path = FeedLayout;
-			sourceTree = "<group>";
-		};
-		FAF32D4F1CFA023100C31DB1 /* ASFloatingHeadersFlowLayout */ = {
-			isa = PBXGroup;
-			children = (
-				FAF32D501CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift */,
-			);
-			path = ASFloatingHeadersFlowLayout;
 			sourceTree = "<group>";
 		};
 		FAF32D511CFA023100C31DB1 /* CustomLayout */ = {
@@ -921,14 +897,12 @@
 				FA93B9591CFA4CDB00FD5554 /* MEBarButtonItem.m in Sources */,
 				FAF32D391CF9D15600C31DB1 /* UIFont+MEFonts.m in Sources */,
 				FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */,
-				FAF32D521CFA023100C31DB1 /* ASFloatingHeadersFlowLayout.swift in Sources */,
 				FAF32D381CF9D15600C31DB1 /* UIColor+MEColors.m in Sources */,
 				FAF32CA21CF485BE00C31DB1 /* MEFeedCollectionCell.m in Sources */,
 				FAF32D3A1CF9D15600C31DB1 /* UIImage+MEDefault.m in Sources */,
 				FAF32C9E1CF484BB00C31DB1 /* MEShareContentView.m in Sources */,
 				FA556B1A1CFB2D4300C71906 /* MELikeImageView.m in Sources */,
 				FA93B9491CFA1DE400FD5554 /* MEImageView.m in Sources */,
-				FAF32D151CF900DD00C31DB1 /* AttributedLabel.swift in Sources */,
 				FADEDF2B1CF3C2BE008F6E75 /* MEAuthorizationPresenter.m in Sources */,
 				FADEDF2A1CF3C2BE008F6E75 /* MEAuthorizationInteractor.m in Sources */,
 				FA93B94C1CFA1DFB00FD5554 /* MEFeedImageView.m in Sources */,

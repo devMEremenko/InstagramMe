@@ -9,7 +9,6 @@
 @class ASTextNode;
 
 #import "MEViewAllButton.h"
-#import "InstagramMe-Swift.h"
 #import "MESTCommentLabel.h"
 #import "MECommentLabel.h"
 

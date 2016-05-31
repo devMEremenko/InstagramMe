@@ -35,6 +35,22 @@ CGFloat const kMEMaxCaptionHeight = 80;
 
 @implementation MECommentsContentView
 
+#pragma mark - Initialization
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self userLabel];
+        [self allCommentsButton];
+        [self firstCommentLabel];
+        [self secondCommentLabel];
+    }
+    return self;
+}
+
+#pragma mark -
+
 + (CGFloat)heightWithMedia:(InstagramMedia *)media inSize:(CGSize)inSize
 {
     NSArray* comments = [self viewingCommentsFromArray:media.comments];
@@ -106,28 +122,6 @@ CGFloat const kMEMaxCaptionHeight = 80;
         return result;
     }
     return result > kMEMaxCaptionHeight ? kMEMaxCaptionHeight : result;
-}
-
-+ (NSArray *)viewingCommentsFromArray:(NSArray *)comments
-{
-    if (comments.count > kMEMaxViewingCommentCount)
-    {
-        NSRange commentsRange = NSMakeRange(0, kMEMaxViewingCommentCount);
-        comments = [comments subarrayWithRange:commentsRange];
-    }
-    return comments;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self userLabel];
-        [self allCommentsButton];
-        [self firstCommentLabel];
-        [self secondCommentLabel];
-    }
-    return self;
 }
 
 #pragma mark - Layouts & Constraints
@@ -226,6 +220,18 @@ CGFloat const kMEMaxCaptionHeight = 80;
 }
 
 #pragma mark - Helpers
+
++ (NSArray *)viewingCommentsFromArray:(NSArray *)comments
+{
+    if (comments.count > kMEMaxViewingCommentCount)
+    {
+        NSRange commentsRange = NSMakeRange(0, kMEMaxViewingCommentCount);
+        comments = [comments subarrayWithRange:commentsRange];
+    }
+    return comments;
+}
+
+#pragma mark -
 
 + (CGFloat)offsetBetweenComments:(NSArray *)comments
 {

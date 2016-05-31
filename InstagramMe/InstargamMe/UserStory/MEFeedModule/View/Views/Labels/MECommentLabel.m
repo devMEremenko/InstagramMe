@@ -13,7 +13,7 @@
 #import "METextNode.h"
 #import "NSString+MEString.h"
 
-NSInteger const kMEWordsPerSecond = 700;
+NSInteger const kMEWordsPerSecond = 200;
 
 @interface MECommentLabel () <ASTextNodeDelegate>
 
@@ -49,6 +49,7 @@ NSInteger const kMEWordsPerSecond = 700;
 {
     self.userInteractionEnabled = YES;
     self.clipsToBounds = YES;
+    self.backgroundColor = [UIColor whiteColor];
     [self tapGesture];
     [self textNode];
     [self overlayView];
@@ -101,7 +102,7 @@ NSInteger const kMEWordsPerSecond = 700;
     CGSize size = CGSizeMake(CGRectGetWidth(self.bounds), CGFLOAT_MAX);
     CGRect textRect = [self.comment.text me_commentsBoundingWithSize:size];
     
-    self.textNode.view.frame = me_ceilRect(textRect);
+    self.textNode.frame = me_ceilRect(textRect);
     
     [super layoutSubviews];
     [self updateConstraints];
@@ -127,7 +128,7 @@ NSInteger const kMEWordsPerSecond = 700;
 
 - (void)animateOverlayView
 {
-    CGFloat duration = self.comment.text.length / kMEWordsPerSecond;    
+    CGFloat duration = kMEWordsPerSecond / (self.comment.text.length + 1);
     
     [UIView animateWithDuration:duration
                           delay:0
@@ -147,10 +148,11 @@ NSInteger const kMEWordsPerSecond = 700;
     {
         _textNode = [METextNode new];
         _textNode.delegate = self;
+        _textNode.layerBacked = YES;
         _textNode.truncationAttributedString = [NSString me_truncationAttributedString];
         _textNode.backgroundColor = [UIColor clearColor];
         
-        [self addSubview:_textNode.view];
+        [self addSubnode:_textNode];
     }
     return _textNode;
 }

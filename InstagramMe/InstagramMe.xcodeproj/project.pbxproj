@@ -516,13 +516,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FAE6E9111CFC710C0003032F /* UICKeyChainStore */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UICKeyChainStore;
-			sourceTree = "<group>";
-		};
 		FAE6E9191CFCAA610003032F /* ASNodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,7 +563,6 @@
 			isa = PBXGroup;
 			children = (
 				FAF32D4E1CFA023100C31DB1 /* FeedLayout */,
-				FAE6E9111CFC710C0003032F /* UICKeyChainStore */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";

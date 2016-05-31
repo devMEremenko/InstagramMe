@@ -149,7 +149,6 @@ NSInteger const kMEWordsPerSecond = 200;
         _textNode = [METextNode new];
         _textNode.delegate = self;
         _textNode.layerBacked = YES;
-        _textNode.truncationAttributedString = [NSString me_truncationAttributedString];
         _textNode.backgroundColor = [UIColor clearColor];
         
         [self addSubnode:_textNode];

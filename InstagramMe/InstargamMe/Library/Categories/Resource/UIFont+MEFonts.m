@@ -25,7 +25,7 @@ NSString* const kMERegularFontName = @"SFUIText-Regular";
 
 + (UIFont *)me_viewAllButtonFont
 {
-    return [UIFont fontWithName:kMERegularFontName size:16];
+    return [UIFont fontWithName:kMESemiboldFontName size:16];
 }
 
 + (UIFont *)me_hashTagsFont

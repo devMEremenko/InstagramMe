@@ -16,14 +16,8 @@ typedef NS_ENUM(NSUInteger, MECommentIndex) {
     MECommentIndexSecond
 };
 
-@interface MECommentsContentView ()
-
-@property (weak, nonatomic) InstagramMedia* media;
-
-@end
-
 CGFloat const kMECommentViewLeftRightOffset = 16.f;
-CGFloat const kMECommentViewTopBottomOffset = 18.f;
+CGFloat const kMECommentViewTopBottomOffset = 14.f;
 
 CGFloat const kMECommentViewButtonTopOffset = 10.f;
 CGFloat const kMECommentViewButtonBottomOffset = 10.f;
@@ -31,12 +25,21 @@ CGFloat const kMECommentViewButtonBottomOffset = 10.f;
 CGFloat const kMEAllButtonHeight = 22.f;
 CGFloat const kMEMaxCommentHeight = 80.f;
 
-@implementation MECommentsContentView
+CGFloat const kMEUserLabelTopBottomOffset = 12.f;
+CGFloat const kMEUserLabelLeftRightOffset = 16.f;
+CGFloat const kMEMaxCaptionHeight = 80;
 
+@interface MECommentsContentView ()
+@property (weak, nonatomic) InstagramMedia* media;
+@end
+
+@implementation MECommentsContentView
 
 + (CGFloat)heightWithMedia:(InstagramMedia *)media inSize:(CGSize)inSize
 {
     NSArray* comments = [self viewingCommentsFromArray:media.comments];
+    
+    CGFloat captionHeight = [self captionHeightForMedia:media inSize:inSize];
     CGFloat result = [self commentsHeight:comments inSize:inSize];
     
     CGFloat bottomOffset =  comments.count > 0 ? kMECommentViewTopBottomOffset : 0;
@@ -50,7 +53,7 @@ CGFloat const kMEMaxCommentHeight = 80.f;
     {
         result = result + topOffset; // top offset insted button
     }
-    return result + bottomOffset;
+    return result + bottomOffset + captionHeight;
 }
 
 + (CGFloat)heightAllCommentsButtonForMedia:(InstagramMedia *)media
@@ -79,6 +82,32 @@ CGFloat const kMEMaxCommentHeight = 80.f;
     return ceilf(result + [self offsetBetweenComments:commentsArr]);
 }
 
++ (CGFloat)captionHeightForMedia:(InstagramMedia *)media inSize:(CGSize)size
+{
+    if (![self isShowCaption:media.caption])
+    {
+        return 0.f;
+    }
+    
+    CGFloat result = [self heightCaption:media.caption inSize:size];
+    return result += kMEUserLabelTopBottomOffset * 2.f;
+}
+
++ (CGFloat)heightCaption:(InstagramComment *)caption inSize:(CGSize)size
+{
+    CGFloat widthOffset = kMEUserLabelLeftRightOffset + kMEUserLabelLeftRightOffset;
+    CGSize inSize = CGSizeMake(size.width - widthOffset, CGFLOAT_MAX);
+    
+    CGRect rect = [caption.text me_commentsBoundingWithSize:inSize];
+    CGFloat result = ceilf(CGRectGetHeight(rect));
+    
+    if (caption.isExtended)
+    {
+        return result;
+    }
+    return result > kMEMaxCaptionHeight ? kMEMaxCaptionHeight : result;
+}
+
 + (NSArray *)viewingCommentsFromArray:(NSArray *)comments
 {
     if (comments.count > kMEMaxViewingCommentCount)
@@ -89,22 +118,50 @@ CGFloat const kMEMaxCommentHeight = 80.f;
     return comments;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self userLabel];
+        [self allCommentsButton];
+        [self firstCommentLabel];
+        [self secondCommentLabel];
+    }
+    return self;
+}
+
 #pragma mark - Layouts & Constraints
 
 - (void)updateConstraints
 {
     BOOL isShowViewAllButton = [self isShowViewAllButton];
     
-    [self.allCommentsButton mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.userLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+        
+        CGFloat height = [[self class]heightCaption:self.media.caption inSize:self.bounds.size];
+        make.height.equalTo(@(height));
+    }];
+    
+    [self.allCommentsButton mas_remakeConstraints:^(MASConstraintMaker *make) {
         
         if (isShowViewAllButton)
         {
+            if ([self isShowCaption])
+            {
+                make.top.equalTo(self.userLabel.mas_bottom).with.offset(kMECommentViewButtonTopOffset);
+            }
+            else
+            {
+                make.top.equalTo(self.mas_top).with.offset(kMECommentViewButtonTopOffset);
+            }
             make.height.equalTo(@(kMEAllButtonHeight));
         }
         else
         {
             make.height.equalTo(@0);
         }
+        make.left.equalTo(self.mas_left).with.offset(kMECommentViewLeftRightOffset);
+        make.right.equalTo(self.mas_right).with.offset(-kMECommentViewLeftRightOffset);
     }];
     
     [self.firstCommentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -115,7 +172,14 @@ CGFloat const kMEMaxCommentHeight = 80.f;
         }
         else
         {
-            make.top.equalTo(self.mas_top).with.offset(kMECommentViewTopBottomOffset);
+            if ([self isShowCaption])
+            {
+                make.top.equalTo(self.userLabel.mas_bottom).with.offset(kMECommentViewTopBottomOffset);
+            }
+            else
+            {
+                make.top.equalTo(self.mas_top).with.offset(kMECommentViewTopBottomOffset);
+            }
         }
         make.left.equalTo(self.mas_left).with.offset(kMECommentViewLeftRightOffset);
         make.right.equalTo(self.mas_right).with.offset(-kMECommentViewLeftRightOffset);
@@ -141,6 +205,7 @@ CGFloat const kMEMaxCommentHeight = 80.f;
     InstagramComment* comment1 = commentsCount >= 1 ? media.comments[MECommentIndexFirst] : nil;
     InstagramComment* comment2 = commentsCount >= 2 ? media.comments[MECommentIndexSecond] : nil;
     
+    [self.userLabel setupWithComment:media.caption];
     [self.firstCommentLabel setupWithComment:comment1];
     [self.secondCommentLabel setupWithComment:comment2];
     [self.allCommentsButton setupWithMedia:media];
@@ -154,13 +219,10 @@ CGFloat const kMEMaxCommentHeight = 80.f;
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
     
-    if ([label isEqual:self.firstCommentLabel])
-    {
-        [UIView animateWithDuration:0.3
-                         animations:^{
-                             [self.secondCommentLabel layoutIfNeeded];
-                         }];
-    }
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         [label layoutIfNeeded];
+                     }];
 }
 
 #pragma mark - Helpers
@@ -206,6 +268,18 @@ CGFloat const kMEMaxCommentHeight = 80.f;
     return media.commentCount > kMEMaxViewingCommentCount;
 }
 
+#pragma mark -
+
+- (BOOL)isShowCaption
+{
+    return [[self class] isShowCaption:self.media.caption];
+}
+
++ (BOOL)isShowCaption:(InstagramComment *)caption
+{
+    return caption.text.length > 0;
+}
+
 - (InstagramComment *)commentAtIndex:(MECommentIndex)index
 {
     if (self.media.commentCount > index)
@@ -217,18 +291,28 @@ CGFloat const kMEMaxCommentHeight = 80.f;
 
 #pragma mark - Lazy Load
 
+- (MECommentLabel *)userLabel
+{
+    if (!_userLabel)
+    {
+        _userLabel = [MECommentLabel new];
+        [self addSubview:_userLabel];
+        
+        [self.userLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.mas_top).with.offset(kMEUserLabelTopBottomOffset);
+            make.left.equalTo(self.mas_left).with.offset(kMEUserLabelLeftRightOffset);
+            make.right.equalTo(self.mas_right).with.offset(-kMEUserLabelLeftRightOffset);
+        }];
+    }
+    return _userLabel;
+}
+
 - (MEViewAllButton *)allCommentsButton
 {
     if (!_allCommentsButton)
     {
         _allCommentsButton = [MEViewAllButton buttonWithType:UIButtonTypeCustom];
         [self addSubview:_allCommentsButton];
-        
-        [_allCommentsButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self).with.offset(kMECommentViewButtonTopOffset);
-            make.left.equalTo(self.mas_left).with.offset(kMECommentViewLeftRightOffset);
-            make.right.equalTo(self.mas_right).with.offset(-kMECommentViewLeftRightOffset);
-        }];
     }
     return _allCommentsButton;
 }

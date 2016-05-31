@@ -15,6 +15,8 @@
 
 @interface MECommentsContentView : UIView
 
+@property (strong, nonatomic) MECommentLabel* userLabel;
+
 @property (strong, nonatomic) MEViewAllButton* allCommentsButton;
 
 @property (strong, nonatomic) MECommentLabel* firstCommentLabel; // or use MESTCommentLabel

@@ -18,6 +18,7 @@
 @property (strong, nonatomic) MEFeedImageView* feedImageView;
 @property (strong, nonatomic) MEShareContentView* shareContentView;
 @property (strong, nonatomic) MECommentsContentView* commentsContentView;
+
 @property (weak, nonatomic) id <MEFeedCollectionCellDelegate> delegate;
 
 + (CGSize)sizeWithMedia:(InstagramMedia *)media inCollectionView:(UICollectionView *)collectionView;

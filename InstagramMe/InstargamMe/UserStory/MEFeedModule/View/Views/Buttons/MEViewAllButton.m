@@ -47,7 +47,9 @@ NSString* const kMEViewAllButtonTitle = @"View all comments";
     
     if (commentsCount > kMEMaxViewingCommentCount)
     {
-        NSString* title = [NSString stringWithFormat:@"View all %li comments", (long)commentsCount];
+        NSString* title = [NSString stringWithFormat:@"%@ (%li)",
+                           kMEViewAllButtonTitle, (long)commentsCount];
+        
         [self setTitle:title forState:UIControlStateNormal];
     }
     else

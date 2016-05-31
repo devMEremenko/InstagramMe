@@ -9,7 +9,7 @@
 #import "MEFeedCollectionCell.h"
 #import "MEInstagramKit.h"
 
-CGFloat const kDefaultShareViewHeight = 48.f;
+CGFloat const kMEDefaultShareViewHeight = 48.f;
 
 @interface MEFeedCollectionCell () <MECommentLabelDelegate, MEFeedImageViewDelegate>
 
@@ -23,7 +23,7 @@ CGFloat const kDefaultShareViewHeight = 48.f;
 {
     CGSize result = CGSizeZero;
     result.height += CGRectGetWidth(collectionView.bounds);
-    result.height += kDefaultShareViewHeight;
+    result.height += kMEDefaultShareViewHeight;
     result.height += [MECommentsContentView heightWithMedia:media inSize:collectionView.bounds.size];
     
     result.width = CGRectGetWidth(collectionView.bounds);
@@ -60,9 +60,13 @@ CGFloat const kDefaultShareViewHeight = 48.f;
 - (void)setupWithMedia:(InstagramMedia *)media
 {
     self.media = media;
+    
     [self.feedImageView setupWithMedia:media];
     [self.shareContentView setupWithMedia:media];
     [self.commentsContentView setupWithMedia:media];
+    
+    [self layoutIfNeeded];
+    [self updateConstraints];
 }
 
 #pragma mark - MECommentLabelDelegate
@@ -83,6 +87,18 @@ CGFloat const kDefaultShareViewHeight = 48.f;
 {
     self.media.liked = YES;
     [self.shareContentView.likeButton setLikedStyleAnimated:YES];
+}
+
+#pragma mark - Layouts
+
+- (void)updateConstraints
+{
+//    [self.userContentView mas_updateConstraints:^(MASConstraintMaker *make) {
+//        CGFloat height = [[self.userContentView class]heightWithMedia:self.media inSize:self.bounds.size];
+//        make.height.equalTo(@(height));
+//    }];
+    
+    [super updateConstraints];
 }
 
 #pragma mark - Lazy Load
@@ -117,17 +133,39 @@ CGFloat const kDefaultShareViewHeight = 48.f;
             make.top.equalTo(self.feedImageView.mas_bottom);
             make.left.equalTo(self.contentView);
             make.right.equalTo(self.contentView);
-            make.height.equalTo(@(kDefaultShareViewHeight));
+            make.height.equalTo(@(kMEDefaultShareViewHeight));
         }];
     }
     return _shareContentView;
 }
+
+/*
+- (MEUserContentView *)userContentView
+{
+    return nil;
+    
+    if (!_userContentView)
+    {
+        _userContentView = [MEUserContentView new];
+        _userContentView.userLabel.delegate = self;
+        [self.contentView addSubview:_userContentView];
+        
+        [_userContentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.shareContentView.mas_bottom);
+            make.left.equalTo(self.contentView.mas_left);
+            make.right.equalTo(self.contentView.mas_right);
+        }];
+    }
+    return _userContentView;
+}
+*/
 
 - (MECommentsContentView *)commentsContentView
 {
     if (!_commentsContentView)
     {
         _commentsContentView = [MECommentsContentView new];
+        _commentsContentView.userLabel.delegate = self;
         _commentsContentView.firstCommentLabel.delegate = self;
         _commentsContentView.secondCommentLabel.delegate = self;
         _commentsContentView.backgroundColor = [UIColor whiteColor];

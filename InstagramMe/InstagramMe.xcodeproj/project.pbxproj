@@ -26,7 +26,6 @@
 		FA93B9A61CFB253700FD5554 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA93B9721CFB1FBA00FD5554 /* SF-UI-Text-Light.otf */; };
 		FA93B9A81CFB253700FD5554 /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA93B9741CFB1FBA00FD5554 /* SF-UI-Text-Medium.otf */; };
 		FA93B9AA1CFB253700FD5554 /* SF-UI-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA93B9781CFB1FBA00FD5554 /* SF-UI-Text-Semibold.otf */; };
-		FACD9E771CFD003B00924235 /* MEUserContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD9E761CFD003B00924235 /* MEUserContentView.m */; };
 		FACD9E7B1CFD170D00924235 /* MEHelperFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD9E7A1CFD170D00924235 /* MEHelperFunctions.m */; };
 		FADEDF251CF3C2BE008F6E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEEB1CF3C2BE008F6E75 /* AppDelegate.m */; };
 		FADEDF261CF3C2BE008F6E75 /* MEPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FADEDEEE1CF3C2BE008F6E75 /* MEPreloader.m */; };
@@ -104,8 +103,6 @@
 		FA93B9741CFB1FBA00FD5554 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
 		FA93B9781CFB1FBA00FD5554 /* SF-UI-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Semibold.otf"; sourceTree = "<group>"; };
 		FA93B9AE1CFB26BA00FD5554 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
-		FACD9E751CFD003B00924235 /* MEUserContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEUserContentView.h; sourceTree = "<group>"; };
-		FACD9E761CFD003B00924235 /* MEUserContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEUserContentView.m; sourceTree = "<group>"; };
 		FACD9E791CFD170D00924235 /* MEHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEHelperFunctions.h; sourceTree = "<group>"; };
 		FACD9E7A1CFD170D00924235 /* MEHelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEHelperFunctions.m; sourceTree = "<group>"; };
 		FADEDEEA1CF3C2BE008F6E75 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -605,8 +602,6 @@
 				FAF32C9D1CF484BB00C31DB1 /* MEShareContentView.m */,
 				FAF32CB81CF4AF8900C31DB1 /* MECommentsContentView.h */,
 				FAF32CB91CF4AF8900C31DB1 /* MECommentsContentView.m */,
-				FACD9E751CFD003B00924235 /* MEUserContentView.h */,
-				FACD9E761CFD003B00924235 /* MEUserContentView.m */,
 			);
 			path = "Content Views";
 			sourceTree = "<group>";
@@ -917,7 +912,6 @@
 				FAF32D401CF9D1FE00C31DB1 /* InstagramComment+MEComment.m in Sources */,
 				FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */,
 				FA93B94F1CFA427100FD5554 /* MELogoImageView.m in Sources */,
-				FACD9E771CFD003B00924235 /* MEUserContentView.m in Sources */,
 				FAF32CE41CF678B700C31DB1 /* MEMediaResponse.m in Sources */,
 				FAF32CEB1CF67EC200C31DB1 /* MEFeedDataProvider.m in Sources */,
 				FAF32D0D1CF771DD00C31DB1 /* MEViewAllButton.m in Sources */,

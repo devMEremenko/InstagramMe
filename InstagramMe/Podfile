@@ -18,7 +18,6 @@ pod 'UICKeyChainStore'
 #ANODA
 pod 'ANLogger'
 pod 'ANHelperFunctions'
-pod 'ANBaseDomainModel'
 
 #UI
 pod 'Masonry'
@@ -30,7 +29,6 @@ pod 'STTweetLabel'
 
 #ANIMATIONS
 pod 'pop', :git => 'https://github.com/facebook/pop.git'
-
 
 end
 

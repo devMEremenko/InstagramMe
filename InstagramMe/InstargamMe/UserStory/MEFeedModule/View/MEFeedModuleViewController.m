@@ -58,7 +58,7 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
 
 - (void)failedFindRecentMedia
 {
-    NSLog(@"Internet connection is unavailable")
+    /* Internet connection is unavailable */
 }
 
 #pragma mark - UICollectionViewDataSource

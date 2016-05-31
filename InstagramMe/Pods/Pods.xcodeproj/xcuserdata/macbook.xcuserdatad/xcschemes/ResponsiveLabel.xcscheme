@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7ED2499CCC7E9741A8B7C0C5'
+               BlueprintIdentifier = '5A0D6815C98BD8717A4CBAA7'
                BlueprintName = 'ResponsiveLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libResponsiveLabel.a'>

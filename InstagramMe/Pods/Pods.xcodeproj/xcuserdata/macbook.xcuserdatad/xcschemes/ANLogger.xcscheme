@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C83F0A67CF35FFC672A6047F'
+               BlueprintIdentifier = '6EC92DFC0805237F3E6225F7'
                BlueprintName = 'ANLogger'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libANLogger.a'>

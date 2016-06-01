@@ -65,7 +65,7 @@ NSInteger const KMESeparatorHeight = 1;
     CGFloat labelOffsets = CGRectGetMaxX(_imageView.frame) + kMEUserLabelLeftOffset + CGRectGetWidth(_additionallyButton.frame) + kMEAdditionallyButtonRightOffset + kMEUserLabelRightOffset;
     
     CGFloat labelWidth = CGRectGetWidth(self.bounds) - labelOffsets;
-    
+     
     _userNameLabel.frame = CGRectMake(CGRectGetMaxX(_imageView.frame) + kMEUserLabelLeftOffset,
                                       CGRectGetMidY(_imageView.frame) - kMEImageSide / 2,
                                       labelWidth, kMEUserLabelHeight);

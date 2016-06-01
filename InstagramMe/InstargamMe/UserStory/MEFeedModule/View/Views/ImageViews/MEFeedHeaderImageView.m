@@ -22,15 +22,10 @@
      options:0
      completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
          
-         ANDispatchBlockToBackgroundQueue(^{
-             UIImage* roundedImage = [image yy_imageByRoundCornerRadius:image.size.height
-                                                            borderWidth:0.5
-                                                            borderColor:[UIColor me_feedImageCornerColor]];
-
-             ANDispatchBlockToMainQueue(^{
-                 self.image = roundedImage;
-             });
-         });
+         UIImage* roundedImage = [image yy_imageByRoundCornerRadius:image.size.height
+                                                        borderWidth:0.5
+                                                        borderColor:[UIColor me_feedImageCornerColor]];
+         self.image = roundedImage;
     }];
 }
 

@@ -20,34 +20,14 @@
 
 - (instancetype)init
 {
-    return [self initWithFrame:CGRectZero];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self)
     {
-        [self setup];
+        self.opaque = NO;
+        self.contentMode = UIViewContentModeRedraw;
+        self.lineBreakMode = NSLineBreakByTruncatingTail;
     }
     return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self)
-    {
-        [self setup];
-    }
-    return self;
-}
-
-- (void)setup
-{
-    self.opaque = NO;
-    self.contentMode = UIViewContentModeRedraw;
-    self.lineBreakMode = NSLineBreakByTruncatingTail;
 }
 
 #pragma mark - Layouts

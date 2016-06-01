@@ -30,12 +30,7 @@ CGFloat kMEButtonAnimationDuration = 0.3f;
 
 - (instancetype)init
 {
-    return [self initWithFrame:CGRectZero];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self)
     {
         [self setImage:[UIImage me_likeImage] forState:UIControlStateNormal];

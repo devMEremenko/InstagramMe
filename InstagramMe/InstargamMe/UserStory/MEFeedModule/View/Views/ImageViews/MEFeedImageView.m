@@ -19,15 +19,11 @@ CGFloat const kMELikeSideScale = 2.25f;
 
 - (instancetype)init
 {
-    return [self initWithFrame:CGRectZero];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self)
     {
-        [self setup];
+        self.backgroundColor = [UIColor me_feedImageColor];
+        [self addGestureRecognizers];
     }
     return self;
 }
@@ -36,12 +32,6 @@ CGFloat const kMELikeSideScale = 2.25f;
 {
     [super layoutSubviews];
     [self likeImageView];
-}
-
-- (void)setup
-{
-    self.backgroundColor = [UIColor me_feedImageColor];
-    [self addGestureRecognizers];
 }
 
 #pragma mark - Gestures

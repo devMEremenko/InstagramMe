@@ -32,25 +32,15 @@ CGSize const kMEViewHiddenScaleSize = {kMEHiddenScaleFactor, kMEHiddenScaleFacto
 
 - (instancetype)init
 {
-    return [self initWithFrame:CGRectZero];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self)
     {
-        [self setup];
+        self.image = [UIImage me_doubleLikeImage];
+        self.contentMode = UIViewContentModeScaleAspectFit;
+        self.transform = CGAffineTransformMakeScale(kMEHiddenScaleFactor, kMEHiddenScaleFactor);
+        self.alpha = 0.f;
     }
     return self;
-}
-
-- (void)setup
-{
-    self.image = [UIImage me_doubleLikeImage];
-    self.contentMode = UIViewContentModeScaleAspectFit;
-    self.transform = CGAffineTransformMakeScale(kMEHiddenScaleFactor, kMEHiddenScaleFactor);
-    self.alpha = 0.f;
 }
 
 - (void)showLike

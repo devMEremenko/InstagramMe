@@ -12,12 +12,7 @@
 
 - (instancetype)init
 {
-    return [self initWithFrame:CGRectZero];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self)
     {
         [self setImage:[UIImage me_additionallyImage] forState:UIControlStateNormal];

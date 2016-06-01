@@ -12,23 +12,14 @@
 
 - (instancetype)init
 {
-    return [self initWithFrame:CGRectZero];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setup];
+    self = [super init];
+    if (self)
+    {
+        self.frame = CGRectMake(0, 0, 40, 30);
+        self.image = [UIImage me_logoImage];
+        self.contentMode = UIViewContentModeScaleAspectFit;
     }
     return self;
-}
-
-- (void)setup
-{
-    self.frame = CGRectMake(0, 0, 40, 30);
-    self.image = [UIImage me_logoImage];
-    self.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 @end

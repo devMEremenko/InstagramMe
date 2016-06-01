@@ -23,23 +23,13 @@ CGFloat const kMEDefaultShareViewHeight = 48.f;
 
 - (instancetype)init
 {
-    return [self initWithFrame:CGRectZero];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self)
     {
-        [self setup];
+        self.clipsToBounds = YES;
+        [self shareContentView];
     }
     return self;
-}
-
-- (void)setup
-{
-    self.clipsToBounds = YES;
-    [self shareContentView];
 }
 
 #pragma mark - Public

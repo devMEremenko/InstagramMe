@@ -24,26 +24,16 @@ NSInteger const KMESeparatorHeight = 1;
 
 #pragma mark - Initialization
 
-- (instancetype)init
-{
-    return [self initWithFrame:CGRectZero];
-}
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self)
     {
-        [self setup];
+        self.backgroundColor = [UIColor whiteColor];
+        [self additionallyButton];
+        [self separator];
     }
     return self;
-}
-
-- (void)setup
-{
-    self.backgroundColor = [UIColor whiteColor];
-    [self additionallyButton];
-    [self separator];
 }
 
 #pragma mark - Public

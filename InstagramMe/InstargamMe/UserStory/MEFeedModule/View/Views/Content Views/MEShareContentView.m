@@ -20,12 +20,7 @@ CGFloat const kMESeparatorLeftRightOffset = 16.f;
 
 - (instancetype)init
 {
-    return [self initWithFrame:CGRectZero];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self)
     {
         [self likeButton];

@@ -20,7 +20,7 @@
 
 @interface MEFeedModulePresenter : NSObject <MENavigationModuleDelegateOutput, MEFeedModuleModuleInput, MEFeedModuleViewOutput, MEFeedModuleInteractorOutput>
 
-@property (nonatomic, strong) id<MEFeedModuleViewInput> view;
+@property (nonatomic, strong) UIViewController<MEFeedModuleViewInput>* view;
 @property (nonatomic, strong) id<MEFeedModuleInteractorInput> interactor;
 @property (nonatomic, strong) id<MEFeedModuleRouterInput> router;
 @property (nonatomic, strong) id <MEAuthorizationModuleInput, MENavigationModuleDelegate> authorizationModule;

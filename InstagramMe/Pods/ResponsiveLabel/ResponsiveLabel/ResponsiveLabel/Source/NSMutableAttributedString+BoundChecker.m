@@ -7,16 +7,13 @@
 //
 
 #import "NSMutableAttributedString+BoundChecker.h"
-#import "ANHelperFunctions.h"
 
 @implementation NSMutableAttributedString (BoundChecker)
 
 - (void)addAttributeWithBoundsCheck:(NSString *)name value:(id)value range:(NSRange)range {
 	NSRange totalRange = NSMakeRange(0, self.length);
 	if (NSEqualRanges(range, NSIntersectionRange(totalRange, range))) {
-        ANDispatchBlockToMainQueue(^{
-            [self addAttribute:name value:value range:range];
-        });
+		[self addAttribute:name value:value range:range];
 	} else {
 		NSLog(@"Cannot add attribute %@ to %@: Given range %@ is out of bounds", name, self.mutableString, NSStringFromRange(range));
 	}
@@ -34,7 +31,7 @@
 - (void)addAttributesWithBoundsCheck:(NSDictionary<NSString *, id> *)attrs range:(NSRange)range {
 	NSRange totalRange = NSMakeRange(0, self.length);
 	if (NSEqualRanges(range, NSIntersectionRange(totalRange, range))) {
-            [self addAttributes:attrs range:range];
+		[self addAttributes:attrs range:range];
 	} else {
 		NSLog(@"Cannot add attributes to %@: Given range %@ is out of bounds", self.mutableString, NSStringFromRange(range));
 	}

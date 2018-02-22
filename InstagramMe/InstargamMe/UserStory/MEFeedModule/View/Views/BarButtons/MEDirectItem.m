@@ -13,7 +13,10 @@
 + (instancetype)directItem
 {
     MEDirectItem* item = [[self class] item];
-    item.contentButton.frame = CGRectMake(0, 0, 25, 25);
+    
+    [[item.contentButton.widthAnchor constraintEqualToConstant:25] setActive:YES];
+    [[item.contentButton.heightAnchor constraintEqualToConstant:25] setActive:YES];
+    
     [item.contentButton setImage:[UIImage me_directImage] forState:UIControlStateNormal];
     return item;
 }

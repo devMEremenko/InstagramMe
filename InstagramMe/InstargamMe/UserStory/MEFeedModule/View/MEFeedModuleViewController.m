@@ -12,7 +12,7 @@
 #import "TLYShyNavBarManager.h"
 #import "MERecentMediaDataSource.h"
 #import "CustomLayout.h"
-#import "MELogoImageView.h"
+#import "MELogoView.h"
 #import "MEDirectItem.h"
 #import "MEFeedHeaderView.h"
 #import "MEMediaResponse.h"
@@ -20,8 +20,8 @@
 @interface MEFeedModuleViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MEFeedCollectionCellDelegate>
 
 @property (strong, nonatomic) UICollectionView* collectionView;
-@property (strong, nonatomic) TLYShyNavBarManager* topNavigationBar;
 @property (strong, nonatomic) id <MEFeedDataSourceProtocol> dataSource;
+
 @end
 
 CGSize const MEFeedHeaderSize = {1, 58};
@@ -85,7 +85,7 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
     return cell;
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+- (UICollectionReusableView*)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     MEFeedHeaderView* reusableview = nil;
     
@@ -147,15 +147,20 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
 
 - (void)setupUserInterface
 {
-    TLYShyNavBarManager *shyManager = [TLYShyNavBarManager new];
-    self.shyNavBarManager = shyManager;
+    self.shyNavBarManager = [TLYShyNavBarManager new];
     self.shyNavBarManager.scrollView = self.collectionView;
+    
+    if (@available(iOS 11.0, *)) {
+        self.viewRespectsSystemMinimumLayoutMargins = NO;
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.collectionView.prefetchingEnabled = NO;
+    }
     
     MEDirectItem* item = [MEDirectItem directItem];
     [item addTarget:self andAction:@selector(actionDidPressDirectButton:)];
     
     self.navigationItem.rightBarButtonItem = item;
-    self.navigationItem.titleView = [MELogoImageView new];
+    self.navigationItem.titleView = [MELogoView new];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = [UIColor me_feedBarColor];
 }
@@ -207,7 +212,7 @@ NSString* const kMEFeedCollectionHeaderIdentifier = @"kMEFeedCollectionHeaderIde
         CustomLayout * layout = [CustomLayout new];
         layout.headerReferenceSize = MEFeedHeaderSize;
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;

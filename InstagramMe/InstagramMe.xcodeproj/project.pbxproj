@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F822ED030B5A54ADF1C870B7 /* libPods-InstagramMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */; };
+		91C3B4B8203EE58100E78168 /* ANHelperFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C3B4B7203EE58100E78168 /* ANHelperFunctions.m */; };
+		EA682C9CA586F3BD8C467106 /* libPods-InstagramMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5EECDB329758A78D8355F4 /* libPods-InstagramMe.a */; };
 		FA14D3E01CF311790024F6CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14D3DE1CF311790024F6CC /* main.m */; };
 		FA556B1A1CFB2D4300C71906 /* MELikeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA556B191CFB2D4300C71906 /* MELikeImageView.m */; };
 		FA5D19631CFCDDDC00E8F874 /* MEMediaBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D19621CFCDDDC00E8F874 /* MEMediaBuilder.m */; };
@@ -15,7 +16,7 @@
 		FA9014231CFB285A003D9435 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA93B9AE1CFB26BA00FD5554 /* SF-UI-Text-Regular.otf */; };
 		FA93B9491CFA1DE400FD5554 /* MEImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B9481CFA1DE400FD5554 /* MEImageView.m */; };
 		FA93B94C1CFA1DFB00FD5554 /* MEFeedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B94B1CFA1DFB00FD5554 /* MEFeedImageView.m */; };
-		FA93B94F1CFA427100FD5554 /* MELogoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B94E1CFA427100FD5554 /* MELogoImageView.m */; };
+		FA93B94F1CFA427100FD5554 /* MELogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B94E1CFA427100FD5554 /* MELogoView.m */; };
 		FA93B9561CFA4B2D00FD5554 /* MEDirectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B9551CFA4B2D00FD5554 /* MEDirectItem.m */; };
 		FA93B9591CFA4CDB00FD5554 /* MEBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B9581CFA4CDB00FD5554 /* MEBarButtonItem.m */; };
 		FA93B95C1CFB04BC00FD5554 /* MEFeedHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93B95B1CFB04BC00FD5554 /* MEFeedHeaderView.m */; };
@@ -67,9 +68,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F3636DED59B569B4ECA9099 /* Pods-InstagramMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe.debug.xcconfig"; sourceTree = "<group>"; };
-		33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F3E303D04A1D4F0BF639120 /* Pods-InstagramMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe.release.xcconfig"; sourceTree = "<group>"; };
+		91C3B4B5203EE58100E78168 /* ANDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANDefines.h; sourceTree = "<group>"; };
+		91C3B4B6203EE58100E78168 /* ANHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANHelperFunctions.h; sourceTree = "<group>"; };
+		91C3B4B7203EE58100E78168 /* ANHelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANHelperFunctions.m; sourceTree = "<group>"; };
+		C7BA94D237EE401302A98F41 /* Pods-InstagramMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe.debug.xcconfig"; sourceTree = "<group>"; };
+		EB5EECDB329758A78D8355F4 /* libPods-InstagramMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F18C63B06A4EBF8D2BA82024 /* Pods-InstagramMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe.release.xcconfig"; sourceTree = "<group>"; };
 		FA14D3BC1CF310570024F6CC /* InstagramMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA14D3DD1CF311790024F6CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA14D3DE1CF311790024F6CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,8 +87,8 @@
 		FA93B9481CFA1DE400FD5554 /* MEImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEImageView.m; sourceTree = "<group>"; };
 		FA93B94A1CFA1DFB00FD5554 /* MEFeedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFeedImageView.h; sourceTree = "<group>"; };
 		FA93B94B1CFA1DFB00FD5554 /* MEFeedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFeedImageView.m; sourceTree = "<group>"; };
-		FA93B94D1CFA427100FD5554 /* MELogoImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELogoImageView.h; sourceTree = "<group>"; };
-		FA93B94E1CFA427100FD5554 /* MELogoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELogoImageView.m; sourceTree = "<group>"; };
+		FA93B94D1CFA427100FD5554 /* MELogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELogoView.h; sourceTree = "<group>"; };
+		FA93B94E1CFA427100FD5554 /* MELogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELogoView.m; sourceTree = "<group>"; };
 		FA93B9541CFA4B2D00FD5554 /* MEDirectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDirectItem.h; sourceTree = "<group>"; };
 		FA93B9551CFA4B2D00FD5554 /* MEDirectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDirectItem.m; sourceTree = "<group>"; };
 		FA93B9571CFA4CDB00FD5554 /* MEBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEBarButtonItem.h; sourceTree = "<group>"; };
@@ -201,18 +205,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF32CC71CF6469600C31DB1 /* Security.framework in Frameworks */,
-				F822ED030B5A54ADF1C870B7 /* libPods-InstagramMe.a in Frameworks */,
+				EA682C9CA586F3BD8C467106 /* libPods-InstagramMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BDEECCD4175B7B9182361FD7 /* Pods */ = {
+		91C3B4B4203EE58100E78168 /* HelperFunctions */ = {
 			isa = PBXGroup;
 			children = (
-				2F3636DED59B569B4ECA9099 /* Pods-InstagramMe.debug.xcconfig */,
-				4F3E303D04A1D4F0BF639120 /* Pods-InstagramMe.release.xcconfig */,
+				91C3B4B5203EE58100E78168 /* ANDefines.h */,
+				91C3B4B6203EE58100E78168 /* ANHelperFunctions.h */,
+				91C3B4B7203EE58100E78168 /* ANHelperFunctions.m */,
+			);
+			path = HelperFunctions;
+			sourceTree = "<group>";
+		};
+		A10FB74335DFBCA04E33E36A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA94D237EE401302A98F41 /* Pods-InstagramMe.debug.xcconfig */,
+				F18C63B06A4EBF8D2BA82024 /* Pods-InstagramMe.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -221,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF32CC61CF6469600C31DB1 /* Security.framework */,
-				33B56BA73A7B1A39C4B550A0 /* libPods-InstagramMe.a */,
+				EB5EECDB329758A78D8355F4 /* libPods-InstagramMe.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,8 +246,8 @@
 				FADEDEE81CF3C2BE008F6E75 /* InstargamMe */,
 				FA14D3D81CF3111C0024F6CC /* Supporting Files */,
 				FA14D3BD1CF310570024F6CC /* Products */,
-				BDEECCD4175B7B9182361FD7 /* Pods */,
 				EF8F0DBFF2B9865D5A41FCB4 /* Frameworks */,
+				A10FB74335DFBCA04E33E36A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -287,8 +301,8 @@
 				FA93B94B1CFA1DFB00FD5554 /* MEFeedImageView.m */,
 				FA93B9601CFB0BFF00FD5554 /* MEFeedHeaderImageView.h */,
 				FA93B9611CFB0BFF00FD5554 /* MEFeedHeaderImageView.m */,
-				FA93B94D1CFA427100FD5554 /* MELogoImageView.h */,
-				FA93B94E1CFA427100FD5554 /* MELogoImageView.m */,
+				FA93B94D1CFA427100FD5554 /* MELogoView.h */,
+				FA93B94E1CFA427100FD5554 /* MELogoView.m */,
 				FA556B181CFB2D4300C71906 /* MELikeImageView.h */,
 				FA556B191CFB2D4300C71906 /* MELikeImageView.m */,
 			);
@@ -562,6 +576,7 @@
 		FAF32C8D1CF3C92400C31DB1 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				91C3B4B4203EE58100E78168 /* HelperFunctions */,
 				FAF32D4E1CFA023100C31DB1 /* FeedLayout */,
 			);
 			path = Vendor;
@@ -755,12 +770,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA14D3D31CF310570024F6CC /* Build configuration list for PBXNativeTarget "InstagramMe" */;
 			buildPhases = (
-				D2F07990DBD893C403B224EB /* Check Pods Manifest.lock */,
+				6BD954A2D2D2187A882FA2B9 /* [CP] Check Pods Manifest.lock */,
 				FA14D3B81CF310570024F6CC /* Sources */,
 				FA14D3B91CF310570024F6CC /* Frameworks */,
 				FA14D3BA1CF310570024F6CC /* Resources */,
-				219DBF2FCCB27F9D24B32EAD /* Embed Pods Frameworks */,
-				9D163C38B30D5C19F2F93DC2 /* Copy Pods Resources */,
+				4FA93221A876DC95A0DEED0E /* [CP] Embed Pods Frameworks */,
+				861694CE49B71958CF338970 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -778,7 +793,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ME;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Maxim Eremenko";
 				TargetAttributes = {
 					FA14D3BB1CF310570024F6CC = {
@@ -823,14 +838,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		219DBF2FCCB27F9D24B32EAD /* Embed Pods Frameworks */ = {
+		4FA93221A876DC95A0DEED0E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,34 +853,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D163C38B30D5C19F2F93DC2 /* Copy Pods Resources */ = {
+		6BD954A2D2D2187A882FA2B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		861694CE49B71958CF338970 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstagramMe/Pods-InstagramMe-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D2F07990DBD893C403B224EB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -879,7 +894,7 @@
 				FA5D19631CFCDDDC00E8F874 /* MEMediaBuilder.m in Sources */,
 				FAF32D401CF9D1FE00C31DB1 /* InstagramComment+MEComment.m in Sources */,
 				FAF32CBA1CF4AF8900C31DB1 /* MECommentsContentView.m in Sources */,
-				FA93B94F1CFA427100FD5554 /* MELogoImageView.m in Sources */,
+				FA93B94F1CFA427100FD5554 /* MELogoView.m in Sources */,
 				FAF32CE41CF678B700C31DB1 /* MEMediaResponse.m in Sources */,
 				FAF32CEB1CF67EC200C31DB1 /* MEFeedDataProvider.m in Sources */,
 				FAF32D0D1CF771DD00C31DB1 /* MEViewAllButton.m in Sources */,
@@ -907,6 +922,7 @@
 				FAF32D1E1CF90E7400C31DB1 /* MESTCommentLabel.m in Sources */,
 				FACD9E7B1CFD170D00924235 /* MEHelperFunctions.m in Sources */,
 				FADEDF2E1CF3C2BE008F6E75 /* MEFeedModuleAssembly.m in Sources */,
+				91C3B4B8203EE58100E78168 /* ANHelperFunctions.m in Sources */,
 				FAF32D441CF9E68300C31DB1 /* MELabel.m in Sources */,
 				FAF32CB71CF4A8A000C31DB1 /* MEReplyButton.m in Sources */,
 				FA93B9561CFA4B2D00FD5554 /* MEDirectItem.m in Sources */,
@@ -946,13 +962,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -992,13 +1016,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1026,7 +1058,7 @@
 		};
 		FA14D3D41CF310570024F6CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F3636DED59B569B4ECA9099 /* Pods-InstagramMe.debug.xcconfig */;
+			baseConfigurationReference = C7BA94D237EE401302A98F41 /* Pods-InstagramMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1039,7 +1071,7 @@
 					INSTAGRAMKIT_UICKEYCHAINSTORE,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1051,7 +1083,7 @@
 		};
 		FA14D3D51CF310570024F6CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F3E303D04A1D4F0BF639120 /* Pods-InstagramMe.release.xcconfig */;
+			baseConfigurationReference = F18C63B06A4EBF8D2BA82024 /* Pods-InstagramMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1064,7 +1096,7 @@
 					INSTAGRAMKIT_UICKEYCHAINSTORE,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.InstagramMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -297,7 +297,7 @@
                  failure:(InstagramFailureBlock)failure
 {
     NSDictionary *params = [self dictionaryWithAccessTokenAndParameters:parameters];
-    NSString *percentageEscapedPath = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    NSString *percentageEscapedPath = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self.httpManager GET:percentageEscapedPath
                parameters:params
                  progress:nil
@@ -312,13 +312,12 @@
                       NSMutableArray *objects = [NSMutableArray arrayWithCapacity:responseObjects.count];
                       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                           [responseObjects enumerateObjectsUsingBlock:^(NSDictionary * dataDictionary, NSUInteger idx, BOOL *stop) {
-                              
                               id modelObject = [[modelClass alloc] initWithInfo:dataDictionary];
                               [objects addObject:modelObject];
                           }];
-//                          dispatch_async(dispatch_get_main_queue(), ^{
+                          dispatch_async(dispatch_get_main_queue(), ^{
                               success([objects copy], paginationInfo);
-//                          });
+                          });
                       });
                   }
                   failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -555,7 +554,7 @@
                      failure:(InstagramFailureBlock)failure
 {
     NSDictionary *params = [self parametersFromCount:count maxId:maxId andPaginationKey:kPaginationKeyMaxId];
-    [self getPaginatedPath:[NSString stringWithFormat:@"users/self/media/recent"]
+    [self getPaginatedPath:[NSString stringWithFormat:@"users/self/feed"]
                 parameters:params
              responseModel:[InstagramMedia class]
                    success:success

@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Sebastien Thiebaud. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 typedef NS_ENUM(NSInteger, STTweetHotWord) {
     STTweetHandle = 0,
     STTweetHashtag,
     STTweetLink
 };
-
-typedef void (^MEDetectionBlock)(STTweetHotWord hotWord, NSString *string, NSString *protocol, NSRange range);
 
 @interface STTweetLabel : UILabel
 
@@ -20,7 +20,7 @@ typedef void (^MEDetectionBlock)(STTweetHotWord hotWord, NSString *string, NSStr
 @property (nonatomic, assign) BOOL leftToRight;
 @property (nonatomic, assign) BOOL textSelectable;
 @property (nonatomic, strong) UIColor *selectionColor;
-@property (nonatomic, copy) MEDetectionBlock detectionBlock;
+@property (nonatomic, copy) void (^detectionBlock)(STTweetHotWord hotWord, NSString *string, NSString *protocol, NSRange range);
 
 - (void)setAttributes:(NSDictionary *)attributes;
 - (void)setAttributes:(NSDictionary *)attributes hotWord:(STTweetHotWord)hotWord;
